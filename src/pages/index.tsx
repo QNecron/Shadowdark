@@ -1,13 +1,18 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
+import Page from "../components/page/page"
+import Hero from "../components/hero/hero"
+
 const IndexPage: React.FC<PageProps> = () => {
 
   return (
 
-    <main role="main">
-      <h1>Shadowdark</h1>
-    </main>
+    <Page>
+
+      <Hero heading1="Shadowdark" copy1="Something here." />
+
+    </Page>
 
   )
 
