@@ -1,5 +1,22 @@
+@import "_reset";
+
 body {
   background: #1f1f1f;
   color: #f0f0f0;
   font-family: sans-serif;
 }
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 4vw;
+  padding-left: 4vw;
+}
+
+$wrapper-structure: 1400px;
+
+[wrapper-type="structure"] {
+  max-width: $wrapper-structure;
+}
+
+@import "../components/hero/_hero";

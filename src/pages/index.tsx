@@ -10,7 +10,20 @@ const IndexPage: React.FC<PageProps> = () => {
 
     <Page>
 
-      <Hero heading1="Shadowdark" copy1="Something here." />
+      <Hero
+        desktop="https://picsum.photos/1600/900"
+        desktopH="1080"
+        desktopW="1920"
+        tablet="https://picsum.photos/1024/768"
+        tabletH="768"
+        tabletW="1024"
+        mobile="https://picsum.photos/480/960"
+        mobileH="960"
+        mobileW="480"
+        alt="Shadowdark Hero"
+        heading="Shadowdark"
+        copy="Something here."
+      />
 
     </Page>
 

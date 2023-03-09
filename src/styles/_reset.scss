@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+picture,
+video {
+  display: block;
+  line-height: 0;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
