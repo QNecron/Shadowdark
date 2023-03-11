@@ -1,0 +1,11 @@
+@mixin media($queries...) {
+
+  @each $query in $queries {
+
+    @media only screen and #{$query} {
+      @content;
+    }
+
+  }
+
+}

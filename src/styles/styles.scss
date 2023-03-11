@@ -1,3 +1,4 @@
+@import "_base";
 @import "_reset";
 
 body {
@@ -6,17 +7,6 @@ body {
   font-family: sans-serif;
 }
 
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 4vw;
-  padding-left: 4vw;
-}
-
-$wrapper-structure: 1400px;
-
-[wrapper-type="structure"] {
-  max-width: $wrapper-structure;
-}
-
+@import "../components/grid/_grid";
 @import "../components/hero/_hero";
+@import "../components/wrapper/_wrapper";

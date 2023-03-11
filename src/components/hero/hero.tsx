@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Image from "../image/image"
+import Wrapper from "../wrapper/wrapper"
 
 const Hero = ({ ...props }) => {
 
@@ -21,9 +22,9 @@ const Hero = ({ ...props }) => {
         alt={props.alt}
       />
 
-      <div className="hero-wrapper wrapper" wrapper-type={props.wrapper || "structure"}>
+      <Wrapper classes="hero-wrapper" type={props.wrapper || "structure"}>
 
-        <div className="hero-grid grid" x-axis={props.x} y-axis={props.y}>
+        <div className="hero-grid" hero-x={props.x} hero-y={props.y}>
 
           {(props.heading || props.copy || props.cta) &&
             <div className="hero-content">
@@ -51,7 +52,7 @@ const Hero = ({ ...props }) => {
 
         </div>
 
-      </div>
+      </Wrapper>
 
     </section>
   )

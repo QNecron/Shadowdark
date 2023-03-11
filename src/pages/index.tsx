@@ -21,6 +21,8 @@ const IndexPage: React.FC<PageProps> = () => {
         mobileH="960"
         mobileW="480"
         alt="Shadowdark Hero"
+        x="2"
+        y="2"
         heading="Shadowdark"
         copy="Something here."
       />

@@ -1,0 +1,28 @@
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  // media
+  @include media($mq-desktop) {
+    padding-right: $space-32;
+    padding-left: $space-32;
+  }
+  @include media($mq-tablet-range) {
+    padding-right: $space-24;
+    padding-left: $space-24;
+  }
+  @include media($mq-mobile) {
+    padding-right: $space-16;
+    padding-left: $space-16;
+  }
+
+}
+
+[wrapper-type="content"] {
+  max-width: $wrapper-content;
+}
+
+[wrapper-type="structure"] {
+  max-width: $wrapper-structure;
+}

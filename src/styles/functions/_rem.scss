@@ -1,0 +1,10 @@
+@function rem($size) {
+
+  @if ( $size == 1) {
+    @return 1px;
+  }
+  @else {
+    @return ($size / 16) + 0rem;
+  }
+
+}

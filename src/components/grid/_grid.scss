@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+[grid-gap="16"] { grid-gap: $space-16; }
+[grid-gap="32"] { grid-gap: $space-32; }
+
+// media
+@include media($mq-desktop) {
+  [grid-desktop="1"] > * { grid-column: span 12; }
+  [grid-desktop="2"] > * { grid-column: span 6; }
+  [grid-desktop="4"] > * { grid-column: span 3; }
+}
+@include media($mq-tablet-range) {
+  [grid-tablet="1"] > * { grid-column: span 12; }
+  [grid-tablet="2"] > * { grid-column: span 6; }
+  [grid-tablet="4"] > * { grid-column: span 3; }
+}
+@include media($mq-mobile) {
+  [grid-mobile="1"] > * { grid-column: span 12; }
+  [grid-mobile="2"] > * { grid-column: span 6; }
+}
+@include media($mq-mobile-s) {
+  [grid-mobile="2"] > * { grid-column: span 12; }
+}

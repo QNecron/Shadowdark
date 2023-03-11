@@ -10,3 +10,26 @@
   left: 0;
   z-index: 1;
 }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i"
+  ;
+  height: 100%;
+}
+
+[hero-x="2"][hero-y="2"] .hero-content {
+  grid-area: e;
+  justify-content: center;
+}
+
+.hero-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
