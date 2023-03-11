@@ -4,12 +4,16 @@ import { Link } from "gatsby"
 import Image from "../image/image"
 import Wrapper from "../wrapper/wrapper"
 
+import LogoWhite from "../../images/logo-sd-white.png"
+import LogoBlack from "../../images/logo-sd-black.png"
+
 const Hero = ({ ...props }) => {
 
   return (
     <section className="hero" hero-theme={props.theme}>
 
       <Image
+        classes="hero-asset"
         desktop={props.desktop}
         desktopH={props.desktopH}
         desktopW={props.desktopW}
@@ -26,8 +30,18 @@ const Hero = ({ ...props }) => {
 
         <div className="hero-grid" hero-x={props.x} hero-y={props.y}>
 
-          {(props.heading || props.copy || props.cta) &&
+          {(props.logo || props.heading || props.copy || props.cta) &&
             <div className="hero-content">
+
+              {props.logo &&
+                <Image
+                  desktop={props.logo === "black" ? LogoBlack : LogoWhite}
+                  tablet={props.logo === "black" ? LogoBlack : LogoWhite}
+                  mobile={props.logo === "black" ? LogoBlack : LogoWhite}
+                  classes="hero-logo"
+                  alt="Shadowdark Logo"
+                />
+              }
 
               {props.heading ?
                 <h1 className="hero-heading">

@@ -1,11 +1,17 @@
+// no code should be produced with these:
+
+// functions
 @import "functions/_rem";
-
-@import "mixins/_media-query";
-@import "mixins/_webkit";
-
+// placeholders
 @import "placeholders/_ratios";
 @import "placeholders/_typography";
-
+// mixins
+@import "mixins/_media-query";
+@import "mixins/_textures";
+@import "mixins/_typography";
+@import "mixins/_webkit";
+// variables
+@import "variables/_colors";
 @import "variables/_media-queries";
 @import "variables/_spacing";
 @import "variables/_wrappers";

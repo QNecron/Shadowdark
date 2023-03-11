@@ -4,7 +4,7 @@
     @return 1px;
   }
   @else {
-    @return ($size / 16) + 0rem;
+    @return calc($size / 16) + 0rem;
   }
 
 }

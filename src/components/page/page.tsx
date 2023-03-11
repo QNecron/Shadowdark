@@ -2,17 +2,23 @@ import React from "react"
 
 import "../../styles/styles.scss"
 
+import Header from "../header/header"
+
 const Page = ({ ...props }) => {
 
   return (
 
-    // header here
+    <>
 
-    <main className="main" role="main">
+    <Header />
+
+    <main id="main" className="main" role="main">
       {props.children}
     </main>
 
-    // footer here
+    [My Thing] is an independenmt product published under the Shadowdark RPG Thrid-Partry License and is not affiliated with The Arcane Library, LLC. Shadow RPG &copy; 2023 The Arcane Library.
+
+    </>
 
   )
 

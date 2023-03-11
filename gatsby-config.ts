@@ -12,7 +12,15 @@ const config: GatsbyConfig = {
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/icon.webp"
+    },
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `Oswald\:300`,
+        `Roboto\:400,400i,700` // you can also specify font weights and styles
+      ],
+      display: 'swap'
     }
   }, "gatsby-plugin-mdx", {
     resolve: 'gatsby-source-filesystem',

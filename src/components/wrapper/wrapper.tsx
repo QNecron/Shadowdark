@@ -4,7 +4,7 @@ const Wrapper = ({ ...props }) => {
 
   return (
 
-    <div className={`${props.classes} "wrapper"`} wrapper-type={props.type}>
+    <div className={`${props.classes} wrapper`} wrapper-type={props.type}>
       {props.children}
     </div>
 

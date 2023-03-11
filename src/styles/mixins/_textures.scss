@@ -1,0 +1,4 @@
+@mixin stipple($color: transparent) {
+  background-image: radial-gradient(rgba($color, .08) .5px, transparent .5px);
+  background-size: calc(10 * .5px) calc(10 * .5px);
+}

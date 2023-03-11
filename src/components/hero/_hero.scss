@@ -33,3 +33,14 @@
   display: flex;
   flex-direction: column;
 }
+
+
+[hero-theme~="shaded"] {
+  background-color: $black;
+
+  .hero-asset {
+    filter: grayscale(50%);
+    opacity: .48;
+  }
+
+}

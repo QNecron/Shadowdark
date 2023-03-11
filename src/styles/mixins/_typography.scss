@@ -1,0 +1,11 @@
+@mixin outlined($color: transparent) {
+  outline-color: rgba($color, 0);
+  outline-offset: rem(-4);
+
+  &:focus {
+    outline-color: rgba($color, .48);
+    outline-style: dashed;
+    outline-width: rem(1);
+  }
+
+}

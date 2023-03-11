@@ -1,0 +1,45 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.header {
+  @include stipple($white);
+  background-color: $black;
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+}
+
+.nav-primary {
+  align-items: center;
+  display: flex;
+}
+
+.nav-primary-logo {
+  margin-right: $space-16;
+}
+
+// @TODO abstract styles to primary button UI
+.nav-primary-link {
+  @extend %black-letter;
+  color: rgba($white, .72);
+  border: solid rem(1) transparent;
+  font-size: rem(14);
+  font-weight: 700;
+  margin-right: $space-8;
+  padding: $space-12 $space-16;
+  text-decoration: none;
+  line-height: rem(14); // creates 40 height
+  @include outlined($white);
+
+  &:focus,
+  &:hover {
+    background-color: rgba($black, .64);
+    border-color: rgba($white, .08);
+    color: $white;
+  }
+
+}

@@ -11,6 +11,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <Page>
 
       <Hero
+        theme="shaded"
         desktop="https://picsum.photos/1600/900"
         desktopH="1080"
         desktopW="1920"
@@ -23,8 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
         alt="Shadowdark Hero"
         x="2"
         y="2"
-        heading="Shadowdark"
-        copy="Something here."
+        logo="white"
       />
 
     </Page>
