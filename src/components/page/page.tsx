@@ -3,6 +3,8 @@ import React from "react"
 import "../../styles/styles.scss"
 
 import Header from "../header/header"
+import Footer from "../footer/footer"
+import Copyright from "../copyright/copyright"
 
 const Page = ({ ...props }) => {
 
@@ -16,7 +18,9 @@ const Page = ({ ...props }) => {
       {props.children}
     </main>
 
-    [My Thing] is an independenmt product published under the Shadowdark RPG Thrid-Partry License and is not affiliated with The Arcane Library, LLC. Shadow RPG &copy; 2023 The Arcane Library.
+    <Footer>
+      <Copyright />
+    </Footer>
 
     </>
 

@@ -24,6 +24,8 @@ h6 { font-size: rem(12); }
 
 // header & footer components
 @import "../components/header/_header";
+@import "../components/footer/_footer";
+@import "../components/copyright/_copyright";
 
 // content components
 @import "../components/hero/_hero";
