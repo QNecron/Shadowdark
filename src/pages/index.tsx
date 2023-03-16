@@ -4,6 +4,8 @@ import type { HeadFC, PageProps } from "gatsby"
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
 
+import Data from "../../json/bestiary.json"
+
 const IndexPage: React.FC<PageProps> = () => {
 
   return (

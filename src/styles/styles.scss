@@ -28,4 +28,9 @@ h6 { font-size: rem(12); }
 @import "../components/copyright/_copyright";
 
 // content components
+@import "../components/grid/_grid";
 @import "../components/hero/_hero";
+@import "../components/section/_section";
+
+// pages
+@import "pages/_bestiary";

@@ -1,0 +1,33 @@
+.bestiary-entry {
+  border: solid rem(1) $white;
+  padding: $space-16;
+}
+
+.bestiary-description {
+  padding-top: $space-8;
+}
+
+.bestiary-details,
+.bestiary-stats,
+.bestiary-attack,
+.bestiary-abilities,
+.bestiary-spells {
+  border-top: solid rem(1) rgba($white, .48);
+  font-size: rem(14);
+  margin-top: $space-8;
+  padding-top: $space-8;
+}
+
+.bestiary-details,
+.bestiary-stats {
+  display: flex;
+
+  > * {
+    margin-right: $space-8;
+  }
+
+}
+
+.bestiary-ability:not(:first-of-type) {
+  padding-top: $space-8;
+}

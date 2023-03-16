@@ -18,7 +18,7 @@ const config: GatsbyConfig = {
     options: {
       fonts: [
         `Oswald\:300`,
-        `Roboto\:400,400i,700` // you can also specify font weights and styles
+        `Montserrat\:400,400i,700` // you can also specify font weights and styles
       ],
       display: 'swap'
     }

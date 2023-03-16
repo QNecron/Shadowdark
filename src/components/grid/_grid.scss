@@ -10,11 +10,13 @@
 @include media($mq-desktop) {
   [grid-desktop="1"] > * { grid-column: span 12; }
   [grid-desktop="2"] > * { grid-column: span 6; }
+  [grid-desktop="3"] > * { grid-column: span 4; }
   [grid-desktop="4"] > * { grid-column: span 3; }
 }
 @include media($mq-tablet-range) {
   [grid-tablet="1"] > * { grid-column: span 12; }
   [grid-tablet="2"] > * { grid-column: span 6; }
+  [grid-tablet="3"] > * { grid-column: span 4; }
   [grid-tablet="4"] > * { grid-column: span 3; }
 }
 @include media($mq-mobile) {
