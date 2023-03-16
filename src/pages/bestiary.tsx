@@ -6,6 +6,7 @@ import Hero from "../components/hero/hero"
 import Section from "../components/section/section"
 import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
+import BestiaryCard from "../components/card/bestiary"
 
 import Data from "../../json/bestiary.json"
 
@@ -56,52 +57,33 @@ const Bestiary: React.FC<PageProps> = () => {
 
               return(
 
-                <article id={index} className="bestiary-entry" key={index}>
-
-                  <h3 className="bestiary-name">{data.name}</h3>
-
-                  <p className="bestiary-description">{data.description}</p>
-
-                  <div className="bestiary-details">
-                    <div><strong>LV:</strong> {data.level}</div>
-                    <div><strong>HP:</strong> {data.hitpoints}</div>
-                    <div><strong>AC:</strong> {data.armorclass}</div>
-                    <div><strong>AL:</strong> {data.alignment}</div>
-                    <div><strong>MV:</strong> {data.move}</div>
-                  </div>
-
-                  <div className="bestiary-stats">
-                    <div><strong>S:</strong> {data.str}</div>
-                    <div><strong>D:</strong> {data.dex}</div>
-                    <div><strong>C:</strong> {data.con}</div>
-                    <div><strong>I:</strong> {data.int}</div>
-                    <div><strong>W:</strong> {data.wis}</div>
-                    <div><strong>Ch:</strong> {data.cha}</div>
-                  </div>
-
-                  <div className="bestiary-attack">{data.attack}</div>
-
-                  {data.ability_1 &&
-                    <div className="bestiary-abilities">
-                      {data.ability_1 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: data.ability_1}}></div> : ""}
-                      {data.ability_2 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: data.ability_2}}></div> : ""}
-                      {data.ability_3 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: data.ability_3}}></div> : ""}
-                      {data.ability_4 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: data.ability_4}}></div> : ""}
-                      {data.ability_5 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: data.ability_5}}></div> : ""}
-                    </div>
-                  }
-
-                  {data.spell_1 &&
-                    <div className="bestiary-spells">
-                      {data.spell_1 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: data.spell_1}}></div> : ""}
-                      {data.spell_2 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: data.spell_2}}></div> : ""}
-                      {data.spell_3 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: data.spell_3}}></div> : ""}
-                      {data.spell_4 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: data.spell_4}}></div> : ""}
-                      {data.spell_5 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: data.spell_5}}></div> : ""}
-                    </div>
-                  }
-
-                </article>
+                <BestiaryCard
+                  index={index}
+                  name={data.name}
+                  description={data.description}
+                  level={data.level}
+                  hitpoints={data.hitpoints}
+                  armorclass={data.armorclass}
+                  alignment={data.alignment}
+                  move={data.move}
+                  str={data.str}
+                  dex={data.dex}
+                  con={data.con}
+                  int={data.int}
+                  wis={data.wis}
+                  cha={data.cha}
+                  attack={data.attack}
+                  ability_1={data.ability_1}
+                  ability_2={data.ability_2}
+                  ability_3={data.ability_3}
+                  ability_4={data.ability_4}
+                  ability_5={data.ability_5}
+                  spell_1={data.spell_1}
+                  spell_2={data.spell_2}
+                  spell_3={data.spell_3}
+                  spell_4={data.spell_4}
+                  spell_5={data.spell_5}
+                />
 
               )
 

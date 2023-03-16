@@ -15,17 +15,32 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas:
-    "a b c"
-    "d e f"
-    "g h i"
-  ;
   height: 100%;
+
+  // media
+  @include media($mq-tablet-up) {
+    grid-template-areas:
+      "a b c"
+      "d e f"
+      "g h i"
+    ;
+  }
+  @include media($mq-mobile) {
+    grid-template-areas:
+      "a a a"
+      "b b b"
+      "c c c"
+    ;
+  }
+
 }
 
 [hero-x="2"][hero-y="2"] .hero-content {
-  grid-area: e;
   justify-content: center;
+
+  // media
+  @include media($mq-tablet-up) { grid-area: e; }
+  @include media($mq-mobile) { grid-area: b; }
 }
 
 .hero-content {
