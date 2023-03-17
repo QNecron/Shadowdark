@@ -16,7 +16,8 @@
     "attack": "2 tentacle (near) +5 (1d8 + curse) or tail +5 (3d6)",
     "ability_1": "<strong>Curse.</strong> DC 15 CON or target gains a magical curse, turning into a deep one over 2d10 days.",
     "ability_2": "<strong>Enslave.</strong> In place of attacks, one creature within far DC 15 WIS or aboleth controls for 1d4 rounds.",
-    "ability_3": "<strong>Telepathic.</strong> Read the thoughts of all creatures within far."
+    "ability_3": "<strong>Telepathic.</strong> Read the thoughts of all creatures within far.",
+    "source": "core"
   },
   {
     "name": "Acolyte",
@@ -33,7 +34,8 @@
     "wis": "+2",
     "cha": "+0",
     "attack": "1 mace +1 (1d6) or 1 spell +2",
-    "spell_1": "<strong>Healing Touch.</strong> DC 11. Heal one creature within close for 1d4 HP."
+    "spell_1": "<strong>Healing Touch.</strong> DC 11. Heal one creature within close for 1d4 HP.",
+    "source": "core"
   },
   {
     "name": "Animated Armor",
@@ -50,7 +52,8 @@
     "wis": "+1",
     "cha": "+0",
     "attack": "1 longsword +3 (1d8)",
-    "ability_1": "<strong>Statue.</strong> When standing still, looks exactly like a suit of armor."
+    "ability_1": "<strong>Statue.</strong> When standing still, looks exactly like a suit of armor.",
+    "source": "core"
   },
   {
     "name": "Bandit",
@@ -67,7 +70,8 @@
     "wis": "+0",
     "cha": "-1",
     "attack": "1 club +1 (1d4) or shortbow (far) +0 (1d4)",
-    "ability_1": "<strong>Ambush.</strong> Deal an extra die of damage when undetected."
+    "ability_1": "<strong>Ambush.</strong> Deal an extra die of damage when undetected.",
+    "source": "core"
   },
   {
     "name": "Bat, Giant",
@@ -83,7 +87,8 @@
     "int": "-3",
     "wis": "+1",
     "cha": "-3",
-    "attack": "1 bite +2 (1d6)"
+    "attack": "1 bite +2 (1d6)",
+    "source": "core"
   },
   {
     "name": "Bear, Brown",
@@ -100,7 +105,8 @@
     "wis": "+1",
     "cha": "-2",
     "attack": "2 claws +4 (1d8)",
-    "ability_1": "<strong>Crush.</strong> Deals an extra die of damage if it hits the same target with both claws."
+    "ability_1": "<strong>Crush.</strong> Deals an extra die of damage if it hits the same target with both claws.",
+    "source": "core"
   },
   {
     "name": "Beastman",
@@ -117,7 +123,8 @@
     "wis": "+1",
     "cha": "-1",
     "attack": "1 spear (close/near) +2 (1d6 + 1)",
-    "ability_1": "<strong>Brutal.</strong> +1 damage with melee weapons (included)."
+    "ability_1": "<strong>Brutal.</strong> +1 damage with melee weapons (included).",
+    "source": "core"
   },
   {
     "name": "Boar",
@@ -134,6 +141,7 @@
     "wis": "+1",
     "cha": "-1",
     "attack": "2 tusk +3 (1d6)",
-    "ability_1": "<strong>Gore.</strong> Deals an extra die of damage if it hits the same target with both tusks."
+    "ability_1": "<strong>Gore.</strong> Deals an extra die of damage if it hits the same target with both tusks.",
+    "source": "core"
   }
 ]

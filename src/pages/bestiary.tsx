@@ -37,17 +37,13 @@ const Bestiary: React.FC<PageProps> = () => {
 
         <Wrapper>
 
-          <Grid
-            desktop="3"
-            tablet="3"
-            mobile="1"
-          >
+          <Grid desktop="3" tablet="3" mobile="1">
 
             {Data.map((data, index) => {
 
-
               let alphaFilter = data.name.charAt(0).toLowerCase()
               let levelFilter = data.level
+              let sourceFilter = data.source
 
               // alphabetical filter
               // if (alphaFilter !== "a") return null
@@ -55,10 +51,14 @@ const Bestiary: React.FC<PageProps> = () => {
               // level filter
               // if (levelFilter !== 3) return null
 
+              // source filter
+              // if (sourceFilter !== "core") return null
+
               return(
 
                 <BestiaryCard
-                  index={index}
+                  key={index}
+                  source={data.source}
                   name={data.name}
                   description={data.description}
                   level={data.level}

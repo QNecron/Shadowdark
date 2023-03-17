@@ -1,6 +1,6 @@
 .footer {
   @include stipple($white);
   background-color: $black;
-  padding-top: 8vh;
+  padding-top: $space-32;
   padding-bottom: $space-32;
 }

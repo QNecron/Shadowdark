@@ -1,9 +1,21 @@
 import React from "react"
 
+import LogoTAL from "../../images/icon.webp"
+
 const BestiaryCard = ({ ...props }) => {
 
   return (
-    <article id={props.index} className="bestiary-card" key={props.index}>
+    <article className="bestiary-card" key={props.key}>
+
+      {props.source &&
+        <img
+          src={props.source ? LogoTAL : ""}
+          className="bestiary-source"
+          height="32"
+          width="32"
+          alt={`source book: ${props.source}`}
+        />
+      }
 
       <h3 className="bestiary-name">{props.name}</h3>
 

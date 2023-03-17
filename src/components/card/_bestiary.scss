@@ -1,6 +1,15 @@
 .bestiary-card {
   border: solid rem(1) $white;
   padding: $space-16;
+  position: relative;
+}
+
+.bestiary-source {
+  height: $space-32;
+  width: $space-32;
+  position: absolute;
+  top: $space-16;
+  right: $space-16;
 }
 
 .bestiary-description {

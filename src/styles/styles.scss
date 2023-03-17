@@ -20,6 +20,7 @@ h6 { font-size: rem(12); }
 
 // core components
 @import "../components/grid/_grid";
+@import "../components/section/_section";
 @import "../components/wrapper/_wrapper";
 
 // header & footer components
@@ -28,9 +29,7 @@ h6 { font-size: rem(12); }
 @import "../components/copyright/_copyright";
 
 // content components
-@import "../components/grid/_grid";
 @import "../components/hero/_hero";
-@import "../components/section/_section";
 
 // pages
 @import "../components/card/_bestiary";
