@@ -1,8 +1,6 @@
 .header-container {
   position: sticky;
   top: 0;
-  right: 0;
-  left: 0;
   z-index: 9;
 }
 
@@ -18,53 +16,6 @@
   display: flex;
 }
 
-.nav-primary-logo {
+.nav-logo {
   margin-right: $space-16;
-}
-
-// @TODO abstract styles to primary button UI
-.nav-primary-link,
-.nav-secondary-link {
-  @extend %black-letter;
-  color: rgba($white, .72);
-  border: solid rem(1) transparent;
-  font-size: rem(14);
-  font-weight: 700;
-  padding: $space-12 $space-16;
-  text-decoration: none;
-  line-height: rem(14); // creates 40 height
-  @include outlined($white);
-
-  &:focus,
-  &:hover {
-    background-color: rgba($black, .64);
-    border-color: rgba($white, .08);
-    color: $white;
-  }
-
-}
-
-.nav-primary-link {
-  margin-right: $space-8;
-}
-
-.nav-secondary {
-  backdrop-filter: blur($space-4);
-  background: rgba($black, .48);
-  padding: $space-32;
-  height: 100vh;
-  width: rem(320);
-  position: fixed;
-  top: $space-72;
-  left: 0;
-  z-index: 9;
-  transition: .48s cubic-bezier(.5,.25,0,1);
-}
-
-[nav-open="false"] {
-  transform: translate(-104%, 0);
-}
-
-.nav-secondary-link {
-  display: block;
 }

@@ -1,0 +1,72 @@
+.btn,
+.btn-tab {
+  border: solid rem(1) transparent;
+  font-size: rem(14);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  line-height: rem(14); // creates 40 height
+}
+
+.btn {
+  padding: $space-12 $space-16;
+}
+
+a.btn {
+  display: block;
+
+  ~ .btn {
+    margin-top: $space-8;
+  }
+
+}
+
+.btn-tab {
+  padding-top: $space-12;
+  padding-bottom: $space-12;
+}
+
+.btn-icon {
+  border: solid rem(1) transparent;
+  padding: $space-8;
+  height: $space-40;
+  width: $space-40;
+}
+
+.btn-primary {
+  background-color: rgba($black, .64);
+  border-color: rgba($white, .08);
+  color: $white;
+  @include outlined($white);
+  @include shadows(1, 0);
+
+  &:focus,
+  &:hover,
+  &[aria-selected="true"] {
+    background-color: rgba($black, .88);
+    border-color: rgba($white, .32);
+    color: $white;
+  }
+
+}
+
+.btn-secondary {
+  background-color: rgba($white, .88);
+  border-color: $white;
+  color: $black;
+  @include outlined($white);
+  @include shadows(1, 0);
+
+  &:focus,
+  &:hover,
+  &[aria-selected="true"] {
+    background-color: rgba($black, .88);
+    color: $white;
+
+    .icon {
+      filter: invert(100%);
+    }
+
+  }
+
+}

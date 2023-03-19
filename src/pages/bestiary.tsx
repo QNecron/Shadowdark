@@ -1,16 +1,28 @@
-import * as React from "react"
+import React, { useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
+import NavFlyout from "../components/nav/nav-flyout"
 import Section from "../components/section/section"
 import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
 import BestiaryCard from "../components/card/bestiary"
+import Tabs from "../components/tabs/tabs"
 
-import Data from "../../json/bestiary.json"
+import Alphabet from "../../json/alphabet.json"
+import Numeric from "../../json/numeric.json"
+
+import Core from "../../json/bestiary_core.json"
+import Custom from "../../json/bestiary_custom.json"
 
 const Bestiary: React.FC<PageProps> = () => {
+
+  const [alpha, alphaUpdate] = useState("all")
+  const [level, levelUpdate] = useState("all")
+  const [source, sourceUpdate] = useState("all")
+
+  const Data = Core.concat(Custom)
 
   return (
 
@@ -33,7 +45,47 @@ const Bestiary: React.FC<PageProps> = () => {
         logo="white"
       />
 
-      <Section>
+      { /*
+
+      */ }
+
+      <Wrapper classes="filter-wrapper">
+
+        <nav className="filter" aria-label="Bestiary Filters" role="navigation">
+
+          <NavFlyout
+            btnClass="btn btn-primary"
+            btnCopy="Filters"
+            navId="filters"
+            navClass="nav-secondary"
+          >
+
+            <Tabs
+              data={Alphabet}
+              state={alpha}
+              click={alphaUpdate}
+              tabClass="filters-alpha"
+              btnClass="btn-primary"
+            />
+
+            <Tabs
+              data={Numeric}
+              state={level}
+              click={levelUpdate}
+              tabClass="filters-numeric"
+              btnClass="btn-primary"
+            />
+
+            <button className="nav-secondary-link" onClick={(e) => sourceUpdate("core")}>Core</button>
+            <button className="nav-secondary-link" onClick={(e) => sourceUpdate("custom")}>Custom</button>
+            <button className="nav-secondary-link" onClick={(e) => sourceUpdate("all")}>All</button>
+          </NavFlyout>
+
+        </nav>
+
+      </Wrapper>
+
+      <Section theme="bot">
 
         <Wrapper>
 
@@ -41,18 +93,18 @@ const Bestiary: React.FC<PageProps> = () => {
 
             {Data.map((data, index) => {
 
-              let alphaFilter = data.name.charAt(0).toLowerCase()
+              let alphaFilter = data.name.charAt(0)
               let levelFilter = data.level
               let sourceFilter = data.source
 
               // alphabetical filter
-              // if (alphaFilter !== "a") return null
+              if (alphaFilter !== alpha && alpha !== "*") return null
 
               // level filter
-              // if (levelFilter !== 3) return null
+              if (levelFilter !== level && level !== "*") return null
 
               // source filter
-              // if (sourceFilter !== "core") return null
+              if (sourceFilter !== source && source !== "all") return null
 
               return(
 

@@ -1,5 +1,16 @@
 .section {
+  position: relative;
+}
+
+[section-theme~="both"] {
   padding-top: 8vh;
   padding-bottom: 8vh;
-  position: relative;
+}
+
+[section-theme~="top"] {
+  padding-top: 8vh;
+}
+
+[section-theme~="bot"] {
+  padding-bottom: 8vh;
 }

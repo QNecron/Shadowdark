@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Zombie, Spellgorged",
+    "description": "The shambling zombie shuffles forward, opens its mouth in a silent moan, and suddenly spits out a gout of searing fire.",
+    "level": 3,
+    "hitpoints": 19,
+    "armorclass": "14",
+    "alignment": "C",
+    "move": "near",
+    "str": "+1",
+    "dex": "+1",
+    "con": "+2",
+    "int": "-2",
+    "wis": "+2",
+    "cha": "-1",
+    "attack": "1 slam +1 (1d6) or one spell +2",
+    "ability_3": "<strong>Undead.</strong> Immune to morale checks.",
+    "spell_1": "<strong>Burning Hands.</strong> DC 12. Creatures within the area of effect take 1d6 damage. Unattended flammable objects ignite.",
+    "source": "custom"
+  }
+]

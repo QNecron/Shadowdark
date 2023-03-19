@@ -6,7 +6,7 @@ const Section = ({ ...props }) => {
     <section
       id={props.id}
       className={`${props.classes ? props.classes+" " : ""}section`}
-      section-theme={props.theme}
+      section-theme={props.theme || "both"}
     >
       {props.children}
     </section>

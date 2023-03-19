@@ -7,9 +7,9 @@ const BestiaryCard = ({ ...props }) => {
   return (
     <article className="bestiary-card" key={props.key}>
 
-      {props.source &&
+      {props.source === "core" &&
         <img
-          src={props.source ? LogoTAL : ""}
+          src={LogoTAL}
           className="bestiary-source"
           height="32"
           width="32"

@@ -1,0 +1,22 @@
+@mixin shadows($box: 0, $text: 0, $color: black) {
+
+  $b-shadow: none;
+  $t-shadow: none;
+
+  // box shadow
+  @if $box > 0 {
+
+    @if $box == 1 { $b-shadow: 0 rem(1) rem(2) rgba($color, .16), 0 rem(3) rem(4) rgba($color, .32) }
+
+    box-shadow: $b-shadow;
+
+  }
+
+  // text shadow
+  @if $text > 0 {
+
+    text-shadow: $t-shadow;
+
+  }
+
+}

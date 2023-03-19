@@ -1,0 +1,16 @@
+.filters-alpha,
+.filters-numeric {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-8;
+
+  > * {
+    flex: 1 0 20%;
+    max-width: $space-40;
+  }
+
+}
+
+.filters-numeric {
+  margin-top: $space-32;
+}

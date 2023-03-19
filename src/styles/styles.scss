@@ -1,22 +1,9 @@
 @import "_base";
 @import "_reset";
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 300;
-  letter-spacing: rem(2);
-}
-
-h1 { font-size: rem(48); }
-h2 { font-size: rem(40); }
-h3 { font-size: rem(32); }
-h4 { font-size: rem(24); }
-h5 { font-size: rem(16); }
-h6 { font-size: rem(12); }
+// core
+@import "core/_buttons";
+@import "core/_typography";
 
 // core components
 @import "../components/grid/_grid";
@@ -26,10 +13,13 @@ h6 { font-size: rem(12); }
 // header & footer components
 @import "../components/header/_header";
 @import "../components/footer/_footer";
+@import "../components/nav/_nav-flyout";
 @import "../components/copyright/_copyright";
 
 // content components
 @import "../components/hero/_hero";
+@import "../components/icon/_icon";
 
 // pages
 @import "../components/card/_bestiary";
+@import "pages/_filters";

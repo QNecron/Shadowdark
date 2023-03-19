@@ -3,7 +3,7 @@ import React from "react"
 const Image = ({ ...props }) => {
 
   return (
-    <picture className={`${props.classes} asset-container`}>
+    <picture className={`${props.classes ? props.classes+" " : ""}asset-container`}>
 
       {props.desktop ?
         <source srcSet={props.desktop}

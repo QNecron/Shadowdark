@@ -2,14 +2,18 @@
 
 // functions
 @import "functions/_rem";
+
 // placeholders
 @import "placeholders/_ratios";
 @import "placeholders/_typography";
+
 // mixins
 @import "mixins/_media-query";
+@import "mixins/_shadows";
 @import "mixins/_textures";
 @import "mixins/_typography";
 @import "mixins/_webkit";
+
 // variables
 @import "variables/_colors";
 @import "variables/_media-queries";

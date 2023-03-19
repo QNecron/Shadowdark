@@ -1,18 +1,13 @@
-import React, { useState } from "react"
+import * as React from "react"
 import { Link } from "gatsby"
 
 import Image from "../image/image"
 import Wrapper from "../wrapper/wrapper"
+import NavFlyout from "../nav/nav-flyout"
 
 import Logo from "../../images/icon.webp"
 
 const Header = ({ ...props }) => {
-
-  const [menu, menuUpdate] = useState(false)
-
-  const menuToggle = () => {
-    menuUpdate((current) => !current);
-  }
 
   return (
 
@@ -24,29 +19,26 @@ const Header = ({ ...props }) => {
 
           <nav className="nav" aria-label="Site Navigation" role="navigation">
 
-            <Image
-              classes="nav-primary-logo"
-              mobile={Logo}
-              mobileH="32"
-              mobileW="32"
-              alt="My Thing | Replace Logo"
-            />
+            <Link className="nav-logo" to="/">
+              <Image
+                mobile={Logo}
+                mobileH="32"
+                mobileW="32"
+                alt="My Thing | Replace Logo"
+              />
+            </Link>
 
-            <button
-              className="nav-primary-link"
-              aria-expanded={menu}
-              aria-controls="nav"
-              onClick={menuToggle}
+            <NavFlyout
+              btnClass="btn btn-primary"
+              btnCopy="Menu"
+              navId="nav"
+              navClass="nav-primary"
             >
-              Menu
-            </button>
-
-            <div id="nav" className="nav-secondary" nav-open={menu.toString()}>
-              <Link className="nav-secondary-link" to="/">Home</Link>
-              <Link className="nav-secondary-link" to="/">Creator</Link>
-              <Link className="nav-secondary-link" to="/">Spells</Link>
-              <Link className="nav-secondary-link" to="/bestiary">Bestiary</Link>
-            </div>
+              {/* change btn-primary => btn-link */}
+              <Link className="btn btn-primary" to="/">Creator</Link>
+              <Link className="btn btn-primary" to="/">Spells</Link>
+              <Link className="btn btn-primary" to="/bestiary">Bestiary</Link>
+            </NavFlyout>
 
           </nav>
 

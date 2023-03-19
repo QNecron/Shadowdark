@@ -2,3 +2,11 @@
   letter-spacing: rem(1);
   text-transform: uppercase;
 }
+
+%screen-reader-text {
+  clip: rect(rem(1),rem(1),rem(1),rem(1));
+  height: rem(1);
+  width: rem(1);
+  overflow: hidden;
+  position: absolute;
+}
