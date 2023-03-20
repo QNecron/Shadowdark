@@ -7,7 +7,7 @@
   position: fixed;
   top: $space-72;
   z-index: 9;
-  transition: .48s cubic-bezier(.5,.25,0,1);
+  transition: .48s cubic-bezier(.5,.25,0,1) 0s;
 }
 
 .nav-flyout-content {

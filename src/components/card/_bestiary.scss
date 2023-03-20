@@ -1,5 +1,5 @@
 .bestiary-card {
-  border: solid rem(1) $white;
+  border: solid rem(1) rgba($white, .32);
   padding: $space-16;
   position: relative;
 }
@@ -21,7 +21,7 @@
 .bestiary-attack,
 .bestiary-abilities,
 .bestiary-spells {
-  border-top: solid rem(1) rgba($white, .48);
+  border-top: solid rem(1) rgba($white, .16);
   font-size: rem(14);
   margin-top: $space-8;
   padding-top: $space-8;
