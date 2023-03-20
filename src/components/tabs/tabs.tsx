@@ -4,6 +4,10 @@ const Tabs = ({ ...props }) => {
 
   return(
 
+    <>
+
+    {props.children}
+
     <div className={props.tabClass}>
       {props.data.map((info, index) =>
         <button
@@ -16,6 +20,8 @@ const Tabs = ({ ...props }) => {
         </button>
       )}
     </div>
+
+    </>
 
   )
 

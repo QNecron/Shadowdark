@@ -1,8 +1,15 @@
+.filter-heading {
+  border-bottom: solid rem(1) rgba($white, .08);
+  margin-bottom: $space-16;
+  line-height: $space-40;
+}
+
 .filters-alpha,
 .filters-numeric {
   display: flex;
   flex-wrap: wrap;
-  gap: $space-8;
+  gap: rem(14);
+  margin-bottom: $space-16;
 
   > * {
     flex: 1 0 20%;
@@ -11,6 +18,8 @@
 
 }
 
-.filters-numeric {
-  margin-top: $space-32;
+.filters-source {
+  display: flex;
+  flex-direction: column;
+  gap: $space-16;
 }

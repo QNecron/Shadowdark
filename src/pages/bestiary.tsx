@@ -12,15 +12,16 @@ import Tabs from "../components/tabs/tabs"
 
 import Alphabet from "../../json/alphabet.json"
 import Numeric from "../../json/numeric.json"
+import Sources from "../../json/sources.json"
 
 import Core from "../../json/bestiary_core.json"
 import Custom from "../../json/bestiary_custom.json"
 
 const Bestiary: React.FC<PageProps> = () => {
 
-  const [alpha, alphaUpdate] = useState("all")
-  const [level, levelUpdate] = useState("all")
-  const [source, sourceUpdate] = useState("all")
+  const [alpha, alphaUpdate] = useState("*")
+  const [level, levelUpdate] = useState("*")
+  const [source, sourceUpdate] = useState("*")
 
   const Data = Core.concat(Custom)
 
@@ -45,10 +46,6 @@ const Bestiary: React.FC<PageProps> = () => {
         logo="white"
       />
 
-      { /*
-
-      */ }
-
       <Wrapper classes="filter-wrapper">
 
         <nav className="filter" aria-label="Bestiary Filters" role="navigation">
@@ -65,20 +62,28 @@ const Bestiary: React.FC<PageProps> = () => {
               state={alpha}
               click={alphaUpdate}
               tabClass="filters-alpha"
-              btnClass="btn-primary"
-            />
+            >
+              <h5 className="filter-heading">Name</h5>
+            </Tabs>
 
             <Tabs
               data={Numeric}
               state={level}
               click={levelUpdate}
               tabClass="filters-numeric"
-              btnClass="btn-primary"
-            />
+            >
+              <h5 className="filter-heading">Level</h5>
+            </Tabs>
 
-            <button className="nav-secondary-link" onClick={(e) => sourceUpdate("core")}>Core</button>
-            <button className="nav-secondary-link" onClick={(e) => sourceUpdate("custom")}>Custom</button>
-            <button className="nav-secondary-link" onClick={(e) => sourceUpdate("all")}>All</button>
+            <Tabs
+              data={Sources}
+              state={source}
+              click={sourceUpdate}
+              tabClass="filters-source"
+            >
+              <h5 className="filter-heading">Source</h5>
+            </Tabs>
+
           </NavFlyout>
 
         </nav>
@@ -104,7 +109,7 @@ const Bestiary: React.FC<PageProps> = () => {
               if (levelFilter !== level && level !== "*") return null
 
               // source filter
-              if (sourceFilter !== source && source !== "all") return null
+              if (sourceFilter !== source && source !== "*") return null
 
               return(
 

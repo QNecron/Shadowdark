@@ -1,6 +1,6 @@
 .nav-flyout {
   backdrop-filter: blur($space-4);
-  background: rgba($black, .72);
+  background: rgba($black, .8);
   padding: $space-32;
   height: 100vh;
   width: rem(320);
@@ -8,6 +8,16 @@
   top: $space-72;
   z-index: 9;
   transition: .48s cubic-bezier(.5,.25,0,1);
+}
+
+.nav-flyout-content {
+
+  // media
+  @include media($mq-mobile) {
+    max-height: calc(100vh - rem(136));
+    overflow-y: auto;
+  }
+
 }
 
 .nav-flyout-close {
