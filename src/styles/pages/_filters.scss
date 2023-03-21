@@ -1,4 +1,15 @@
-.filter-heading {
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: $space-16;
+  margin-left: auto;
+  max-width: 50%;
+  position: sticky;
+  top: $space-16;
+  z-index: 9;
+}
+
+.filters-heading {
   border-bottom: solid rem(1) rgba($white, .08);
   margin-bottom: $space-16;
   line-height: $space-40;

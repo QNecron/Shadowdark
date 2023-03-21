@@ -22,8 +22,8 @@ const Header = ({ ...props }) => {
             <Link className="nav-logo" to="/">
               <Image
                 mobile={Logo}
-                mobileH="32"
-                mobileW="32"
+                mobileH="40"
+                mobileW="40"
                 alt="My Thing | Replace Logo"
               />
             </Link>

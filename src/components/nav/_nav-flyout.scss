@@ -1,5 +1,5 @@
 .nav-flyout {
-  backdrop-filter: blur($space-4);
+  backdrop-filter: blur($space-8);
   background: rgba($black, .8);
   padding: $space-32;
   height: 100vh;
@@ -8,6 +8,7 @@
   top: $space-72;
   z-index: 9;
   transition: .48s cubic-bezier(.5,.25,0,1) 0s;
+  @include shadows(1, 0);
 }
 
 .nav-flyout-content {

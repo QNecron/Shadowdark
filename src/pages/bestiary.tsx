@@ -46,53 +46,49 @@ const Bestiary: React.FC<PageProps> = () => {
         logo="white"
       />
 
-      <Wrapper classes="filter-wrapper">
-
-        <nav className="filter" aria-label="Bestiary Filters" role="navigation">
-
-          <NavFlyout
-            btnClass="btn btn-primary"
-            btnCopy="Filters"
-            navId="filters"
-            navClass="nav-secondary"
-          >
-
-            <Tabs
-              data={Alphabet}
-              state={alpha}
-              click={alphaUpdate}
-              tabClass="filters-alpha"
-            >
-              <h5 className="filter-heading">Name</h5>
-            </Tabs>
-
-            <Tabs
-              data={Numeric}
-              state={level}
-              click={levelUpdate}
-              tabClass="filters-numeric"
-            >
-              <h5 className="filter-heading">Level</h5>
-            </Tabs>
-
-            <Tabs
-              data={Sources}
-              state={source}
-              click={sourceUpdate}
-              tabClass="filters-source"
-            >
-              <h5 className="filter-heading">Source</h5>
-            </Tabs>
-
-          </NavFlyout>
-
-        </nav>
-
-      </Wrapper>
-
-      <Section theme="bot">
+      <Section>
 
         <Wrapper>
+
+          <nav className="filters" aria-label="Bestiary Filters" role="navigation">
+
+            <NavFlyout
+              btnClass="btn btn-primary"
+              btnCopy="Filters"
+              navId="filters"
+              navClass="nav-secondary"
+            >
+
+              <Tabs
+                data={Alphabet}
+                state={alpha}
+                click={alphaUpdate}
+                tabClass="filters-alpha"
+              >
+                <h5 className="filters-heading">Name</h5>
+              </Tabs>
+
+              <Tabs
+                data={Numeric}
+                state={level}
+                click={levelUpdate}
+                tabClass="filters-numeric"
+              >
+                <h5 className="filters-heading">Level</h5>
+              </Tabs>
+
+              <Tabs
+                data={Sources}
+                state={source}
+                click={sourceUpdate}
+                tabClass="filters-source"
+              >
+                <h5 className="filters-heading">Source</h5>
+              </Tabs>
+
+            </NavFlyout>
+
+          </nav>
 
           <Grid desktop="3" tablet="3" mobile="1">
 

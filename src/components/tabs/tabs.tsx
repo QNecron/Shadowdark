@@ -6,6 +6,7 @@ const Tabs = ({ ...props }) => {
 
     <>
 
+    {/* not sure if I like this.. */}
     {props.children}
 
     <div className={props.tabClass}>
