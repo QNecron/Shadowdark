@@ -48,7 +48,7 @@ const Hero = ({ ...props }) => {
               }
 
               {props.heading ?
-                <h1 className="hero-heading">
+                <h1 className="hero-heading heading-1">
                   {props.heading}
                 </h1>
               : ""}

@@ -1,6 +1,7 @@
 .footer {
   @include stipple($white);
   background-color: $black;
+  border-top: solid rem(1) rgba($white, .08);
   padding-top: $space-32;
   padding-bottom: $space-32;
 }

@@ -2,18 +2,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+[class*="heading-"] {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  letter-spacing: rem(2);
 }
 
-h1 { font-size: rem(48); }
-h2 { font-size: rem(40); }
-h3 { font-size: rem(32); }
-h4 { font-size: rem(24); }
-h5 { font-size: rem(16); }
-h6 { font-size: rem(12); }
+.heading-1 { @include heading(1); }
+.heading-2 { @include heading(2); }
+.heading-3 { @include heading(3); }
+.heading-4 { @include heading(4); }
+.heading-5 { @include heading(5); }
+.heading-6 { @include heading(6); }
+
 
 .srt {
   @extend %screen-reader-text;

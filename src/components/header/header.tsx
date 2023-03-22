@@ -34,10 +34,9 @@ const Header = ({ ...props }) => {
               navId="nav"
               navClass="nav-primary"
             >
-              {/* change btn-primary => btn-link */}
-              <Link className="btn btn-primary" to="/">Creator</Link>
-              <Link className="btn btn-primary" to="/">Spells</Link>
               <Link className="btn btn-primary" to="/bestiary">Bestiary</Link>
+              <Link className="btn btn-primary" to="/creator">Creator</Link>
+              <Link className="btn btn-primary" to="/spells">Spells</Link>
             </NavFlyout>
 
           </nav>

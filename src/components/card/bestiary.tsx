@@ -5,12 +5,13 @@ const BestiaryCard = ({ ...props }) => {
   return (
     <article className={`bestiary-card${props.source ? " "+props.source : ""}`} key={props.key}>
 
-      <h3 className="bestiary-name">{props.name}</h3>
+      <h2 className="bestiary-name heading-3">{props.name}</h2>
 
       <p className="bestiary-description">{props.description}</p>
 
+      <div className="bestiary-level">{props.level}</div>
+
       <div className="bestiary-details">
-        <div className="bestiary-detail"><strong>LV:</strong> {props.level}</div>
         <div className="bestiary-detail"><strong>HP:</strong> {props.hitpoints}</div>
         <div className="bestiary-detail"><strong>AC:</strong> {props.armorclass}</div>
         <div className="bestiary-detail"><strong>AL:</strong> {props.alignment}</div>

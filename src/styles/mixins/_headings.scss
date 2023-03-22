@@ -1,0 +1,14 @@
+@mixin heading($type: 1, $spacing: 2) {
+
+  $size: 0;
+
+  @if $type == 1 { $size: 56; }
+  @if $type == 2 { $size: 40; }
+  @if $type == 3 { $size: 32; }
+  @if $type == 4 { $size: 24; }
+  @if $type == 5 { $size: 16; }
+  @if $type == 6 { $size: 12; }
+
+  font-size: rem($size);
+  letter-spacing: rem($spacing);
+}

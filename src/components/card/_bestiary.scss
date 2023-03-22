@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.bestiary-name {
+  margin-bottom: $space-8;
+}
+
 .bestiary-source {
   height: $space-32;
   width: $space-32;
@@ -14,6 +18,37 @@
 
 .bestiary-description {
   padding-top: $space-8;
+}
+
+.bestiary-level {
+  align-items: center;
+  // background: $white;
+  // border: solid rem(1) rgba($white, .32);
+  // border-radius: 50%;
+  color: $black;
+  display: flex;
+  font-family: monospace;
+  font-size: rem(12);
+  justify-content: center;
+  height: $space-24;
+  width: $space-24;
+  position: absolute;
+  top: rem(20);
+  right: rem(20);
+  z-index: 1;
+
+  &:before {
+    content: "";
+    background: $white;
+    height: $space-24;
+    width: $space-24;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+
 }
 
 .bestiary-details,

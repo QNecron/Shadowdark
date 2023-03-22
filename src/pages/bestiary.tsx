@@ -65,7 +65,7 @@ const Bestiary: React.FC<PageProps> = () => {
                 click={alphaUpdate}
                 tabClass="filters-alpha"
               >
-                <h5 className="filters-heading">Name</h5>
+                <h5 className="filters-heading heading-5">Name</h5>
               </Tabs>
 
               <Tabs
@@ -74,7 +74,7 @@ const Bestiary: React.FC<PageProps> = () => {
                 click={levelUpdate}
                 tabClass="filters-numeric"
               >
-                <h5 className="filters-heading">Level</h5>
+                <h5 className="filters-heading heading-5">Level</h5>
               </Tabs>
 
               <Tabs
@@ -83,7 +83,7 @@ const Bestiary: React.FC<PageProps> = () => {
                 click={sourceUpdate}
                 tabClass="filters-source"
               >
-                <h5 className="filters-heading">Source</h5>
+                <h5 className="filters-heading heading-5">Source</h5>
               </Tabs>
 
             </NavFlyout>
@@ -92,7 +92,7 @@ const Bestiary: React.FC<PageProps> = () => {
 
           <Grid desktop="3" tablet="3" mobile="1">
 
-            {Data.map((data, index) => {
+            {Data.sort((a, b) => a.Name > b.Name ? -1 : 1).map((data, index) => {
 
               let alphaFilter = data.name.charAt(0)
               let levelFilter = data.level
