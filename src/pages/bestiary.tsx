@@ -43,10 +43,10 @@ const Bestiary: React.FC<PageProps> = () => {
         alt="Shadowdark Hero"
         x="2"
         y="2"
-        logo="white"
+        heading="Bestiary"
       />
 
-      <Section>
+      <Section theme="bot">
 
         <Wrapper>
 

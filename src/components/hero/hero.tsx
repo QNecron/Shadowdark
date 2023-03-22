@@ -24,6 +24,8 @@ const Hero = ({ ...props }) => {
         mobileH={props.mobileH}
         mobileW={props.mobileW}
         alt={props.alt}
+        loading="lazy"
+        priority="high"
       />
 
       <Wrapper classes="hero-wrapper" type={props.wrapper || "structure"}>
@@ -40,6 +42,8 @@ const Hero = ({ ...props }) => {
                   mobile={props.logo === "black" ? LogoBlack : LogoWhite}
                   classes="hero-logo"
                   alt="Shadowdark Logo"
+                  loading="lazy"
+                  priority="high"
                 />
               }
 

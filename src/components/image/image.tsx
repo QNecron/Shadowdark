@@ -26,8 +26,9 @@ const Image = ({ ...props }) => {
           className="asset"
           height={props.mobileH}
           width={props.mobileW}
-          loading="lazy"
           alt={props.alt || " "}
+          loading={props.loading || " "}
+          fetchpriority={props.priority || " "}
         />
       : ""}
 

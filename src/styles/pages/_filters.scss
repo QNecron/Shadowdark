@@ -1,6 +1,7 @@
 .filters {
   display: flex;
   justify-content: flex-end;
+  margin-top: $space-16;
   margin-bottom: $space-16;
   margin-left: auto;
   max-width: 50%;
@@ -19,8 +20,8 @@
 .filters-numeric {
   display: flex;
   flex-wrap: wrap;
-  gap: rem(14);
-  margin-bottom: $space-16;
+  gap: rem(3);
+  margin-bottom: $space-8;
 
   > * {
     flex: 1 0 20%;
@@ -32,5 +33,23 @@
 .filters-source {
   display: flex;
   flex-direction: column;
-  gap: $space-16;
+  gap: $space-8;
+}
+
+.cap-left,
+.cap-mid,
+.cap-right {
+  width: rem(88);
+}
+
+.cap-left {
+
+}
+
+.cap-mid {
+
+}
+
+.cap-right {
+  margin-right: $space-16;
 }

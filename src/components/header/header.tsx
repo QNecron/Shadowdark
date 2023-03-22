@@ -5,7 +5,7 @@ import Image from "../image/image"
 import Wrapper from "../wrapper/wrapper"
 import NavFlyout from "../nav/nav-flyout"
 
-import Logo from "../../images/icon.webp"
+import Logo from "../../images/icons/flame.svg"
 
 const Header = ({ ...props }) => {
 
@@ -24,7 +24,7 @@ const Header = ({ ...props }) => {
                 mobile={Logo}
                 mobileH="40"
                 mobileW="40"
-                alt="My Thing | Replace Logo"
+                alt="Placeholder Logo"
               />
             </Link>
 
