@@ -1,0 +1,26 @@
+.creator-block {
+  @include flex-center("true", "false", "true", 33%);
+  gap: $space-8;
+
+  ~ .creator-block {
+    margin-top: $space-8;
+  }
+
+}
+
+.creator-heading,
+.creator-mod,
+.creator-total {
+  border: solid rem(1) rgba($white, .08);
+  text-align: center;
+  line-height: rem(38); // +2 from border
+  max-width: $space-56;
+}
+
+.creator-heading {
+
+}
+
+.creator-mod {
+
+}

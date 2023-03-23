@@ -1,0 +1,33 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  position: relative;
+}
+
+.input {
+  background-color: rgba($black, .64);
+  border: solid rem(1) rgba($white, .08);
+  color: $white;
+  order: 3;
+  padding: rem(7) $space-8;
+  line-height: $space-24;
+  @include outlined($white);
+  // @include shadows(1, 0);
+
+  &:focus,
+  &:hover {
+    background-color: rgba($black, .88);
+    border-color: rgba($white, .32);
+    color: $white;
+  }
+
+}
+
+.input-label {
+  order: 1;
+}
+
+.input-helper {
+  order: 2;
+}

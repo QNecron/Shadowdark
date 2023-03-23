@@ -1,0 +1,19 @@
+@mixin flex-center($v: "true", $h: "false", $c: "false", $s: 100%) {
+
+  // $v = vertical
+  // $h = horizontal
+  // $c = children
+  // $s = size
+
+  @if $v == "true" { align-items: center; }
+  display: flex;
+  @if $h == "true" { justify-content: center; }
+  @if $h == "false" { justify-content: flex-start; }
+
+  @if $c == "true" {
+    > * {
+      flex: 1 1 $s;
+    }
+  }
+
+}

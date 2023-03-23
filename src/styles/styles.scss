@@ -7,6 +7,7 @@
 
 // core components
 @import "../components/grid/_grid";
+@import "../components/forms/_inputs";
 @import "../components/section/_section";
 @import "../components/wrapper/_wrapper";
 
@@ -19,7 +20,8 @@
 // content components
 @import "../components/hero/_hero";
 @import "../components/icon/_icon";
+@import "../components/card/_bestiary";
 
 // pages
-@import "../components/card/_bestiary";
+@import "pages/_creator";
 @import "pages/_filters";

@@ -1,3 +1,4 @@
+// @TODO - rename this, it's not just used for filters
 .filters {
   display: flex;
   justify-content: flex-end;
@@ -34,22 +35,4 @@
   display: flex;
   flex-direction: column;
   gap: $space-8;
-}
-
-.cap-left,
-.cap-mid,
-.cap-right {
-  width: rem(88);
-}
-
-.cap-left {
-
-}
-
-.cap-mid {
-
-}
-
-.cap-right {
-  margin-right: $space-16;
 }
