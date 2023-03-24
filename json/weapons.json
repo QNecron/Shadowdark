@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Bastard Sword",
+    "cost": "10 gp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d8/1d10",
+    "properties": "V, 2 slots"
+  },
+  {
+    "name": "Club",
+    "cost": "5 cp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d4",
+    "properties": "-"
+  },
+  {
+    "name": "Crossbow",
+    "cost": "8 gp",
+    "type": "R",
+    "range": "F",
+    "damage": "1d6",
+    "properties": "2H, L"
+  },
+  {
+    "name": "Dagger",
+    "cost": "1 gp",
+    "type": "M/R",
+    "range": "C/N",
+    "damage": "1d4",
+    "properties": "F, Th"
+  },
+  {
+    "name": "Greataxe",
+    "cost": "10 gp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d8/1d10",
+    "properties": "V, 2 slots"
+  },
+  {
+    "name": "Greatsword",
+    "cost": "12 gp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d12",
+    "properties": "2H, 2 slots"
+  },
+  {
+    "name": "Javelin",
+    "cost": "5 sp",
+    "type": "M/R",
+    "range": "C/F",
+    "damage": "1d4",
+    "properties": "Th"
+  },
+  {
+    "name": "Longbow",
+    "cost": "8 gp",
+    "type": "R",
+    "range": "F",
+    "damage": "1d8",
+    "properties": "2H"
+  },
+  {
+    "name": "Longsword",
+    "cost": "9 gp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d8",
+    "properties": "-"
+  },
+  {
+    "name": "Mace",
+    "cost": "5 gp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d6",
+    "properties": "-"
+  },
+  {
+    "name": "Shortbow",
+    "cost": "6 gp",
+    "type": "R",
+    "range": "F",
+    "damage": "1d4",
+    "properties": "2H"
+  },
+  {
+    "name": "Spear",
+    "cost": "5 sp",
+    "type": "M/R",
+    "range": "C/N",
+    "damage": "1d6",
+    "properties": "Th"
+  },
+  {
+    "name": "Staff",
+    "cost": "5 sp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d4",
+    "properties": "2H"
+  },
+  {
+    "name": "Warhammer",
+    "cost": "10 gp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d10",
+    "properties": "2H"
+  }
+]

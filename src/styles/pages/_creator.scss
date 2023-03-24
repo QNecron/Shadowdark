@@ -1,26 +1,56 @@
+.creator-heading {
+  border-bottom: solid rem(1) rgba($white, .08);
+  margin-bottom: $space-16;
+  padding-bottom: $space-16;
+}
+
 .creator-block {
   @include flex-center("true", "false", "true", 33%);
   gap: $space-8;
 
   ~ .creator-block {
-    margin-top: $space-8;
+    margin-top: $space-16;
   }
+
+  ~ .creator-heading {
+    margin-top: $space-32;
+  }
+
+  // media
+  // @include media($mq-mobile) {
+  //
+  //   .input-container {
+  //     max-width: calc(50% - $space-8); // should not have to do this...
+  //   }
+  //
+  // }
 
 }
 
-.creator-heading,
+.creator-subheading,
 .creator-mod,
-.creator-total {
+.creator-total,
+.creator-class {
+  background: rgba($white, .02);
   border: solid rem(1) rgba($white, .08);
   text-align: center;
   line-height: rem(38); // +2 from border
+}
+
+.creator-subheading,
+.creator-mod,
+.creator-total {
   max-width: $space-56;
 }
 
-.creator-heading {
+.creator-subheading {
 
 }
 
 .creator-mod {
 
+}
+
+.creator-dice {
+  max-width: $space-40;
 }

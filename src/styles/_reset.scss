@@ -9,6 +9,7 @@ body {
   color: $white;
   font-size: 16px;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 picture,
@@ -36,11 +37,11 @@ button {
   @include appearance(none);
 }
 
-a, button {
+a, button, select {
   cursor: pointer;
   transition: all .24s ease-in-out 0s;
 }
 
-input, textarea {
+input, select, textarea {
   font-size: 16px;
 }
