@@ -1,6 +1,7 @@
 // @TODO - rename this, it's not just used for filters
 .filters {
   display: flex;
+  gap: $space-8;
   justify-content: flex-end;
   margin-top: $space-16;
   margin-bottom: $space-16;

@@ -215,11 +215,15 @@ const Creator: React.FC<PageProps> = () => {
 
         <Wrapper>
 
-          <nav className="filters" aria-label="Saved Characters" role="navigation">
+          <nav className="filters" aria-label="Manage Characters" role="navigation">
 
-            <button className="btn btn-primary" onClick={(e) => save(character, character.name)}>Save</button>
-
-            <button className="btn btn-primary" onClick={(e) => console.log(character)}>Data</button>
+            <button
+              className="btn-icon btn-primary"
+              onClick={(e) => save(character, character.name)}
+            >
+              <span className="srt">Save Character</span>
+              <Icon icon="upload" />
+            </button>
 
             <NavFlyout
               btnClass="btn btn-primary"
@@ -484,6 +488,7 @@ const Creator: React.FC<PageProps> = () => {
                   )}
                 </div>
                 <Select
+                  value={character.armor_class.armor}
                   id="armor"
                   label="Armor"
                   helper="Armor"
@@ -502,6 +507,7 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="15">Plate mail</option>
                 </Select>
                 <Select
+                  value={character.armor_class.shield}
                   id="shield"
                   label="Shield"
                   helper="Shield"
@@ -523,6 +529,7 @@ const Creator: React.FC<PageProps> = () => {
 
               <div className="creator-block attacks">
                 <Select
+                  value={character.attacks.weapon_1}
                   id="weapon1"
                   label="Weapon (A)"
                   helper="Weapon (A)"
@@ -563,6 +570,7 @@ const Creator: React.FC<PageProps> = () => {
 
               <div className="creator-block attacks">
                 <Select
+                  value={character.attacks.weapon_2}
                   id="weapon2"
                   label="Weapon (B)"
                   helper="Weapon (B)"
@@ -620,6 +628,7 @@ const Creator: React.FC<PageProps> = () => {
                   })}
                 />
                 <Select
+                  value={character.ancestry}
                   id="ancestry"
                   label="Ancestry"
                   helper="Ancestry"
@@ -643,6 +652,7 @@ const Creator: React.FC<PageProps> = () => {
 
               <div className="creator-block">
                 <Select
+                  value={character.background}
                   id="background"
                   label="Background"
                   helper="Background"
@@ -676,6 +686,7 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Chirurgeon">Chirurgeon</option>
                 </Select>
                 <Select
+                  value={character.alignment}
                   id="alignment"
                   label="Alignment"
                   helper="Alignment"
@@ -722,6 +733,7 @@ const Creator: React.FC<PageProps> = () => {
 
               <div className="creator-block">
                 <Select
+                  value={character.class}
                   id="class"
                   label="Class"
                   helper="Class"

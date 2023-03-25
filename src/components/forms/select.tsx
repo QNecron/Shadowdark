@@ -7,6 +7,7 @@ const Select = ({ ...props }) => {
     <div className="input-container input-select">
 
       <select
+        value={props.value}
         id={props.id}
         className="input"
         autoComplete="off"
