@@ -774,10 +774,11 @@ const Creator: React.FC<PageProps> = () => {
               <div className="creator-block">
                 <h2 className="creator-subheading heading-5">HP</h2>
                 <div className="creator-mod">
-                  {character.hit_points + (character.level * modifier(character.attributes.con, 0, 0))}
-                </div>
-                <div className="creator-mod">
-                  {character.level * modifier(character.attributes.con, 0, 0)}
+                  {total(
+                    character.hit_points,
+                    character.ancestry === "Dwarf" ? 2 : 0,
+                    0, 0
+                  )}
                 </div>
                 <Input
                   type="number"
@@ -874,7 +875,7 @@ const Creator: React.FC<PageProps> = () => {
 
           </Grid>
 
-          <h2 className="creator-heading talents-spells heading-3">Talents / Spells</h2>
+          <h2 className="creator-heading creator-talents-spells heading-3">Talents / Spells</h2>
 
           <div className="creator-block rewards">
             <TextArea
