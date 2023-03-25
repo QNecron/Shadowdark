@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
 import Page from "../components/page/page"
@@ -12,9 +12,9 @@ import Input from "../components/forms/input"
 import Select from "../components/forms/select"
 import TextArea from "../components/forms/textarea"
 
-// import Data from "../../json/bestiary.json"
+import Weapons from "../../json/weapons.json"
 
-import { modifier, total, diceroll, hitdice, ancestry } from "../utilities/functions"
+import { modifier, total, diceroll, hitdice, ancestry, armory } from "../utilities/functions"
 
 const Creator: React.FC<PageProps> = () => {
 
@@ -42,8 +42,152 @@ const Creator: React.FC<PageProps> = () => {
       base: 10,
       armor: 0,
       shield: 0
-    }
+    },
+    attacks: {
+      weapon_1: "None",
+      type_1: "-",
+      range_1: "-",
+      damage_1: "-",
+      talent_bonus_1: 0,
+      properties_1: "-",
+      weapon_2: "None",
+      type_2: "-",
+      range_2: "-",
+      damage_2: "-",
+      talent_bonus_2: 0,
+      properties_2: "-"
+    },
+    xp: 0,
+    gp: 0,
+    sp: 0,
+    cp: 0,
+    inventory: "",
+    talents_spells: ""
   })
+  const [characterSaved, characterSavedUpdate] = useState("")
+
+  const save = (character, name) => {
+    let hero = name
+
+    if (!hero) return
+
+    const data = JSON.stringify({character})
+
+    const storage = window.localStorage
+
+    storage.setItem(name, data)
+
+    let characters = []
+
+    for (var i = 0; i < storage.length; i++) {
+      let key = storage.key(i);
+      characters.push(key)
+    }
+
+    characterSavedUpdate(characters)
+
+  }
+
+  const saved = [].concat(characterSaved)
+
+  const load = (name) => {
+
+    if (!name) return;
+
+    const storage = window.localStorage
+    const saved = storage.getItem(name)
+
+    if (saved) {
+      let data = JSON.parse(saved, null, -1).character
+
+      console.log(data)
+
+      characterUpdate({
+        ...character,
+        name: data.name,
+        alignment: data.alignment,
+        ancestry: data.ancestry,
+        ancestry_trait: data.ancestry_trait,
+        attributes: {
+          ...character.attributes,
+          str: data.attributes.str,
+          dex: data.attributes.dex,
+          con: data.attributes.con,
+          int: data.attributes.int,
+          wis: data.attributes.wis,
+          cha: data.attributes.cha
+        },
+        armor_class: {
+          ...character.armor_class,
+          base: data.armor_class.base,
+          armor: data.armor_class.armor,
+          shield: data.armor_class.shield
+        },
+        attacks: {
+          ...character.attacks,
+          weapon_1: data.attacks.weapon_1,
+          type_1: data.attacks.type_1,
+          range_1: data.attacks.range_1,
+          damage_1: data.attacks.damage_1,
+          properties_1: data.attacks.properties_1,
+          weapon_2: data.attacks.weapon_2,
+          type_2: data.attacks.type_2,
+          range_2: data.attacks.range_2,
+          damage_2: data.attacks.damage_2,
+          properties_2: data.attacks.properties_2
+        },
+        background: data.background,
+        title: data.title,
+        deity: data.deity,
+        class: data.class,
+        level: data.level,
+        hit_dice: data.hit_dice,
+        hit_points: data.hit_points,
+        xp: data.xp,
+        gp: data.gp,
+        sp: data.sp,
+        cp: data.cp,
+        inventory: data.inventory,
+        talents_spells: data.talents_spells
+      })
+
+    }
+    else {
+      console.log("No saved character data found.")
+    }
+
+  }
+
+  const remove = (name) => {
+    const storage = window.localStorage
+    let characters = []
+
+    if (!name) return
+
+    storage.removeItem(name)
+
+    for (var i = 0; i < storage.length; i++) {
+      let key = storage.key(i);
+      characters.push(key)
+    }
+
+    characterSavedUpdate(characters)
+
+  }
+
+  useEffect(() => {
+
+    const storage = window.localStorage
+    let characters = []
+
+    for (var i = 0; i < storage.length; i++) {
+      let key = storage.key(i)
+      characters.push(key)
+    }
+
+    characterSavedUpdate(characters)
+
+  }, [])
 
   return (
 
@@ -61,6 +205,7 @@ const Creator: React.FC<PageProps> = () => {
         mobileH="480"
         mobileW="480"
         alt="Shadowdark Hero"
+        loading="auto"
         x="2"
         y="2"
         heading="Creator"
@@ -72,20 +217,60 @@ const Creator: React.FC<PageProps> = () => {
 
           <nav className="filters" aria-label="Saved Characters" role="navigation">
 
+            <button className="btn btn-primary" onClick={(e) => save(character, character.name)}>Save</button>
+
+            <button className="btn btn-primary" onClick={(e) => console.log(character)}>Data</button>
+
             <NavFlyout
               btnClass="btn btn-primary"
-              btnCopy="Unknown"
-              navId="unknown"
+              btnCopy="Characters"
+              navId="character"
               navClass="nav-secondary"
             >
-              <button className="btn btn-secondary" onClick={(e) => console.log(character)}>Data</button>
+
+            {characterSaved[0] && (
+              <ul>
+
+                {saved.map(item => (
+
+                  <li key={item}>
+
+                    <button
+                      className="btn btn-secondary"
+                      onClick={(e) => load(item)}
+                    >
+                      Load {item}
+                    </button>
+
+                    <button
+                      className="btn btn-secondary"
+                      onClick={(e) => remove(item)}
+                    >
+                      Delete {item}
+                    </button>
+
+                  </li>
+
+                ))}
+
+              </ul>
+            )}
+
+            {!characterSaved[0] && (
+              <div className="character-storage-empty">
+                <p className="character-storage-name">
+                  No saved characters found, click the "Save" button to store your progress.
+                </p>
+              </div>
+            )}
+
             </NavFlyout>
 
           </nav>
 
           <Grid desktop="2" tablet="2" mobile="1" gap="32">
 
-            <div>
+            <div className="left">
 
               <h2 className="creator-heading heading-3">Attributes</h2>
 
@@ -290,7 +475,6 @@ const Creator: React.FC<PageProps> = () => {
               <h2 className="creator-heading heading-3">Armor</h2>
 
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">AC</h2>
                 <div className="creator-total">
                   {total(
                     character.armor_class.base,
@@ -337,9 +521,89 @@ const Creator: React.FC<PageProps> = () => {
 
               <h2 className="creator-heading heading-3">Attacks</h2>
 
+              <div className="creator-block attacks">
+                <Select
+                  id="weapon1"
+                  label="Weapon (A)"
+                  helper="Weapon (A)"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    attacks: {
+                      ...character.attacks,
+                      weapon_1: e.target.value,
+                      type_1: armory(Weapons, e.target.value, 1),
+                      range_1: armory(Weapons, e.target.value, 2),
+                      damage_1: armory(Weapons, e.target.value, 3),
+                      properties_1: armory(Weapons, e.target.value, 4)
+                    }
+                  })}
+                >
+                  <option value="None">-</option>
+                  {Weapons.map((data, index) => {
+                    return (
+                      <option
+                        key={index}
+                        value={data.name}
+                        type={data.type}
+                        range={data.range}
+                        damage={data.damage}
+                        properties={data.properties}
+                      >
+                        {data.name}
+                      </option>
+                    )
+                  })}
+                </Select>
+                <div className="creator-mod">{character.attacks.type_1}</div>
+                <div className="creator-mod">{character.attacks.range_1}</div>
+                <div className="creator-weapon">{character.attacks.damage_1}</div>
+                <div className="creator-weapon">{character.attacks.properties_1}</div>
+              </div>
+
+              <div className="creator-block attacks">
+                <Select
+                  id="weapon2"
+                  label="Weapon (B)"
+                  helper="Weapon (B)"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    attacks: {
+                      ...character.attacks,
+                      weapon_2: e.target.value,
+                      type_2: armory(Weapons, e.target.value, 1),
+                      range_2: armory(Weapons, e.target.value, 2),
+                      damage_2: armory(Weapons, e.target.value, 3),
+                      properties_2: armory(Weapons, e.target.value, 4)
+                    }
+                  })}
+                >
+                  <option value="None">-</option>
+                  {Weapons.map((data, index) => {
+                    return (
+                      <option
+                        key={index}
+                        value={data.name}
+                        type={data.type}
+                        range={data.range}
+                        damage={data.damage}
+                        properties={data.properties}
+                      >
+                        {data.name}
+                      </option>
+                    )
+                  })}
+                </Select>
+                <div className="creator-mod">{character.attacks.type_2}</div>
+                <div className="creator-mod">{character.attacks.range_2}</div>
+                <div className="creator-weapon">{character.attacks.damage_2}</div>
+                <div className="creator-weapon">{character.attacks.properties_2}</div>
+              </div>
+
             </div>
 
-            <div>
+            <div className="right">
 
               <h2 className="creator-heading heading-3">Character</h2>
 
@@ -522,26 +786,94 @@ const Creator: React.FC<PageProps> = () => {
                 </div>
               </div>
 
+              <h2 className="creator-heading heading-3">Rewards</h2>
+
+              <div className="creator-block rewards">
+                <h2 className="creator-subheading heading-5">XP</h2>
+                <Input
+                  type="number"
+                  value={character.xp}
+                  id="xp"
+                  label="Experience"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    xp: e.target.value
+                  })}
+                />
+                <h2 className="creator-subheading heading-5">GP</h2>
+                <Input
+                  type="number"
+                  value={character.gp}
+                  id="gp"
+                  label="Gold Pieces"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    gp: e.target.value
+                  })}
+                />
+                <h2 className="creator-subheading heading-5">SP</h2>
+                <Input
+                  type="number"
+                  value={character.sp}
+                  id="sp"
+                  label="Silver Pieces"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    sp: e.target.value
+                  })}
+                />
+                <h2 className="creator-subheading heading-5">CP</h2>
+                <Input
+                  type="number"
+                  value={character.cp}
+                  id="cp"
+                  label="Copper Pieces"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    cp: e.target.value
+                  })}
+                />
+              </div>
+
+              <div className="creator-block rewards">
+                <TextArea
+                  value={character.inventory}
+                  id="inventory"
+                  label="Inventory"
+                  helper="Inventory"
+                  srt="true"
+                  rows="6"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    inventory: e.target.value
+                  })}
+                />
+              </div>
+
             </div>
 
           </Grid>
 
-        </Wrapper>
+          <h2 className="creator-heading talents-spells heading-3">Talents / Spells</h2>
 
-      </Section>
+          <div className="creator-block rewards">
+            <TextArea
+              value={character.talents_spells}
+              id="talents-spells"
+              label="Talents / Spells"
+              srt="true"
+              rows="12"
+              change={(e) => characterUpdate({
+                ...character,
+                talents_spells: e.target.value
+              })}
+            />
+          </div>
 
-      <Section>
-
-        <Wrapper>
-          <TextArea id="attacks" label="Attacks" rows="4" />
-
-          <Input type="number" id="xp" label="Experience" />
-
-          <TextArea id="talentsspells" label="Talents/Spells" rows="12" />
-
-          <Input type="number" id="gp" label="Gold Pieces" />
-          <Input type="number" id="sp" label="Silver Pieces" />
-          <Input type="number" id="cp" label="Copper Pieces" />
         </Wrapper>
 
       </Section>

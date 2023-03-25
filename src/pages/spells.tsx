@@ -24,6 +24,7 @@ const Spells: React.FC<PageProps> = () => {
         mobileH="480"
         mobileW="480"
         alt="Shadowdark Hero"
+        loading="auto"
         x="2"
         y="2"
         heading="Spells"

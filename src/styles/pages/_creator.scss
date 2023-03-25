@@ -16,41 +16,74 @@
     margin-top: $space-32;
   }
 
-  // media
-  // @include media($mq-mobile) {
-  //
-  //   .input-container {
-  //     max-width: calc(50% - $space-8); // should not have to do this...
-  //   }
-  //
-  // }
+  &.attacks,
+  &.rewards {
+
+    // media
+    @include media($mq-mobile) {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  &.attacks {
+
+    // media
+    @include media($mq-mobile) {
+
+      .input-container {
+        min-width: 100%;
+      }
+
+    }
+
+  }
+
+  &.rewards {
+
+    // media
+    @include media($mq-mobile) {
+
+      .input-container {
+        min-width: calc(100% - $space-64);
+      }
+
+    }
+
+  }
 
 }
 
 .creator-subheading,
 .creator-mod,
 .creator-total,
-.creator-class {
+.creator-class,
+.creator-weapon {
   background: rgba($white, .02);
   border: solid rem(1) rgba($white, .08);
   text-align: center;
   line-height: rem(38); // +2 from border
 }
 
-.creator-subheading,
 .creator-mod,
-.creator-total {
-  max-width: $space-56;
+.creator-total,
+.creator-dice {
+  max-width: $space-40;
 }
 
 .creator-subheading {
+  max-width: $space-56;
+}
+
+.creator-weapon {
+
+  // media
+  @include media($mq-tablet-up) {
+    max-width: rem(96);
+  }
 
 }
 
-.creator-mod {
-
-}
-
-.creator-dice {
-  max-width: $space-40;
+.talents-spells {
+  margin-top: $space-32;
 }

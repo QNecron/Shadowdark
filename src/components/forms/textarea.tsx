@@ -9,16 +9,22 @@ const TextArea = ({ ...props }) => {
       <textarea
         id={props.id}
         className="input"
+        value={props.value}
         rows={props.rows}
         cols={props.cols}
-      ></textarea>
+        onChange={props.change}
+      />
 
       <label
         htmlFor={props.id}
-        className={`input-label${props.srt === true ? " srt" : ""}`}
+        className={`input-label${props.srt === "true" ? " srt" : ""}`}
       >
         {props.label}
       </label>
+
+      {props.helper &&
+        <span className="input-helper">{props.helper}</span>
+      }
 
     </div>
 

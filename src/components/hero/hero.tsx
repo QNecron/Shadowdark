@@ -24,7 +24,7 @@ const Hero = ({ ...props }) => {
         mobileH={props.mobileH}
         mobileW={props.mobileW}
         alt={props.alt}
-        loading="lazy"
+        loading={props.loading || "lazy"}
         priority="high"
       />
 

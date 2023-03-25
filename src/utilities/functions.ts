@@ -72,3 +72,30 @@ export const ancestry = (a) => {
   return trait
 
 }
+
+export const armory = (json, weapon, output) => {
+  let type = "-"
+  let range = "-"
+  let damage = "-"
+  let properties = "-"
+
+  json.map((data) => {
+
+    if (weapon === data.name) {
+      type = data.type
+      range = data.range
+      damage = data.damage
+      properties = data.properties
+    }
+
+  })
+
+  if (output === 1) return type
+  else if (output === 2) return range
+  else if (output === 3) return damage
+  else if (output === 4) return properties
+  else {
+    console.log("Weapon not found.")
+  }
+
+}
