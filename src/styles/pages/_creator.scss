@@ -58,7 +58,8 @@
 .creator-mod,
 .creator-total,
 .creator-class,
-.creator-weapon {
+.creator-weapon,
+.creator-name {
   background: rgba($white, .02);
   border: solid rem(1) rgba($white, .08);
   text-align: center;
@@ -86,4 +87,13 @@
 
 .talents-spells {
   margin-top: $space-32;
+}
+
+.creator-character {
+  @include flex-center("true", "false", "false");
+  gap: $space-8;
+}
+
+.creator-name {
+  width: calc(100% - rem(88));
 }

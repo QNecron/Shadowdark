@@ -237,20 +237,24 @@ const Creator: React.FC<PageProps> = () => {
 
                 {saved.map(item => (
 
-                  <li key={item}>
+                  <li className="creator-character" key={item}>
+
+                    <div className="creator-name">{item}</div>
 
                     <button
-                      className="btn btn-secondary"
+                      className="btn-icon btn-primary"
                       onClick={(e) => load(item)}
                     >
-                      Load {item}
+                      <span className="srt">Load {item}</span>
+                      <Icon icon="download" />
                     </button>
 
                     <button
-                      className="btn btn-secondary"
+                      className="btn-icon btn-primary"
                       onClick={(e) => remove(item)}
                     >
-                      Delete {item}
+                      <span className="srt">Delete {item}</span>
+                      <Icon icon="delete" />
                     </button>
 
                   </li>
@@ -261,8 +265,8 @@ const Creator: React.FC<PageProps> = () => {
             )}
 
             {!characterSaved[0] && (
-              <div className="character-storage-empty">
-                <p className="character-storage-name">
+              <div className="">
+                <p className="">
                   No saved characters found, click the "Save" button to store your progress.
                 </p>
               </div>
