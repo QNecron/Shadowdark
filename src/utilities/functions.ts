@@ -1,8 +1,12 @@
 export const modifier = (a, b, c) => {
   const add = parseInt(a) + parseInt(b) + parseInt(c)
   const total = Math.floor((add - 10) / 2)
+  let modifier
 
-  return total
+  if (total >= 0) modifier = "+" + total.toString()
+  else if (total <= -1) modifier = total.toString()
+
+  return modifier
 }
 
 export const total = (a, b, c, d) => {

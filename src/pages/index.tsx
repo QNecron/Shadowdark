@@ -3,8 +3,8 @@ import type { HeadFC, PageProps } from "gatsby"
 
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
-
-import Data from "../../json/bestiary.json"
+import Section from "../components/section/section"
+import Wrapper from "../components/wrapper/wrapper"
 
 const IndexPage: React.FC<PageProps> = () => {
 
@@ -29,6 +29,16 @@ const IndexPage: React.FC<PageProps> = () => {
         y="2"
         logo="white"
       />
+
+      <Section>
+
+        <Wrapper>
+
+          <h1 className="heading-3">ShadowDark Toolset</h1>
+
+        </Wrapper>
+
+      </Section>
 
     </Page>
 

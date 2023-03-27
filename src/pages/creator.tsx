@@ -38,6 +38,14 @@ const Creator: React.FC<PageProps> = () => {
       wis: 10,
       cha: 10
     },
+    attributes_bonus: {
+      str: 0,
+      dex: 0,
+      con: 0,
+      int: 0,
+      wis: 0,
+      cha: 0
+    },
     armor_class: {
       base: 10,
       armor: 0,
@@ -231,47 +239,44 @@ const Creator: React.FC<PageProps> = () => {
               navId="character"
               navClass="nav-secondary"
             >
+              {characterSaved[0] && (
+                <ul className="creator-characters">
 
-            {characterSaved[0] && (
-              <ul>
+                  {saved.map(item => (
 
-                {saved.map(item => (
+                    <li className="creator-character" key={item}>
 
-                  <li className="creator-character" key={item}>
+                      <div className="creator-name">{item}</div>
 
-                    <div className="creator-name">{item}</div>
+                      <button
+                        className="btn-icon btn-primary"
+                        onClick={(e) => load(item)}
+                      >
+                        <span className="srt">Load {item}</span>
+                        <Icon icon="download" />
+                      </button>
 
-                    <button
-                      className="btn-icon btn-primary"
-                      onClick={(e) => load(item)}
-                    >
-                      <span className="srt">Load {item}</span>
-                      <Icon icon="download" />
-                    </button>
+                      <button
+                        className="btn-icon btn-primary"
+                        onClick={(e) => remove(item)}
+                      >
+                        <span className="srt">Delete {item}</span>
+                        <Icon icon="delete" />
+                      </button>
 
-                    <button
-                      className="btn-icon btn-primary"
-                      onClick={(e) => remove(item)}
-                    >
-                      <span className="srt">Delete {item}</span>
-                      <Icon icon="delete" />
-                    </button>
+                    </li>
 
-                  </li>
+                  ))}
 
-                ))}
-
-              </ul>
-            )}
-
-            {!characterSaved[0] && (
-              <div className="">
-                <p className="">
-                  No saved characters found, click the "Save" button to store your progress.
-                </p>
-              </div>
-            )}
-
+                </ul>
+              )}
+              {!characterSaved[0] && (
+                <div className="creator-no-characters">
+                  <p>
+                    No saved characters found, click the "Save" button to store your progress.
+                  </p>
+                </div>
+              )}
             </NavFlyout>
 
           </nav>
@@ -283,7 +288,7 @@ const Creator: React.FC<PageProps> = () => {
               <h2 className="creator-heading heading-3">Attributes</h2>
 
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">Str</h2>
+                <div className="creator-subheading heading-5">Str</div>
                 <div className="creator-mod">
                   {modifier(character.attributes.str, 0, 0)}
                 </div>
@@ -316,7 +321,7 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">Dex</h2>
+                <div className="creator-subheading heading-5">Dex</div>
                 <div className="creator-mod">
                   {modifier(character.attributes.dex, 0, 0)}
                 </div>
@@ -349,7 +354,7 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">Con</h2>
+                <div className="creator-subheading heading-5">Con</div>
                 <div className="creator-mod">
                   {modifier(character.attributes.con, 0, 0)}
                 </div>
@@ -382,7 +387,7 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">Int</h2>
+                <div className="creator-subheading heading-5">Int</div>
                 <div className="creator-mod">
                   {modifier(character.attributes.int, 0, 0)}
                 </div>
@@ -415,7 +420,7 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">Wis</h2>
+                <div className="creator-subheading heading-5">Wis</div>
                 <div className="creator-mod">
                   {modifier(character.attributes.wis, 0, 0)}
                 </div>
@@ -448,7 +453,7 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">Cha</h2>
+                <div className="creator-subheading heading-5">Cha</div>
                 <div className="creator-mod">
                   {modifier(character.attributes.cha, 0, 0)}
                 </div>
@@ -533,7 +538,7 @@ const Creator: React.FC<PageProps> = () => {
               <h2 className="creator-heading heading-3">Attacks</h2>
 
               <div className="creator-block attacks">
-                <Input
+                {/*<Input
                   type="number"
                   value={character.attacks.weapon_bonus_1}
                   id="weapon-bonus1"
@@ -547,7 +552,7 @@ const Creator: React.FC<PageProps> = () => {
                       weapon_bonus_1: e.target.value
                     }
                   })}
-                />
+                />*/}
                 <Select
                   value={character.attacks.weapon_1}
                   id="weapon1"
@@ -589,7 +594,7 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block attacks">
-                <Input
+                {/*<Input
                   type="number"
                   value={character.attacks.weapon_bonus_2}
                   id="weapon-bonus2"
@@ -603,7 +608,7 @@ const Creator: React.FC<PageProps> = () => {
                       weapon_bonus_2: e.target.value
                     }
                   })}
-                />
+                />*/}
                 <Select
                   value={character.attacks.weapon_2}
                   id="weapon2"
@@ -662,6 +667,9 @@ const Creator: React.FC<PageProps> = () => {
                     name: e.target.value
                   })}
                 />
+              </div>
+
+              <div className="creator-block">
                 <Select
                   value={character.ancestry}
                   id="ancestry"
@@ -683,9 +691,6 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Half-orc">Half-orc</option>
                   <option value="Human">Human</option>
                 </Select>
-              </div>
-
-              <div className="creator-block">
                 <Select
                   value={character.background}
                   id="background"
@@ -720,6 +725,9 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Noble">Noble</option>
                   <option value="Chirurgeon">Chirurgeon</option>
                 </Select>
+              </div>
+
+              <div className="creator-block">
                 <Select
                   value={character.alignment}
                   id="alignment"
@@ -736,21 +744,6 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Chaotic">Chaotic</option>
                   <option value="Neutral">Neutral</option>
                 </Select>
-              </div>
-
-              <div className="creator-block">
-                {/* @TODO class + level + alignment = title */}
-                <Input
-                  value={character.title}
-                  id="title"
-                  label="Title"
-                  helper="Title"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    title: e.target.value
-                  })}
-                />
                 <Input
                   value={character.deity}
                   id="deity"
@@ -785,26 +778,24 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Thief">Thief</option>
                   <option value="Wizard">Wizard</option>
                 </Select>
+                {/* @TODO class + level + alignment = title */}
                 <Input
-                  type="number"
-                  value={character.level}
-                  id="level"
-                  label="Level"
-                  helper="Level"
+                  value={character.title}
+                  id="title"
+                  label="Title"
+                  helper="Title"
                   srt="true"
                   change={(e) => characterUpdate({
                     ...character,
-                    level: e.target.value
+                    title: e.target.value
                   })}
                 />
-                <div className="creator-mod">
-                  {character.hit_dice}
-                </div>
               </div>
 
+              <h2 className="creator-heading heading-3">Hit Points</h2>
+
               <div className="creator-block">
-                <h2 className="creator-subheading heading-5">HP</h2>
-                <div className="creator-mod">
+                <div className="creator-total">
                   {total(
                     character.hit_points,
                     character.ancestry === "Dwarf" ? 2 : 0,
@@ -823,6 +814,21 @@ const Creator: React.FC<PageProps> = () => {
                     hit_points: e.target.value
                   })}
                 />
+                <Input
+                  type="number"
+                  value={character.level}
+                  id="level"
+                  label="Level"
+                  helper="Level"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    level: e.target.value
+                  })}
+                />
+                <div className="creator-mod">
+                  {character.hit_dice}
+                </div>
                 <div className="creator-dice">
                   <button className="btn-icon btn-primary" onClick={(e) => characterUpdate({
                     ...character,
@@ -834,70 +840,18 @@ const Creator: React.FC<PageProps> = () => {
                 </div>
               </div>
 
-              <h2 className="creator-heading heading-3">Rewards</h2>
+              <h2 className="creator-heading heading-3">Talents / Spells</h2>
 
-              <div className="creator-block rewards">
-                <h2 className="creator-subheading heading-5">XP</h2>
-                <Input
-                  type="number"
-                  value={character.xp}
-                  id="xp"
-                  label="Experience"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    xp: e.target.value
-                  })}
-                />
-                <h2 className="creator-subheading heading-5">GP</h2>
-                <Input
-                  type="number"
-                  value={character.gp}
-                  id="gp"
-                  label="Gold Pieces"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    gp: e.target.value
-                  })}
-                />
-                <h2 className="creator-subheading heading-5">SP</h2>
-                <Input
-                  type="number"
-                  value={character.sp}
-                  id="sp"
-                  label="Silver Pieces"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    sp: e.target.value
-                  })}
-                />
-                <h2 className="creator-subheading heading-5">CP</h2>
-                <Input
-                  type="number"
-                  value={character.cp}
-                  id="cp"
-                  label="Copper Pieces"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    cp: e.target.value
-                  })}
-                />
-              </div>
-
-              <div className="creator-block rewards">
+              <div className="creator-block">
                 <TextArea
-                  value={character.inventory}
-                  id="inventory"
-                  label="Inventory"
-                  helper="Inventory"
+                  value={character.talents_spells}
+                  id="talents-spells"
+                  label="Talents / Spells"
                   srt="true"
-                  rows="6"
+                  rows="8"
                   change={(e) => characterUpdate({
                     ...character,
-                    inventory: e.target.value
+                    talents_spells: e.target.value
                   })}
                 />
               </div>
@@ -906,18 +860,70 @@ const Creator: React.FC<PageProps> = () => {
 
           </Grid>
 
-          <h2 className="creator-heading creator-talents-spells heading-3">Talents / Spells</h2>
+          <h2 className="creator-heading heading-3">Rewards</h2>
+
+          <div className="creator-block rewards">
+            <div className="creator-subheading heading-5">XP</div>
+            <Input
+              type="number"
+              value={character.xp}
+              id="xp"
+              label="Experience"
+              srt="true"
+              change={(e) => characterUpdate({
+                ...character,
+                xp: e.target.value
+              })}
+            />
+            <div className="creator-subheading heading-5">GP</div>
+            <Input
+              type="number"
+              value={character.gp}
+              id="gp"
+              label="Gold Pieces"
+              srt="true"
+              change={(e) => characterUpdate({
+                ...character,
+                gp: e.target.value
+              })}
+            />
+            <div className="creator-subheading heading-5">SP</div>
+            <Input
+              type="number"
+              value={character.sp}
+              id="sp"
+              label="Silver Pieces"
+              srt="true"
+              change={(e) => characterUpdate({
+                ...character,
+                sp: e.target.value
+              })}
+            />
+            <div className="creator-subheading heading-5">CP</div>
+            <Input
+              type="number"
+              value={character.cp}
+              id="cp"
+              label="Copper Pieces"
+              srt="true"
+              change={(e) => characterUpdate({
+                ...character,
+                cp: e.target.value
+              })}
+            />
+          </div>
 
           <div className="creator-block rewards">
             <TextArea
-              value={character.talents_spells}
-              id="talents-spells"
-              label="Talents / Spells"
+              value={character.inventory}
+              id="inventory"
+              label="Inventory"
+              helper="Inventory"
               srt="true"
               rows="12"
               change={(e) => characterUpdate({
                 ...character,
-                talents_spells: e.target.value
+                inventory: e.target.value
               })}
             />
           </div>

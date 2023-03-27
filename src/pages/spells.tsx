@@ -3,6 +3,8 @@ import type { HeadFC, PageProps } from "gatsby"
 
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
+import Section from "../components/section/section"
+import Wrapper from "../components/wrapper/wrapper"
 
 // import Data from "../../json/bestiary.json"
 
@@ -29,6 +31,16 @@ const Spells: React.FC<PageProps> = () => {
         y="2"
         heading="Spells"
       />
+
+      <Section>
+
+        <Wrapper>
+
+          <h2 className="heading-3">Coming soon..</h2>
+
+        </Wrapper>
+
+      </Section>
 
     </Page>
 

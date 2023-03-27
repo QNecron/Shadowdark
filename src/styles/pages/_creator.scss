@@ -27,24 +27,10 @@
   }
 
   &.attacks {
-    // flex-wrap: wrap;
-
-    // .input-select {
-    //   min-width: 100%;
-    // }
 
     .input-number {
       max-width: $space-56;
     }
-
-    // media
-    // @include media($mq-mobile) {
-    //
-    //   .input-container {
-    //     min-width: 100%;
-    //   }
-    //
-    // }
 
   }
 
@@ -101,8 +87,14 @@
 .creator-character {
   @include flex-center("true", "false", "false");
   gap: $space-8;
+
+  ~ .creator-character {
+    margin-top: $space-8;
+  }
+
 }
 
 .creator-name {
+  font-size: rem(14);
   width: calc(100% - rem(88));
 }
