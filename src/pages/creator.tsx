@@ -48,13 +48,13 @@ const Creator: React.FC<PageProps> = () => {
       type_1: "-",
       range_1: "-",
       damage_1: "-",
-      talent_bonus_1: 0,
+      weapon_bonus_1: 0,
       properties_1: "-",
       weapon_2: "None",
       type_2: "-",
       range_2: "-",
       damage_2: "-",
-      talent_bonus_2: 0,
+      weapon_bonus_2: 0,
       properties_2: "-"
     },
     xp: 0,
@@ -482,6 +482,7 @@ const Creator: React.FC<PageProps> = () => {
 
               <h2 className="creator-heading heading-3">Armor</h2>
 
+
               <div className="creator-block">
                 <div className="creator-total">
                   {total(
@@ -532,6 +533,21 @@ const Creator: React.FC<PageProps> = () => {
               <h2 className="creator-heading heading-3">Attacks</h2>
 
               <div className="creator-block attacks">
+                <Input
+                  type="number"
+                  value={character.attacks.weapon_bonus_1}
+                  id="weapon-bonus1"
+                  label="Weapon (A) Bonus"
+                  helper="Bonus"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    attacks: {
+                      ...character.attacks,
+                      weapon_bonus_1: e.target.value
+                    }
+                  })}
+                />
                 <Select
                   value={character.attacks.weapon_1}
                   id="weapon1"
@@ -573,6 +589,21 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block attacks">
+                <Input
+                  type="number"
+                  value={character.attacks.weapon_bonus_2}
+                  id="weapon-bonus2"
+                  label="Weapon (A) Bonus"
+                  helper="Bonus"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    attacks: {
+                      ...character.attacks,
+                      weapon_bonus_2: e.target.value
+                    }
+                  })}
+                />
                 <Select
                   value={character.attacks.weapon_2}
                   id="weapon2"

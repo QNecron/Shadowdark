@@ -5,7 +5,7 @@
 }
 
 .creator-block {
-  @include flex-center("true", "false", "true", 33%);
+  @include flex-center("fill", "false", "true", 33%);
   gap: $space-8;
 
   ~ .creator-block {
@@ -27,15 +27,24 @@
   }
 
   &.attacks {
+    // flex-wrap: wrap;
+
+    // .input-select {
+    //   min-width: 100%;
+    // }
+
+    .input-number {
+      max-width: $space-56;
+    }
 
     // media
-    @include media($mq-mobile) {
-
-      .input-container {
-        min-width: 100%;
-      }
-
-    }
+    // @include media($mq-mobile) {
+    //
+    //   .input-container {
+    //     min-width: 100%;
+    //   }
+    //
+    // }
 
   }
 

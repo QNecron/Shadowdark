@@ -6,6 +6,7 @@
   // $s = size
 
   @if $v == "true" { align-items: center; }
+  @if $v == "fill" { align-items: stretch; }
   display: flex;
   @if $h == "true" { justify-content: center; }
   @if $h == "false" { justify-content: flex-start; }

@@ -340,7 +340,7 @@
     "wis": "+1",
     "cha": "-4",
     "attack": "1 touch +4 (1d8 + toxin + engulf)",
-    "ability_1": "<strong>Engulf.</strong> DC 12 STR or trapped inside cube. Touch attack auto- hits engulfed targets each round. DC 12 STR on turn to escape. Fail checks if paralyzed.",
+    "ability_1": "<strong>Engulf.</strong> DC 12 STR or trapped inside cube. Touch attack auto-hits engulfed targets each round. DC 12 STR on turn to escape. Fail checks if paralyzed.",
     "ability_2": "<strong>Rubbery.</strong> Half damage from stabbing weapons.",
     "ability_3": "<strong>Engulf.</strong> DC 15 CON or paralyzed 1d4 rounds.",
     "source": "core"
@@ -362,7 +362,7 @@
     "attack": "2 death touch +5 (1d8 + life drain) or 1 possess",
     "ability_1": "<strong>Greater Undead.</strong> Immune to morale checks. Only damaged by silver or magical sources.",
     "ability_2": "<strong>Life Drain.</strong> 1d4 CON damage. Death if reduced to 0 CON.",
-    "ability_3": "<strong>Possess.</strong> DOne target, close range. Contested Charisma check. If ghost wins, it inhabits the target's body and controls its actions for 2d4 rounds.",
+    "ability_3": "<strong>Possess.</strong> One target, close range. Contested Charisma check. If ghost wins, it inhabits the target's body and controls its actions for 2d4 rounds.",
     "source": "core"
   },
   {

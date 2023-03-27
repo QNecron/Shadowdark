@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Clothing",
+    "cost": "5 cp",
+    "gear_slots": "1",
+    "ac": 0,
+    "dex": true,
+    "properties": "-"
+  },
+  {
+    "name": "Leather",
+    "cost": "10 gp",
+    "gear_slots": "1",
+    "ac": 11,
+    "dex": true,
+    "properties": "-"
+  },
+  {
+    "name": "Chainmail",
+    "cost": "60 gp",
+    "gear_slots": "2",
+    "ac": 13,
+    "dex": true,
+    "properties": "Disadv on stealth, swim"
+  },
+  {
+    "name": "Plate mail",
+    "cost": "130 gp",
+    "gear_slots": "3",
+    "ac": 15,
+    "dex": false,
+    "properties": "No swim, disadv on stealth"
+  },
+  {
+    "name": "Shield",
+    "cost": "10 gp",
+    "gear_slots": "1",
+    "ac": 2,
+    "dex": true,
+    "properties": "Occupies one hand"
+  }
+]
