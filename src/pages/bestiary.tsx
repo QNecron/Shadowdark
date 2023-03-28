@@ -17,6 +17,10 @@ import Sources from "../../json/sources.json"
 import Core from "../../json/bestiary_core.json"
 import Custom from "../../json/bestiary_custom.json"
 
+import HeroDesktop from "../images/heroes/16-4-5.webp"
+// import HeroTablet from "../images/heroes/16-9.webp"
+import HeroMobile from "../images/heroes/1-1.webp"
+
 const Bestiary: React.FC<PageProps> = () => {
 
   const [alpha, alphaUpdate] = useState("*")
@@ -31,13 +35,13 @@ const Bestiary: React.FC<PageProps> = () => {
 
       <Hero
         theme="shaded"
-        desktop="https://picsum.photos/1600/450"
+        desktop={HeroDesktop}
         desktopH="540"
         desktopW="1920"
-        tablet="https://picsum.photos/1024/384"
+        tablet={HeroDesktop}
         tabletH="384"
         tabletW="1024"
-        mobile="https://picsum.photos/480/480"
+        mobile={HeroMobile}
         mobileH="480"
         mobileW="480"
         alt="Shadowdark Hero"

@@ -8,6 +8,10 @@ import Wrapper from "../components/wrapper/wrapper"
 
 // import Data from "../../json/bestiary.json"
 
+import HeroDesktop from "../images/heroes/16-4-5.webp"
+// import HeroTablet from "../images/heroes/16-9.webp"
+import HeroMobile from "../images/heroes/1-1.webp"
+
 const Spells: React.FC<PageProps> = () => {
 
   return (
@@ -16,13 +20,13 @@ const Spells: React.FC<PageProps> = () => {
 
       <Hero
         theme="shaded"
-        desktop="https://picsum.photos/1600/450"
+        desktop={HeroDesktop}
         desktopH="540"
         desktopW="1920"
-        tablet="https://picsum.photos/1024/384"
+        tablet={HeroDesktop}
         tabletH="384"
         tabletW="1024"
-        mobile="https://picsum.photos/480/480"
+        mobile={HeroMobile}
         mobileH="480"
         mobileW="480"
         alt="Shadowdark Hero"

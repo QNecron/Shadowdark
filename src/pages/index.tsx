@@ -6,6 +6,10 @@ import Hero from "../components/hero/hero"
 import Section from "../components/section/section"
 import Wrapper from "../components/wrapper/wrapper"
 
+import HeroDesktop from "../images/heroes/16-9.webp"
+// import HeroTablet from "../images/heroes/16-9.webp"
+import HeroMobile from "../images/heroes/9-16.webp"
+
 const IndexPage: React.FC<PageProps> = () => {
 
   return (
@@ -14,13 +18,13 @@ const IndexPage: React.FC<PageProps> = () => {
 
       <Hero
         theme="shaded"
-        desktop="https://picsum.photos/1600/900"
+        desktop={HeroDesktop}
         desktopH="1080"
         desktopW="1920"
-        tablet="https://picsum.photos/1024/768"
+        tablet={HeroDesktop}
         tabletH="768"
         tabletW="1024"
-        mobile="https://picsum.photos/480/960"
+        mobile={HeroMobile}
         mobileH="960"
         mobileW="480"
         alt="Shadowdark Hero"

@@ -5,7 +5,7 @@ import Image from "../image/image"
 import Wrapper from "../wrapper/wrapper"
 import NavFlyout from "../nav/nav-flyout"
 
-import Logo from "../../images/icons/flame.svg"
+import Logo from "../../images/icons/skull.svg"
 
 const Header = ({ ...props }) => {
 

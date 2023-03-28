@@ -16,6 +16,10 @@ import Weapons from "../../json/weapons.json"
 
 import { modifier, total, diceroll, hitdice, ancestry, armory } from "../utilities/functions"
 
+import HeroDesktop from "../images/heroes/16-4-5.webp"
+// import HeroTablet from "../images/heroes/16-9.webp"
+import HeroMobile from "../images/heroes/1-1.webp"
+
 const Creator: React.FC<PageProps> = () => {
 
   const [character, characterUpdate] = useState({
@@ -47,7 +51,7 @@ const Creator: React.FC<PageProps> = () => {
       cha: 0
     },
     armor_class: {
-      base: 0,
+      base: 10,
       armor: 0,
       shield: 0
     },
@@ -203,13 +207,13 @@ const Creator: React.FC<PageProps> = () => {
 
       <Hero
         theme="shaded"
-        desktop="https://picsum.photos/1600/450"
+        desktop={HeroDesktop}
         desktopH="540"
         desktopW="1920"
-        tablet="https://picsum.photos/1024/384"
+        tablet={HeroDesktop}
         tabletH="384"
         tabletW="1024"
-        mobile="https://picsum.photos/480/480"
+        mobile={HeroMobile}
         mobileH="480"
         mobileW="480"
         alt="Shadowdark Hero"
@@ -494,7 +498,7 @@ const Creator: React.FC<PageProps> = () => {
                     character.armor_class.armor,
                     character.armor_class.shield,
                     character.armor_class.armor <= 0 ? modifier(character.attributes.dex, 0, 0) : 0,
-                    character.armor_class.armor <= 0 ? 10 : 0,
+                    character.armor_class.armor <= 0 ? character.armor_class.base : 0,
                   )}
                 </div>
                 <Select
@@ -511,7 +515,7 @@ const Creator: React.FC<PageProps> = () => {
                     }
                   })}
                 >
-                  <option value="0">Clothing / Robes</option>
+                  <option value="0">-</option>
                   <option value="11">Leather armor</option>
                   <option value="13">Chainmail</option>
                   <option value="15">Plate mail</option>

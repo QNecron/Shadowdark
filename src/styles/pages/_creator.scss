@@ -32,6 +32,15 @@
       max-width: $space-56;
     }
 
+    // media
+    @include media($mq-mobile) {
+
+      .input-select {
+        min-width: 100%;
+      }
+
+    }
+
   }
 
   &.rewards {
