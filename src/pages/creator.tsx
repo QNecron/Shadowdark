@@ -47,7 +47,7 @@ const Creator: React.FC<PageProps> = () => {
       cha: 0
     },
     armor_class: {
-      base: 10,
+      base: 0,
       armor: 0,
       shield: 0
     },
@@ -491,10 +491,10 @@ const Creator: React.FC<PageProps> = () => {
               <div className="creator-block">
                 <div className="creator-total">
                   {total(
-                    character.armor_class.base,
                     character.armor_class.armor,
                     character.armor_class.shield,
-                    character.armor_class.armor <= 13 ? modifier(character.attributes.dex, 0, 0) : 0
+                    character.armor_class.armor <= 0 ? modifier(character.attributes.dex, 0, 0) : 0,
+                    character.armor_class.armor <= 0 ? 10 : 0,
                   )}
                 </div>
                 <Select
@@ -511,7 +511,7 @@ const Creator: React.FC<PageProps> = () => {
                     }
                   })}
                 >
-                  <option value="0">-</option>
+                  <option value="0">Clothing / Robes</option>
                   <option value="11">Leather armor</option>
                   <option value="13">Chainmail</option>
                   <option value="15">Plate mail</option>

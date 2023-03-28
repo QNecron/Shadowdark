@@ -12,7 +12,7 @@
     "cost": "10 gp",
     "gear_slots": "1",
     "ac": 11,
-    "dex": true,
+    "dex": false,
     "properties": "-"
   },
   {
@@ -20,7 +20,7 @@
     "cost": "60 gp",
     "gear_slots": "2",
     "ac": 13,
-    "dex": true,
+    "dex": false,
     "properties": "Disadv on stealth, swim"
   },
   {
