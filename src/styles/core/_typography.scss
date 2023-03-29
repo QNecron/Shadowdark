@@ -14,7 +14,6 @@ body {
 .heading-5 { @include heading(5); }
 .heading-6 { @include heading(6); }
 
-
 .srt {
   @extend %screen-reader-text;
 }

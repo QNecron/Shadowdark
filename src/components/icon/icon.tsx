@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 import Close from "../../images/icons/close.svg"
 import Dice from "../../images/icons/dice.svg"

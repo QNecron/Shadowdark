@@ -4,7 +4,7 @@
     "description": "The shambling zombie shuffles forward, opens its mouth in a silent moan, and suddenly spits out a gout of searing fire.",
     "level": 3,
     "hitpoints": 19,
-    "armorclass": "14",
+    "armorclass": "11 (leather)",
     "alignment": "C",
     "move": "near",
     "str": "+1",

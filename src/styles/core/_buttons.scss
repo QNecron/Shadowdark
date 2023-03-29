@@ -1,5 +1,6 @@
 .btn,
-.btn-tab {
+.btn-tab,
+.btn-link {
   // @extend %black-letter;
   border: solid rem(1) transparent;
   font-family: 'Oswald', sans-serif;
@@ -11,7 +12,8 @@
   line-height: rem(14); // creates 40 height
 }
 
-.btn {
+.btn,
+.btn-link {
   padding: $space-12 $space-16;
 }
 
@@ -22,6 +24,10 @@ a.btn {
     margin-top: $space-8;
   }
 
+}
+
+.btn-link {
+  display: inline-block;
 }
 
 .btn-tab {
