@@ -22,14 +22,14 @@
 @import "../components/icon/_icon";
 @import "../components/card/_bestiary";
 @import "../components/card/_media";
+@import "../components/card/_spell";
 
 // pages
 @import "pages/_creator";
 @import "pages/_filters";
 
-// unknown...
+// search
 .search {
-  background: rgba($white, .08);
   background: linear-gradient(0deg, rgba($white, .08) 0%, rgba($black, 0) 100%);
   display: flex;
   justify-content: center;

@@ -65,6 +65,7 @@ const Bestiary: React.FC<PageProps> = () => {
         y="2"
         heading="Bestiary"
       >
+        {/* @TODO make a search component */}
         <form className="search" onSubmit={(e) => form(e, search)}>
           <button type="button" className="btn-icon btn-primary" onClick={(e) => submitUpdate(search)}>
             <span className="srt">Search</span>

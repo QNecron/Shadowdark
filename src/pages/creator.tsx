@@ -710,7 +710,7 @@ const Creator: React.FC<PageProps> = () => {
                     ancestry_trait: ancestry(e.target.value)
                   })}
                 >
-                  {/* move to JSON data */}
+                  {/* @TODO move to JSON data */}
                   <option value="None">-</option>
                   <option value="Dwarf">Dwarf</option>
                   <option value="Elf">Elf</option>
@@ -730,7 +730,7 @@ const Creator: React.FC<PageProps> = () => {
                     background: e.target.value
                   })}
                 >
-                  {/* move to JSON data */}
+                  {/* @TODO move to JSON data */}
                   <option value="None">-</option>
                   <option value="Urchin">Urchin</option>
                   <option value="Wanted">Wanted</option>

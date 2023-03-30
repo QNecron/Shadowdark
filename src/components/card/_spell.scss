@@ -1,22 +1,14 @@
-.bestiary-card {
+.spell-card {
   border: solid rem(1) rgba($white, .32);
   padding: $space-16;
   position: relative;
 }
 
-.bestiary-name {
+.spell-name {
   margin-bottom: $space-16;
 }
 
-.bestiary-source {
-  height: $space-32;
-  width: $space-32;
-  position: absolute;
-  top: $space-16;
-  right: $space-16;
-}
-
-.bestiary-level {
+.spell-tier {
   align-items: center;
   color: $black;
   display: flex;
@@ -44,27 +36,25 @@
 
 }
 
-.bestiary-details,
-.bestiary-stats,
-.bestiary-attack,
-.bestiary-abilities,
-.bestiary-spells {
-  border-top: solid rem(1) rgba($white, .16);
+.spell-class,
+.spell-duration,
+.spell-range {
   font-size: rem(14);
+}
+
+.spell-duration,
+.spell-range,
+.spell-description {
   margin-top: $space-8;
+}
+
+.spell-description {
+  border-top: solid rem(1) rgba($white, .16);
   padding-top: $space-8;
 }
 
-.bestiary-details,
-.bestiary-stats {
-  display: flex;
-
-  > * {
-    margin-right: $space-8;
-  }
-
-}
-
-.bestiary-ability:not(:first-of-type) {
-  padding-top: $space-8;
+.spell-helpers {
+  // border-top: solid rem(1) rgba($white, .16);
+  margin-top: $space-8;
+  // padding-top: $space-8;
 }

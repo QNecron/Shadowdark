@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Acid Arrow",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Far",
+    "description": "You conjure a corrosive bolt that hits one foe, dealing 1d6 damage a round. The bolt remains in the target for as long as you focus.",
+    "source": "core"
+  },
+  {
+    "name": "Alarm",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "1 day",
+    "range": "Close",
+    "description": "You touch one object, such as a door threshold, setting a magical alarm on it.",
+    "helper_1": "If any creature you do not designate while casting the spell touches or crosses past the object, a magical bell sounds in your head.",
+    "source": "core"
+  },
+  {
+    "name": "Alter Self",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "5 rounds",
+    "range": "Self",
+    "description": "You magically change your physical form, gaining one feature that modifies your existing anatomy.",
+    "helper_1": "For example, you can grow functional gills on your neck or bear claws on your fingers. This spell can’t grow wings or limbs.",
+    "source": "core"
+  },
+  {
+    "name": "Augury",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Self",
+    "description": "You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to “weal” or “woe.”",
+    "source": "core"
+  },
+  {
+    "name": "Bless",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Close",
+    "description": "One creature you touch gains a luck token.",
+    "source": "core"
+  },
+  {
+    "name": "Blind/Deafen",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Focus",
+    "range": "Near",
+    "description": "You utter a divine censure, blinding or deafening one creature you can see in range.",
+    "helper_1": "The creature has disadvantage on tasks requiring the lost sense.",
+    "source": "core"
+  },
+  {
+    "name": "Burning Hands",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Close",
+    "description": "You spread your fingers with thumbs touching, unleashing a circle of flame that fills a close area around where you stand.",
+    "helper_1": "Creatures within the area of effect take 1d6 damage. Unattended flammable objects ignite.",
+    "source": "core"
+  },
+  {
+    "name": "Charm Person",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "1d8 days",
+    "range": "Near",
+    "description": "You magically beguile one humanoid of LV 2 or less within near range, who regards you as a friend for the duration.",
+    "helper_1": "The spell ends if you or your allies do anything harmful to the target.",
+    "helper_2": "The target knows it was magically charmed after the spell ends.",
+    "source": "core"
+  },
+  {
+    "name": "Cleansing Weapon",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "5 rounds",
+    "range": "Close",
+    "description": "One weapon you touch is wreathed in purifying flames. It deals an additional 1d4 damage (1d6 vs. undead) for the duration.",
+    "source": "core"
+  },
+  {
+    "name": "Cure Wounds",
+    "tier": 1,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Close",
+    "description": "Your touch restores ebbing life.",
+    "helper_1": "Roll a number of d6s equal to 1 + half your level (rounded down). One target you touch regains that many hit points.",
+    "source": "core"
+  }
+]

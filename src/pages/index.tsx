@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <Page>
 
       <Hero
-        theme="shaded"
+        theme="large shaded"
         desktop={HeroDesktop}
         desktopH="1080"
         desktopW="1920"

@@ -1,6 +1,17 @@
 .hero {
   border-bottom: solid rem(1) rgba($white, .08);
+  overflow: hidden;
   position: relative;
+}
+
+.hero-asset {
+
+  .asset {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+  }
+
 }
 
 .hero-wrapper {
@@ -48,6 +59,14 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+[hero-theme~="large"] {
+
+  .hero-asset {
+    height: 80vh;
+  }
+
 }
 
 [hero-theme~="shaded"] {
