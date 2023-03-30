@@ -5,6 +5,7 @@ import Dice from "../../images/icons/dice.svg"
 import Download from "../../images/icons/cloud-download.svg"
 import Upload from "../../images/icons/cloud-upload.svg"
 import Delete from "../../images/icons/skull.svg"
+import Search from "../../images/icons/search.svg"
 
 const Icon = ({ ...props }) => {
 
@@ -17,6 +18,7 @@ const Icon = ({ ...props }) => {
     if (i === "download") url = Download
     if (i === "upload") url = Upload
     if (i === "delete") url = Delete
+    if (i === "search") url = Search
 
     return url
 

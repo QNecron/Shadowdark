@@ -4,6 +4,10 @@
   padding-bottom: $space-16;
 }
 
+.creator-heading-spacer {
+  margin-top: $space-32;
+}
+
 .creator-block {
   @include flex-center("fill", "false", "true", 33%);
   gap: $space-8;
@@ -62,6 +66,7 @@
 .creator-mod,
 .creator-total,
 .creator-class,
+.creator-armor,
 .creator-weapon,
 .creator-name {
   background: rgba($white, .02);

@@ -15,7 +15,7 @@
   // text shadow
   @if $text > 0 {
 
-    @if $text == 1 { $t-shadow: 0 rem(2) rem(3) rgba($color, .16), 0 rem(4) rem(5) rgba($color, .32) }
+    @if $text == 1 { $t-shadow: 0 rem(1) rem(2) rgba($color, .16), 0 rem(3) rem(4) rgba($color, .32) }
 
     text-shadow: $t-shadow;
 

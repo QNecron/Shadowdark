@@ -77,7 +77,7 @@ export const ancestry = (a) => {
 
 }
 
-export const armory = (json, weapon, output) => {
+export const weapons = (json, weapon, output) => {
   let type = "-"
   let range = "-"
   let damage = "-"
@@ -100,6 +100,33 @@ export const armory = (json, weapon, output) => {
   else if (output === 4) return properties
   else {
     console.log("Weapon not found.")
+  }
+
+}
+
+export const armors = (json, armor, output) => {
+  let slots = 0
+  let ac = 0
+  let dex = false
+  let properties = "-"
+
+  json.map((data) => {
+
+    if (parseInt(armor) === parseInt(data.ac)) {
+      slots = data.gear_slots
+      ac = data.ac
+      dex = data.dex
+      properties = data.properties
+    }
+
+  })
+
+  if (output === 1) return slots
+  else if (output === 2) return ac
+  else if (output === 3) return dex
+  else if (output === 4) return properties
+  else {
+    console.log("Armor not found.")
   }
 
 }

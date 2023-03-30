@@ -72,6 +72,8 @@ const Hero = ({ ...props }) => {
 
       </Wrapper>
 
+      {props.children}
+
     </section>
   )
 

@@ -3,7 +3,7 @@ import * as React from "react"
 const BestiaryCard = ({ ...props }) => {
 
   return (
-    <article className={`bestiary-card${props.source ? " "+props.source : ""}`} key={props.key}>
+    <article className={`bestiary-card${props.source ? " "+props.source : ""}`} key={props.key} card-search={props.name}>
 
       <h2 className="bestiary-name heading-3">{props.name}</h2>
 

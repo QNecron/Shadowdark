@@ -49,7 +49,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <Grid desktop="3" tablet="3" mobile="1">
 
             <MediaCard
-              theme="tinted overlay"
+              theme="shaded overlay"
               desktop={MediaImage}
               desktopH="480"
               desktopW="480"

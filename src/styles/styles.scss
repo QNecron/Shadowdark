@@ -26,3 +26,23 @@
 // pages
 @import "pages/_creator";
 @import "pages/_filters";
+
+// unknown...
+.search {
+  background: rgba($white, .08);
+  background: linear-gradient(0deg, rgba($white, .08) 0%, rgba($black, 0) 100%);
+  display: flex;
+  justify-content: center;
+  padding: $space-16;
+  width: 100vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  .input {
+    @include shadows(1, 0);
+  }
+
+}

@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
+import SEO from "../components/seo/seo"
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
 import Section from "../components/section/section"
@@ -54,4 +55,9 @@ const Spells: React.FC<PageProps> = () => {
 
 export default Spells
 
-export const Head: HeadFC = () => <title>Spells</title>
+export const Head: HeadFC = () => (
+  <SEO
+    title="Name Here | Spells"
+    description="Search through all openly available spells for ShadowDark TTRPG."
+  />
+)

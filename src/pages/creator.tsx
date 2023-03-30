@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
+import SEO from "../components/seo/seo"
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
 import NavFlyout from "../components/nav/nav-flyout"
@@ -12,9 +13,10 @@ import Input from "../components/forms/input"
 import Select from "../components/forms/select"
 import TextArea from "../components/forms/textarea"
 
+import Armors from "../../json/armors.json"
 import Weapons from "../../json/weapons.json"
 
-import { modifier, total, diceroll, hitdice, ancestry, armory } from "../utilities/functions"
+import { modifier, total, diceroll, hitdice, ancestry, armors, weapons } from "../utilities/functions"
 
 import HeroDesktop from "../images/heroes/16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"
@@ -53,7 +55,10 @@ const Creator: React.FC<PageProps> = () => {
     armor_class: {
       base: 10,
       armor: 0,
-      shield: 0
+      armor_slot: 0,
+      properties: "-",
+      shield: 0,
+      shield_slot: 0
     },
     attacks: {
       weapon_1: "None",
@@ -133,7 +138,10 @@ const Creator: React.FC<PageProps> = () => {
           ...character.armor_class,
           base: data.armor_class.base,
           armor: data.armor_class.armor,
-          shield: data.armor_class.shield
+          armor_slot: data.armor_class.armor_slot,
+          properties: data.armor_class.properties,
+          shield: data.armor_class.shield,
+          shield_slot: data.armor_class.shield_slot
         },
         attacks: {
           ...character.attacks,
@@ -491,16 +499,7 @@ const Creator: React.FC<PageProps> = () => {
 
               <h2 className="creator-heading heading-3">Armor</h2>
 
-
               <div className="creator-block">
-                <div className="creator-total">
-                  {total(
-                    character.armor_class.armor,
-                    character.armor_class.shield,
-                    character.armor_class.armor <= 0 ? modifier(character.attributes.dex, 0, 0) : 0,
-                    character.armor_class.armor <= 0 ? character.armor_class.base : 0,
-                  )}
-                </div>
                 <Select
                   value={character.armor_class.armor}
                   id="armor"
@@ -511,14 +510,24 @@ const Creator: React.FC<PageProps> = () => {
                     ...character,
                     armor_class: {
                       ...character.armor_class,
-                      armor: e.target.value
+                      armor: e.target.value,
+                      armor_slot: armors(Armors, e.target.value, 1),
+                      properties: armors(Armors, e.target.value, 4)
                     }
                   })}
                 >
-                  <option value="0">-</option>
-                  <option value="11">Leather armor</option>
-                  <option value="13">Chainmail</option>
-                  <option value="15">Plate mail</option>
+                  {Armors.map((data, index) => {
+                    return (
+                      <option
+                        key={index}
+                        value={data.ac}
+                        slots={data.gear_slots}
+                        properties={data.properties}
+                      >
+                        {data.name}
+                      </option>
+                    )
+                  })}
                 </Select>
                 <Select
                   value={character.armor_class.shield}
@@ -535,8 +544,23 @@ const Creator: React.FC<PageProps> = () => {
                   })}
                 >
                   <option value="0">-</option>
-                  <option value="2">Shield</option>
+                  <option value="2" slots="1" properties="Occupies one hand">
+                    Shield
+                  </option>
                 </Select>
+              </div>
+
+              <div className="creator-block">
+                <div className="creator-total">
+                  {total(
+                    character.armor_class.armor,
+                    character.armor_class.shield,
+                    character.armor_class.armor <= 0 ? modifier(character.attributes.dex, 0, 0) : 0,
+                    character.armor_class.armor <= 0 ? character.armor_class.base : 0,
+                  )}
+                </div>
+                <div className="creator-armor">{character.armor_class.properties}</div>
+                {/*<div className="creator-total">{character.armor_class.armor_slot}</div>*/}
               </div>
 
               <h2 className="creator-heading heading-3">Attacks</h2>
@@ -568,10 +592,10 @@ const Creator: React.FC<PageProps> = () => {
                     attacks: {
                       ...character.attacks,
                       weapon_1: e.target.value,
-                      type_1: armory(Weapons, e.target.value, 1),
-                      range_1: armory(Weapons, e.target.value, 2),
-                      damage_1: armory(Weapons, e.target.value, 3),
-                      properties_1: armory(Weapons, e.target.value, 4)
+                      type_1: weapons(Weapons, e.target.value, 1),
+                      range_1: weapons(Weapons, e.target.value, 2),
+                      damage_1: weapons(Weapons, e.target.value, 3),
+                      properties_1: weapons(Weapons, e.target.value, 4)
                     }
                   })}
                 >
@@ -624,10 +648,10 @@ const Creator: React.FC<PageProps> = () => {
                     attacks: {
                       ...character.attacks,
                       weapon_2: e.target.value,
-                      type_2: armory(Weapons, e.target.value, 1),
-                      range_2: armory(Weapons, e.target.value, 2),
-                      damage_2: armory(Weapons, e.target.value, 3),
-                      properties_2: armory(Weapons, e.target.value, 4)
+                      type_2: weapons(Weapons, e.target.value, 1),
+                      range_2: weapons(Weapons, e.target.value, 2),
+                      damage_2: weapons(Weapons, e.target.value, 3),
+                      properties_2: weapons(Weapons, e.target.value, 4)
                     }
                   })}
                 >
@@ -864,7 +888,7 @@ const Creator: React.FC<PageProps> = () => {
 
           </Grid>
 
-          <h2 className="creator-heading heading-3">Rewards</h2>
+          <h2 className="creator-heading creator-heading-spacer heading-3">Rewards</h2>
 
           <div className="creator-block rewards">
             <div className="creator-subheading heading-5">XP</div>
@@ -944,4 +968,9 @@ const Creator: React.FC<PageProps> = () => {
 
 export default Creator
 
-export const Head: HeadFC = () => <title>Creator</title>
+export const Head: HeadFC = () => (
+  <SEO
+    title="Name Here | Creator"
+    description="Create a player character or non-player character; then preview, save, update, or download your creation."
+  />
+)

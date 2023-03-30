@@ -24,13 +24,15 @@ const NavFlyout = ({ ...props }) => {
 
     <div id={props.navId} className={`${props.navClass ? props.navClass+" " : ""}nav-flyout`} nav-open={nav.toString()}>
 
-      <button className="btn-icon btn-secondary nav-flyout-close" onClick={navToggle}>
-        <span className="srt">Close</span>
-        <Icon icon="close" />
-      </button>
-
       <div className="nav-flyout-content">
+
+        <button className="btn-icon btn-secondary nav-flyout-close" onClick={navToggle}>
+          <span className="srt">Close</span>
+          <Icon icon="close" />
+        </button>
+
         {props.children}
+
       </div>
 
     </div>

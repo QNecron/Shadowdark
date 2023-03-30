@@ -1,12 +1,15 @@
 import React, { useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
+import SEO from "../components/seo/seo"
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
 import NavFlyout from "../components/nav/nav-flyout"
 import Section from "../components/section/section"
 import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
+import Icon from "../components/icon/icon"
+import Input from "../components/forms/input"
 import BestiaryCard from "../components/card/bestiary"
 import Tabs from "../components/tabs/tabs"
 
@@ -26,6 +29,18 @@ const Bestiary: React.FC<PageProps> = () => {
   const [alpha, alphaUpdate] = useState("*")
   const [level, levelUpdate] = useState("*")
   const [source, sourceUpdate] = useState("*")
+  const [search, searchUpdate] = useState("")
+  const [submit, submitUpdate] = useState("")
+
+  const form = (e, prop) => {
+    e.preventDefault()
+    submitUpdate(prop)
+  }
+
+  const clear = (prop) => {
+    searchUpdate(prop)
+    submitUpdate(prop)
+  }
 
   const Data = Core.concat(Custom)
 
@@ -49,7 +64,26 @@ const Bestiary: React.FC<PageProps> = () => {
         x="2"
         y="2"
         heading="Bestiary"
-      />
+      >
+        <form className="search" onSubmit={(e) => form(e, search)}>
+          <button type="button" className="btn-icon btn-primary" onClick={(e) => submitUpdate(search)}>
+            <span className="srt">Search</span>
+            <Icon icon="search" />
+          </button>
+          <Input
+            type="search"
+            value={search}
+            id="search"
+            srt="true"
+            label="Search"
+            change={(e) => searchUpdate(e.target.value)}
+          />
+          <button type="reset" className="btn-icon btn-primary" onClick={(e) => clear("")}>
+            <span className="srt">Clear</span>
+            <Icon icon="close" />
+          </button>
+        </form>
+      </Hero>
 
       <Section theme="bot">
 
@@ -102,6 +136,8 @@ const Bestiary: React.FC<PageProps> = () => {
               let alphaFilter = data.name.charAt(0)
               let levelFilter = data.level
               let sourceFilter = data.source
+              let submitFilter = submit.toLowerCase()
+              let nameFilter = data.name.toLowerCase()
 
               // alphabetical filter
               if (alphaFilter !== alpha && alpha !== "*") return null
@@ -111,6 +147,13 @@ const Bestiary: React.FC<PageProps> = () => {
 
               // source filter
               if (sourceFilter !== source && source !== "*") return null
+
+              // search filter
+              if (submit) {
+
+                if (submitFilter.substring(0, 3) !== nameFilter.substring(0, 3)) return null
+
+              }
 
               return(
 
@@ -161,4 +204,9 @@ const Bestiary: React.FC<PageProps> = () => {
 
 export default Bestiary
 
-export const Head: HeadFC = () => <title>Bestiary</title>
+export const Head: HeadFC = () => (
+  <SEO
+    title="Name Here | Bestiary"
+    description="Search through all openly available monsters for ShadowDark TTRPG."
+  />
+)

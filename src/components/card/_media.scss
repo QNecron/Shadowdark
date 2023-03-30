@@ -18,24 +18,27 @@
   margin-top: $space-8;
 }
 
-[media-theme~="tinted"] {
+[media-theme~="shaded"] {
+  background-color: $black;
 
   .media-card-asset {
+    filter: grayscale(50%);
+    opacity: .48;
+  }
 
-    &:before {
-      content: "";
-      background-color: rgba($white, .24);
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
+}
 
+[media-theme~="tinted"] {
+  background-color: $white;
+
+  .media-card-asset {
+    filter: grayscale(50%);
+    opacity: .48;
   }
 
   .media-card-heading,
   .media-card-copy {
+    color: $black;
     @include shadows(0, 1);
   }
 
