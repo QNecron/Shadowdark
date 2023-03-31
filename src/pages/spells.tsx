@@ -143,7 +143,7 @@ const Spells: React.FC<PageProps> = () => {
 
           <Grid desktop="3" tablet="3" mobile="1">
 
-            {Data.sort((a, b) => a.Name > b.Name ? -1 : 1).map((data, index) => {
+            {Data.sort((a, b) => a.name < b.name ? -1 : 1).map((data, index) => {
 
               let alphaFilter = data.name.charAt(0)
               let casterFilter = data.class

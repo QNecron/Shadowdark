@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "name": "Shillelagh",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "5 rounds",
+    "range": "Close",
+    "description_1": "One club or staff you touch hardens and enlarges. The weapon becomes magical and damage rolls have advantage for the duration.",
+    "source": "custom"
+  }
+]

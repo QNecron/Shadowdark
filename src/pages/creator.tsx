@@ -888,7 +888,7 @@ const Creator: React.FC<PageProps> = () => {
 
           </Grid>
 
-          <h2 className="creator-heading creator-heading-spacer heading-3">Rewards</h2>
+          <h2 className="creator-heading creator-heading-spacer heading-3">Inventory / Rewards</h2>
 
           <div className="creator-block rewards">
             <div className="creator-subheading heading-5">XP</div>
