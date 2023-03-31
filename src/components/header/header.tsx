@@ -38,6 +38,7 @@ const Header = ({ ...props }) => {
               <Link className="btn btn-primary" to="/creator">Creator</Link>
               <Link className="btn btn-primary" to="/spells">Spells</Link>
               <Link className="btn btn-primary" to="/bestiary">Bestiary</Link>
+              <Link className="btn btn-primary" to="/resources">Resources</Link>
             </NavFlyout>
 
           </nav>

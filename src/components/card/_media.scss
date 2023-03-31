@@ -56,3 +56,21 @@
   }
 
 }
+
+[media-theme~="2-of-3"] {
+
+  // media
+  @include media($mq-tablet-up) {
+    grid-column: span 8;
+
+    &[media-theme~="overlay"] {
+
+      .media-card-content {
+        max-width: 50%;
+      }
+
+    }
+
+  }
+
+}
