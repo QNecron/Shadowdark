@@ -5,7 +5,7 @@
     "class": "Wizard",
     "duration": "Focus",
     "range": "Far",
-    "description": "You conjure a corrosive bolt that hits one foe, dealing 1d6 damage a round. The bolt remains in the target for as long as you focus.",
+    "description_1": "You conjure a corrosive bolt that hits one foe, dealing 1d6 damage a round. The bolt remains in the target for as long as you focus.",
     "source": "core"
   },
   {
@@ -14,8 +14,8 @@
     "class": "Wizard",
     "duration": "1 day",
     "range": "Close",
-    "description": "You touch one object, such as a door threshold, setting a magical alarm on it.",
-    "helper_1": "If any creature you do not designate while casting the spell touches or crosses past the object, a magical bell sounds in your head.",
+    "description_1": "You touch one object, such as a door threshold, setting a magical alarm on it.",
+    "description_2": "If any creature you do not designate while casting the spell touches or crosses past the object, a magical bell sounds in your head.",
     "source": "core"
   },
   {
@@ -24,8 +24,8 @@
     "class": "Wizard",
     "duration": "5 rounds",
     "range": "Self",
-    "description": "You magically change your physical form, gaining one feature that modifies your existing anatomy.",
-    "helper_1": "For example, you can grow functional gills on your neck or bear claws on your fingers. This spell can’t grow wings or limbs.",
+    "description_1": "You magically change your physical form, gaining one feature that modifies your existing anatomy.",
+    "description_2": "For example, you can grow functional gills on your neck or bear claws on your fingers. This spell can’t grow wings or limbs.",
     "source": "core"
   },
   {
@@ -34,7 +34,7 @@
     "class": "Priest",
     "duration": "Instant",
     "range": "Self",
-    "description": "You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to “weal” or “woe.”",
+    "description_1": "You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to “weal” or “woe.”",
     "source": "core"
   },
   {
@@ -43,7 +43,7 @@
     "class": "Priest",
     "duration": "Instant",
     "range": "Close",
-    "description": "One creature you touch gains a luck token.",
+    "description_1": "One creature you touch gains a luck token.",
     "source": "core"
   },
   {
@@ -52,8 +52,8 @@
     "class": "Priest",
     "duration": "Focus",
     "range": "Near",
-    "description": "You utter a divine censure, blinding or deafening one creature you can see in range.",
-    "helper_1": "The creature has disadvantage on tasks requiring the lost sense.",
+    "description_1": "You utter a divine censure, blinding or deafening one creature you can see in range.",
+    "description_2": "The creature has disadvantage on tasks requiring the lost sense.",
     "source": "core"
   },
   {
@@ -62,8 +62,8 @@
     "class": "Wizard",
     "duration": "Instant",
     "range": "Close",
-    "description": "You spread your fingers with thumbs touching, unleashing a circle of flame that fills a close area around where you stand.",
-    "helper_1": "Creatures within the area of effect take 1d6 damage. Unattended flammable objects ignite.",
+    "description_1": "You spread your fingers with thumbs touching, unleashing a circle of flame that fills a close area around where you stand.",
+    "description_2": "Creatures within the area of effect take 1d6 damage. Unattended flammable objects ignite.",
     "source": "core"
   },
   {
@@ -72,9 +72,9 @@
     "class": "Wizard",
     "duration": "1d8 days",
     "range": "Near",
-    "description": "You magically beguile one humanoid of LV 2 or less within near range, who regards you as a friend for the duration.",
-    "helper_1": "The spell ends if you or your allies do anything harmful to the target.",
-    "helper_2": "The target knows it was magically charmed after the spell ends.",
+    "description_1": "You magically beguile one humanoid of LV 2 or less within near range, who regards you as a friend for the duration.",
+    "description_2": "The spell ends if you or your allies do anything harmful to the target.",
+    "description_3": "The target knows it was magically charmed after the spell ends.",
     "source": "core"
   },
   {
@@ -83,7 +83,7 @@
     "class": "Priest",
     "duration": "5 rounds",
     "range": "Close",
-    "description": "One weapon you touch is wreathed in purifying flames. It deals an additional 1d4 damage (1d6 vs. undead) for the duration.",
+    "description_1": "One weapon you touch is wreathed in purifying flames. It deals an additional 1d4 damage (1d6 vs. undead) for the duration.",
     "source": "core"
   },
   {
@@ -92,8 +92,225 @@
     "class": "Priest",
     "duration": "Instant",
     "range": "Close",
-    "description": "Your touch restores ebbing life.",
-    "helper_1": "Roll a number of d6s equal to 1 + half your level (rounded down). One target you touch regains that many hit points.",
+    "description_1": "Your touch restores ebbing life.",
+    "description_2": "Roll a number of d6s equal to 1 + half your level (rounded down). One target you touch regains that many hit points.",
+    "source": "core"
+  },
+  {
+    "name": "Detect Magic",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Near",
+    "description_1": "You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.",
+    "source": "core"
+  },
+  {
+    "name": "Detect Thoughts",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Near",
+    "description_1": "You peer into the mind of one creature you can see within the spell’s range.",
+    "description_2": "Each round, you learn the target’s immediate thoughts.",
+    "description_3": "On its turn, the target makes a Wisdom check opposed by your last spellcasting check. If the target succeeds, it notices your presence in its mind and the spell ends.",
+    "source": "core"
+  },
+  {
+    "name": "Feather Fall",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Self",
+    "description_1": "You may make an attempt to cast this spell when you fall.",
+    "description_2": "Your rate of descent slows so that you land safely on your feet.",
+    "source": "core"
+  },
+  {
+    "name": "Fixed Object",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "5 rounds",
+    "range": "Close",
+    "description_1": "An object you touch that weighs no more than 5 pounds becomes fixed in its current location. It can support up to 5,000 pounds of weight for the duration of the spell.",
+    "source": "core"
+  },
+  {
+    "name": "Floating Disk",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "10 rounds",
+    "range": "Near",
+    "description_1": "You create a floating, circular disk of force with a concave center. It can carry up to 20 gear slots. It hovers at waist level and automatically stays within near of you. It can’t cross over drop-offs or pits taller than a human.",
+    "source": "core"
+  },
+  {
+    "name": "Hold Person",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Near",
+    "description_1": "You magically paralyze one humanoid creature of LV 4 or less you can see within range.",
+    "source": "core"
+  },
+  {
+    "name": "Holy Weapon",
+    "tier": 1,
+    "class": "Priest",
+    "duration": "5 rounds",
+    "range": "Close",
+    "description_1": "One weapon you touch is imbued with a sacred blessing. The weapon becomes magical and has +1 to attack and damage rolls for the duration.",
+    "source": "core"
+  },
+  {
+    "name": "Invisibility",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "10 rounds",
+    "range": "Close",
+    "description_1": "A creature you touch becomes invisible for the spell’s duration.",
+    "description_2": "The spell ends if the target attacks or casts a spell.",
+    "source": "core"
+  },
+  {
+    "name": "Knock",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "A door, window, gate, chest, or portal you can see within range instantly opens, defeating all mundane locks and barriers.",
+    "description_2": "This spell creates a loud knock audible to all within earshot.",
+    "source": "core"
+  },
+  {
+    "name": "Levitate",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Self",
+    "description_1": "You can float a near distance vertically per round on your turn. You can also push against solid objects to move horizontally.",
+    "source": "core"
+  },
+  {
+    "name": "Light",
+    "tier": 1,
+    "class": "Priest, Wizard",
+    "duration": "1 hour real time",
+    "range": "Close",
+    "description_1": "One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.",
+    "source": "core"
+  },
+  {
+    "name": "Mage Armor",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "10 rounds",
+    "range": "Self",
+    "description_1": "An invisible layer of magical force protects your vitals. Your armor class becomes 14 (18 on a critical spellcasting check) for the spell’s duration.",
+    "source": "core"
+  },
+  {
+    "name": "Magic Missile",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Far",
+    "description_1": "You have advantage on your check to cast this spell.",
+    "description_2": "A glowing bolt of force streaks from your open hand, dealing 1d4 damage to one target.",
+    "source": "core"
+  },
+  {
+    "name": "Mirror Image",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "5 rounds",
+    "range": "Self",
+    "description_1": "You create a number of illusory duplicates of yourself equal to half your level rounded down (minimum 1). The duplicates surround you and mimic you.",
+    "description_2": "Each time a creature attacks you, the attack misses and causes one of the duplicates to evaporate.",
+    "description_3": "If all of the illusions have disappeared, the spell ends.",
+    "source": "core"
+  },
+  {
+    "name": "Misty Step",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Self",
+    "description_1": "In a puff of smoke, you teleport a near distance to an area you can see.",
+    "source": "core"
+  },
+  {
+    "name": "Protection from Evil",
+    "tier": 1,
+    "class": "Priest, Wizard",
+    "duration": "Focus",
+    "range": "Close",
+    "description_1": "For the spell’s duration, chaotic beings have disadvantage on attack rolls and hostile spellcasting checks against the target. These beings also can’t possess, compel, or beguile it.",
+    "description_2": "When cast on an already-possessed target, the possessing entity makes a CHA check vs. the last spellcasting check. On a failure, the entity is expelled.",
+    "source": "core"
+  },
+  {
+    "name": "Shield of Faith",
+    "tier": 1,
+    "class": "Priest",
+    "duration": "5 rounds",
+    "range": "Self",
+    "description_1": "A protective force wrought of your holy conviction surrounds you. You gain a +2 bonus to your armor class for the duration.",
+    "source": "core"
+  },
+  {
+    "name": "Silence",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Far",
+    "description_1": "You magically mute sound in a near cube within the spell’s range. Creatures inside the area are deafened, and any sounds they create cannot be heard.",
+    "source": "core"
+  },
+  {
+    "name": "Sleep",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "This spell fills a near-sized cube extending from you. Choose a number of living creatures in the area up to your level. Those creatures fall into a deep sleep if they are LV 2 or less. Injury or vigorous shaking wakes them.",
+    "source": "core"
+  },
+  {
+    "name": "Smite",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "You call down punishing flames on a creature you can see within range. It takes 1d6 damage.",
+    "source": "core"
+  },
+  {
+    "name": "Turn Undead",
+    "tier": 1,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "You rebuke undead creatures, forcing them to flee. You must present a holy symbol to cast this spell.",
+    "description_2": "Undead creatures within near of you must make a CHA check opposed by your spellcasting check. If a creature fails by 10+ points and is equal to or less than your level, it is destroyed. Otherwise, on a fail, it flees from you for 5 rounds.",
+    "source": "core"
+  },
+  {
+    "name": "Web",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "5 rounds",
+    "range": "Far",
+    "description_1": "You create a near-sized cube of sticky, dense spider web within the spell’s range. A creature stuck in the web can’t move and must succeed on a Strength check opposed by your spellcasting check to free itself.",
+    "source": "core"
+  },
+  {
+    "name": "Zone of Turth",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Focus",
+    "range": "Near",
+    "description_1": "You compel a creature you can see to speak truth. It can’t utter a deliberate lie while within range.",
     "source": "core"
   }
 ]
