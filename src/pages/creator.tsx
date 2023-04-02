@@ -979,7 +979,7 @@ export default Creator
 
 export const Head: HeadFC = () => (
   <SEO
-    title="Name Here | Creator"
+    title="Creator | Umbral Tools"
     description="Create a player character or non-player character; then preview, save, update, or download your creation."
   />
 )

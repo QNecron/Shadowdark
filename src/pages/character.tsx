@@ -425,6 +425,6 @@ export default Character
 export const Head: HeadFC = () => (
   <SEO
     title="Character Sheet | Umbral Tools"
-    description="???"
+    description="Load saved characters up for a simplified overview for table top play."
   />
 )
