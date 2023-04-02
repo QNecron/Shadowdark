@@ -36,15 +36,13 @@ const IndexPage: React.FC<PageProps> = () => {
         loading="auto"
         x="2"
         y="2"
+        heading="Umbral Tools"
         logo="white"
       />
 
       <Section>
 
         <Wrapper>
-
-          {/* @TODO - abstract heading into Section component */}
-          <h1 className="section-heading heading-3">[Name Here]</h1>
 
           <Grid desktop="3" tablet="3" mobile="1">
 
@@ -84,7 +82,7 @@ export default IndexPage
 
 export const Head: HeadFC = () => (
   <SEO
-    title="Name Here | Home"
+    title="Umbral Tools"
     description="Tool set for the ShadowDark TTRP created by The Arcane Light."
   />
 )

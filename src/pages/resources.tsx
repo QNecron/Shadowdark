@@ -102,7 +102,7 @@ export default Resources
 
 export const Head: HeadFC = () => (
   <SEO
-    title="Name Here | Resources"
+    title="Resources | Umbral Tools"
     description="Additional commnuity driven 3pp reources for ShadowDark."
   />
 )

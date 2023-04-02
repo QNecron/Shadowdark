@@ -208,7 +208,7 @@ export default Bestiary
 
 export const Head: HeadFC = () => (
   <SEO
-    title="Name Here | Bestiary"
+    title="Bestiary | Umbral Tools"
     description="Search through all openly available monsters for ShadowDark TTRPG."
   />
 )

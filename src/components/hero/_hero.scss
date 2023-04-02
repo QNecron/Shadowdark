@@ -61,6 +61,12 @@
   flex-direction: column;
 }
 
+.hero-logo {
+  margin-top: $space-16;
+  padding-right: $space-64;
+  padding-left: $space-64;
+}
+
 [hero-theme~="large"] {
 
   .hero-asset {

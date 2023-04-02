@@ -294,7 +294,7 @@ const Creator: React.FC<PageProps> = () => {
               {!characterSaved[0] && (
                 <div className="creator-no-characters">
                   <p>
-                    No saved characters found, click the "Save" button to store your progress.
+                    No saved characters found, click the save (cloud upload) button to store your progress.
                   </p>
                 </div>
               )}

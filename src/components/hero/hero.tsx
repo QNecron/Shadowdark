@@ -35,18 +35,6 @@ const Hero = ({ ...props }) => {
           {(props.logo || props.heading || props.copy || props.cta) &&
             <div className="hero-content">
 
-              {props.logo &&
-                <Image
-                  desktop={props.logo === "black" ? LogoBlack : LogoWhite}
-                  tablet={props.logo === "black" ? LogoBlack : LogoWhite}
-                  mobile={props.logo === "black" ? LogoBlack : LogoWhite}
-                  classes="hero-logo"
-                  alt="Shadowdark Logo"
-                  loading="lazy"
-                  priority="high"
-                />
-              }
-
               {props.heading ?
                 <h1 className="hero-heading heading-1">
                   {props.heading}
@@ -64,6 +52,18 @@ const Hero = ({ ...props }) => {
                   {props.cta}
                 </Link>
               : ""}
+
+              {props.logo &&
+                <Image
+                  desktop={props.logo === "black" ? LogoBlack : LogoWhite}
+                  tablet={props.logo === "black" ? LogoBlack : LogoWhite}
+                  mobile={props.logo === "black" ? LogoBlack : LogoWhite}
+                  classes="hero-logo"
+                  alt="Shadowdark Logo"
+                  loading="lazy"
+                  priority="high"
+                />
+              }
 
             </div>
           }

@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Name Here`,
-    siteUrl: `https://astounding-vacherin-7bf426.netlify.app/`
+    title: `Umbral Tools`,
+    siteUrl: `https://umbraltools.com/`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

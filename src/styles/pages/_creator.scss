@@ -117,6 +117,10 @@
   width: calc(100% - rem(88));
 }
 
+.creator-no-characters {
+  margin-top: $space-16;
+}
+
 // @TODO move to its own partial
 
 .character-sheet-saved {

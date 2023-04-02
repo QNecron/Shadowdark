@@ -24,7 +24,7 @@ const Header = ({ ...props }) => {
                 mobile={Logo}
                 mobileH="40"
                 mobileW="40"
-                alt="Placeholder Logo"
+                alt="Umbral Tools D20"
               />
             </Link>
 
