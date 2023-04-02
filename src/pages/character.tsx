@@ -19,9 +19,9 @@ const Character: React.FC<PageProps> = () => {
     ancestry: "None",
     ancestry_trait: "None",
     background: "None",
-    deity: "",
+    deity: "None",
     alignment: "None",
-    title: "",
+    title: "None",
     class: "None",
     hit_dice: "d4",
     level: 0,
@@ -256,129 +256,159 @@ const Character: React.FC<PageProps> = () => {
                 {character.name}
               </h1>
 
+              <div className="character-sheet-xp">
+                {character.xp}
+              </div>
+
               <div className="character-sheet-level">
                 {character.level}
               </div>
-
-              <div className="character-sheet-block">
-                <div className="character-sheet-prop">Ancestry</div>
-                <div className="character-sheet-value">{character.ancestry}</div>
-              </div>
-
-            </div>
-
-
-            <div className="creator-sheet hidden">
-
-
 
               <Grid desktop="2" tablet="2" mobile="1" gap="32">
 
                 <div className="left">
 
-                  <div>{character.attributes.str} / {modifier(character.attributes.str, 0, 0)}</div>
-                  <div>{character.attributes.dex} / {modifier(character.attributes.dex, 0, 0)}</div>
-                  <div>{character.attributes.con} / {modifier(character.attributes.con, 0, 0)}</div>
-                  <div>{character.attributes.int} / {modifier(character.attributes.int, 0, 0)}</div>
-                  <div>{character.attributes.wis} / {modifier(character.attributes.wis, 0, 0)}</div>
-                  <div>{character.attributes.cha} / {modifier(character.attributes.cha, 0, 0)}</div>
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">STR</div>
+                    <div className="character-sheet-value">{character.attributes.str}</div>
+                    <div className="character-sheet-mod">{modifier(character.attributes.str, 0, 0)}</div>
+                  </div>
 
-                  <div className="creator-sheet-block creator-sheet-hp-armor">
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">DEX</div>
+                    <div className="character-sheet-value">{character.attributes.dex}</div>
+                    <div className="character-sheet-mod">{modifier(character.attributes.dex, 0, 0)}</div>
+                  </div>
 
-                    <div clasName="hitpoints">
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">CON</div>
+                    <div className="character-sheet-value">{character.attributes.con}</div>
+                    <div className="character-sheet-mod">{modifier(character.attributes.con, 0, 0)}</div>
+                  </div>
+
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">INT</div>
+                    <div className="character-sheet-value">{character.attributes.int}</div>
+                    <div className="character-sheet-mod">{modifier(character.attributes.int, 0, 0)}</div>
+                  </div>
+
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">WIS</div>
+                    <div className="character-sheet-value">{character.attributes.wis}</div>
+                    <div className="character-sheet-mod">{modifier(character.attributes.wis, 0, 0)}</div>
+                  </div>
+
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">CHA</div>
+                    <div className="character-sheet-value">{character.attributes.cha}</div>
+                    <div className="character-sheet-mod">{modifier(character.attributes.cha, 0, 0)}</div>
+                  </div>
+
+                  <div className="character-sheet-block separator">
+                    <div className="character-sheet-prop">Hit Points</div>
+                    <div className="character-sheet-value">
                       {total(character.hit_points, character.ancestry === "Dwarf" ? 2 : 0, 0, 0)}
                     </div>
+                  </div>
 
-                    <div clasName="armor">
-                      {total(character.armor_class.armor, character.armor_class.shield, character.armor_class.armor <= 0 ? modifier(character.attributes.dex, 0, 0) : 0, character.armor_class.armor <= 0 ? character.armor_class.base : 0)}
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">Armor Class</div>
+                    <div className="character-sheet-value">
+                      {total(
+                        character.armor_class.armor,
+                        character.armor_class.shield,
+                        character.armor_class.armor <= 0 ? modifier(character.attributes.dex, 0, 0) : 0,
+                        character.armor_class.armor <= 0 ? character.armor_class.base : 0
+                      )}
                     </div>
-
                   </div>
 
-                  <div className="creator-sheet-block creator-sheet-attacks">
-                    <div>{character.attacks.weapon_1}</div>
-                    <div>{character.attacks.type_1}</div>
-                    <div>{character.attacks.range_1}</div>
-                    <div>{character.attacks.damage_1}</div>
-                    <div>{character.attacks.weapon_bonus_1}</div>
-                    <div>{character.attacks.properties_1}</div>
+                  <div className="character-sheet-stacked separator">
+                    <div className="character-sheet-weapon">{character.attacks.weapon_1}</div>
+                    <div className="character-sheet-type">{character.attacks.type_1}</div>
+                    <div className="character-sheet-range">{character.attacks.range_1}</div>
+                    <div className="character-sheet-damage">{character.attacks.damage_1}</div>
+                    <div className="character-sheet-properties">{character.attacks.properties_1}</div>
                   </div>
 
-                  <div className="creator-sheet-block creator-sheet-attacks">
-                    <div>{character.attacks.weapon_2}</div>
-                    <div>{character.attacks.type_2}</div>
-                    <div>{character.attacks.range_2}</div>
-                    <div>{character.attacks.damage_2}</div>
-                    <div>{character.attacks.weapon_bonus_2}</div>
-                    <div>{character.attacks.properties_2}</div>
+                  <div className="character-sheet-stacked">
+                    <div className="character-sheet-weapon">{character.attacks.weapon_2}</div>
+                    <div className="character-sheet-type">{character.attacks.type_2}</div>
+                    <div className="character-sheet-range">{character.attacks.range_2}</div>
+                    <div className="character-sheet-damage">{character.attacks.damage_2}</div>
+                    <div className="character-sheet-properties">{character.attacks.properties_2}</div>
+                  </div>
+
+                  <div className="character-sheet-block separator">
+                    <div className="character-sheet-money">GP</div>
+                    <div className="character-sheet-value">{character.gp}</div>
+                    <div className="character-sheet-money">SP</div>
+                    <div className="character-sheet-value">{character.sp}</div>
+                    <div className="character-sheet-money">CP</div>
+                    <div className="character-sheet-value">{character.cp}</div>
                   </div>
 
                 </div>
 
                 <div className="right">
 
-                  <div className="creator-sheet-ancestry">
-                    {character.ancestry}
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">Ancestry</div>
+                    <div className="character-sheet-value">{character.ancestry}</div>
                   </div>
 
-                  <div className="creator-sheet-class">
-                    {character.class}
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">Class</div>
+                    <div className="character-sheet-value">{character.class}</div>
                   </div>
 
-                  <div className="creator-sheet-block creator-sheet-level-xp">
-                    <div className="level"></div>
-                    <div className="xp">{character.xp}</div>
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">Title</div>
+                    <div className="character-sheet-value">{character.title}</div>
                   </div>
 
-                  <div className="creator-sheet-title">
-                    {character.title}
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">Alignment</div>
+                    <div className="character-sheet-value">{character.alignment}</div>
                   </div>
 
-                  <div className="creator-sheet-alignment">
-                    {character.alignment}
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">Background</div>
+                    <div className="character-sheet-value">{character.background}</div>
                   </div>
 
-                  <div className="creator-sheet-background">
-                    {character.background}
+                  <div className="character-sheet-block">
+                    <div className="character-sheet-prop">Deity</div>
+                    <div className="character-sheet-value">{character.deity}</div>
                   </div>
 
-                  <div className="creator-sheet-deity">
-                    {character.deity}
+                  <div className="character-sheet-block separator">
+                    <TextArea
+                      value={details(character.armor_class.properties, character.talents_spells)}
+                      id="talents-spells"
+                      label="Talents / Spells"
+                      rows="12"
+                      disabled="disabled"
+                    />
                   </div>
 
                 </div>
 
               </Grid>
 
-              <TextArea
-                value={details(character.armor_class.properties, character.talents_spells)}
-                id="talents-spells"
-                label="Talents / Spells"
-                rows="12"
-                disabled
-              />
-
-              <div className="creator-sheet-block creator-sheet-money">
-                <div className="gp"><strong>GP:</strong> {character.gp}</div>
-                <div className="sp"><strong>SP:</strong> {character.sp}</div>
-                <div className="cp"><strong>CP:</strong> {character.cp}</div>
+              <div className="character-sheet-block separator">
+                <TextArea
+                  value={character.inventory}
+                  id="inventory"
+                  label="Inventory"
+                  rows="12"
+                  disabled="disabled"
+                />
               </div>
-
-              <TextArea
-                value={character.inventory}
-                id="inventory"
-                label="Inventory"
-                rows="12"
-                disabled
-              />
 
             </div>
 
           </Grid>
-
-          <div>
-
-          </div>
 
         </Wrapper>
 

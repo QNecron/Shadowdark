@@ -12,6 +12,7 @@ const TextArea = ({ ...props }) => {
         value={props.value}
         rows={props.rows}
         cols={props.cols}
+        disabled={props.disabled}
         onChange={props.change}
       />
 

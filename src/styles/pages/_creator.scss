@@ -117,6 +117,8 @@
   width: calc(100% - rem(88));
 }
 
+// @TODO move to its own partial
+
 .character-sheet-saved {
   grid-column: span 3;
 }
@@ -128,54 +130,198 @@
   position: relative;
 }
 
-.character-sheet-level {
+.character-sheet-name {
+  border-bottom: solid rem(1) rgba($white, .08);
+  margin-bottom: $space-16;
+  padding-bottom: $space-16;
+  min-height: rem(73);
+}
+
+.character-sheet-level,
+.character-sheet-xp {
   align-items: center;
   color: $black;
   display: flex;
   font-family: monospace;
-  font-size: rem(20);
   justify-content: center;
+  position: absolute;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+}
+
+.character-sheet-level {
+  font-size: rem(20);
   height: $space-40;
   width: $space-40;
-  position: absolute;
   top: $space-4;
   right: 0;
   z-index: 1;
 
   &:before {
-    content: "";
     background: $white;
     height: $space-40;
     width: $space-40;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: rotate(45deg);
   }
 
 }
 
-.character-sheet-block {
-  border-top: solid rem(1) rgba($white, .08);
+.character-sheet-xp {
+  color: $white;
+  height: $space-32;
+  width: $space-32;
+  top: $space-8;
+  right: $space-64;
+  z-index: 2;
+
+  &:before {
+    background: rgba($white, .08);
+    height: $space-32;
+    width: $space-32;
+  }
+
+}
+
+.character-sheet-block,
+.character-sheet-stacked {
+  align-items: center;
   display: flex;
-  margin-top: $space-16;
-  padding-top: $space-16;
+
+  &.separator {
+    border-top: solid rem(1) rgba($white, .08);
+    margin-top: $space-16;
+    padding-top: $space-16;
+  }
+
+  ~ .character-sheet-block,
+  ~ .character-sheet-stacked {
+    margin-top: $space-16;
+  }
+
+  .input-textarea {
+    width: 100%;
+
+    .input-label {
+      @extend %black-letter;
+      background: rgba($white, .88);
+      color: $black;
+      font-family: 'Oswald', sans-serif;
+      font-size: rem(14);
+      line-height: $space-40;
+      padding-right: $space-16;
+      padding-left: $space-16;
+    }
+
+    .input {
+      background: rgba($white, .08);
+      border: 0;
+      padding: $space-16;
+      resize: none;
+    }
+
+  }
+
 }
 
 .character-sheet-prop,
-.character-sheet-value {
-  font-size: rem(20);
-  padding: $space-4 $space-16;
+.character-sheet-value,
+.character-sheet-mod {
+  line-height: $space-40;
+  padding-right: $space-16;
+  padding-left: $space-16;
 }
 
 .character-sheet-prop {
-  background: $white;
+  @extend %black-letter;
+  background: rgba($white, .88);
   color: $black;
+  font-family: 'Oswald', sans-serif;
+  font-size: rem(14);
+  text-align: right;
+  width: rem(132);
 }
 
 .character-sheet-value {
+  background: rgba($white, .08);
+  flex: 1 1 auto;
+}
 
+.character-sheet-mod {
+  background: rgba($white, .08);
+  border-left: solid rem(1) rgba($white, .08);
+  text-align: center;
+  width: $space-64;
+}
+
+.character-sheet-stacked {
+  flex-wrap: wrap;
+}
+
+.character-sheet-weapon,
+.character-sheet-type,
+.character-sheet-range,
+.character-sheet-damage,
+.character-sheet-properties {
+  background: rgba($white, .08);
+  flex: 1 1 auto;
+  padding-right: $space-16;
+  padding-left: $space-16;
+  line-height: $space-40;
+}
+
+.character-sheet-type,
+.character-sheet-range,
+.character-sheet-damage,
+.character-sheet-properties {
+  border-top: solid rem(1) rgba($white, .08);
+}
+
+.character-sheet-type,
+.character-sheet-range {
+  text-align: center;
+  max-width: $space-56;
+}
+
+.character-sheet-weapon,
+.character-sheet-money {
+  @extend %black-letter;
+  background: rgba($white, .88);
+  color: $black;
+  font-family: 'Oswald', sans-serif;
+  font-size: rem(14);
+}
+
+.character-sheet-range {
+  border-right: solid rem(1) rgba($white, .08);
+  border-left: solid rem(1) rgba($white, .08);
+}
+
+.character-sheet-weapon {
+  width: 100%;
+}
+
+.character-sheet-damage {
+  width: rem(160);
+  max-width: rem(160);
+}
+
+.character-sheet-properties {
+  border-left: solid rem(1) rgba($white, .08);
+}
+
+.character-sheet-money {
+  padding-right: $space-16;
+  padding-left: $space-16;
+  text-align: center;
+  line-height: $space-40;
+  max-width: $space-56;
 }
 
 .hidden {
