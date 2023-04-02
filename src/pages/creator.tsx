@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import { Link } from "gatsby"
 
 import SEO from "../components/seo/seo"
 import Page from "../components/page/page"
@@ -202,7 +203,7 @@ const Creator: React.FC<PageProps> = () => {
 
     for (var i = 0; i < storage.length; i++) {
       let key = storage.key(i)
-      characters.push(key)
+      if (key !== "ally-supports-cache") characters.push(key)
     }
 
     characterSavedUpdate(characters)
@@ -251,6 +252,14 @@ const Creator: React.FC<PageProps> = () => {
               navId="character"
               navClass="nav-secondary"
             >
+
+              <Link
+                to="/character"
+                className="btn-link btn-secondary full"
+              >
+                Character Sheets
+              </Link>
+
               {characterSaved[0] && (
                 <ul className="creator-characters">
 

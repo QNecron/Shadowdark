@@ -11,6 +11,7 @@ const Input = ({ ...props }) => {
         value={props.value}
         id={props.id}
         className="input"
+        placeholder={props.placeholder}
         autoComplete="off"
         onChange={props.change}
       />

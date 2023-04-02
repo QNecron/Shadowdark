@@ -98,6 +98,10 @@
   margin-top: $space-32;
 }
 
+.creator-characters {
+  margin-top: $space-8;
+}
+
 .creator-character {
   @include flex-center("true", "false", "false");
   gap: $space-8;
@@ -111,4 +115,69 @@
 .creator-name {
   font-size: rem(14);
   width: calc(100% - rem(88));
+}
+
+.character-sheet-saved {
+  grid-column: span 3;
+}
+
+.character-sheet {
+  border-left: solid rem(1) rgba($white, .08);
+  grid-column: span 9;
+  padding-left: $space-32;
+  position: relative;
+}
+
+.character-sheet-level {
+  align-items: center;
+  color: $black;
+  display: flex;
+  font-family: monospace;
+  font-size: rem(20);
+  justify-content: center;
+  height: $space-40;
+  width: $space-40;
+  position: absolute;
+  top: $space-4;
+  right: 0;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    background: $white;
+    height: $space-40;
+    width: $space-40;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+
+}
+
+.character-sheet-block {
+  border-top: solid rem(1) rgba($white, .08);
+  display: flex;
+  margin-top: $space-16;
+  padding-top: $space-16;
+}
+
+.character-sheet-prop,
+.character-sheet-value {
+  font-size: rem(20);
+  padding: $space-4 $space-16;
+}
+
+.character-sheet-prop {
+  background: $white;
+  color: $black;
+}
+
+.character-sheet-value {
+
+}
+
+.hidden {
+  display: none;
 }

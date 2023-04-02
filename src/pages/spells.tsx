@@ -79,6 +79,7 @@ const Spells: React.FC<PageProps> = () => {
             id="search"
             srt="true"
             label="Search"
+            placeholder="Spell Name"
             change={(e) => searchUpdate(e.target.value)}
           />
           <button type="reset" className="btn-icon btn-primary" onClick={(e) => clear("")}>

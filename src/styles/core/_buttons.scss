@@ -15,6 +15,11 @@
 .btn,
 .btn-link {
   padding: $space-12 $space-16;
+
+  &.full {
+    width: 100%;
+  }
+
 }
 
 a.btn {
