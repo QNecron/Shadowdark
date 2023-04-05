@@ -14,12 +14,10 @@ import SpellCard from "../components/card/spell"
 import Tabs from "../components/tabs/tabs"
 
 import Alphabet from "../../json/alphabet.json"
-import Numeric from "../../json/tier.json"
 import Sources from "../../json/sources.json"
-import Casters from "../../json/casters.json"
 
-import Core from "../../json/spells_core.json"
-import Custom from "../../json/spells_custom.json"
+import Core from "../../json/items_core.json"
+import Custom from "../../json/items_custom.json"
 
 import HeroDesktop from "../images/heroes/16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"
@@ -28,9 +26,7 @@ import HeroMobile from "../images/heroes/1-1.webp"
 const Spells: React.FC<PageProps> = () => {
 
   const [alpha, alphaUpdate] = useState("*")
-  const [level, levelUpdate] = useState(1)
   const [source, sourceUpdate] = useState("*")
-  const [caster, casterUpdate] = useState("*")
   const [search, searchUpdate] = useState("")
   const [submit, submitUpdate] = useState("")
 
@@ -38,9 +34,7 @@ const Spells: React.FC<PageProps> = () => {
     e.preventDefault()
     submitUpdate(prop)
     alphaUpdate("*")
-    levelUpdate("*")
     sourceUpdate("*")
-    casterUpdate("*")
   }
 
   const clear = (prop) => {
@@ -69,7 +63,7 @@ const Spells: React.FC<PageProps> = () => {
         loading="auto"
         x="2"
         y="2"
-        heading="Spells"
+        heading="Magical Items"
       >
         {/* @TODO make a search component */}
         <form className="search" onSubmit={(e) => form(e, search)}>
@@ -116,24 +110,6 @@ const Spells: React.FC<PageProps> = () => {
               </Tabs>
 
               <Tabs
-                data={Casters}
-                state={caster}
-                click={casterUpdate}
-                tabClass="filters-casters"
-              >
-                <h5 className="filters-heading heading-5">Class</h5>
-              </Tabs>
-
-              <Tabs
-                data={Numeric}
-                state={level}
-                click={levelUpdate}
-                tabClass="filters-numeric"
-              >
-                <h5 className="filters-heading heading-5">Tier</h5>
-              </Tabs>
-
-              <Tabs
                 data={Sources}
                 state={source}
                 click={sourceUpdate}
@@ -151,20 +127,12 @@ const Spells: React.FC<PageProps> = () => {
             {Data.sort((a, b) => a.name < b.name ? -1 : 1).map((data, index) => {
 
               let alphaFilter = data.name.charAt(0)
-              let casterFilter = data.class
-              let levelFilter = data.tier
               let sourceFilter = data.source
               let submitFilter = submit.toLowerCase()
               let nameFilter = data.name.toLowerCase()
 
               // alphabetical filter
               if (alphaFilter !== alpha && alpha !== "*") return null
-
-              // caster filter
-              if (casterFilter.includes(caster) === false && caster !== "*") return null
-
-              // level filter
-              if (levelFilter !== level && level !== "*") return null
 
               // source filter
               if (sourceFilter !== source && source !== "*") return null
@@ -178,18 +146,17 @@ const Spells: React.FC<PageProps> = () => {
 
               return (
 
-                <SpellCard
-                  key={index}
-                  source={data.source}
-                  name={data.name}
-                  tier={data.tier}
-                  class={data.class}
-                  duration={data.duration}
-                  range={data.range}
-                  description_1={data.description_1}
-                  description_2={data.description_2}
-                  description_3={data.description_3}
-                />
+                <div className="item-card" key={index} hidden>
+
+                  <div className="item-card-name">{data.name}</div>
+
+                  <div className="item-card-description">{data.description}</div>
+
+                  <div className="item-card-benefit" dangerouslySetInnerHTML={{__html: data.benefit}}></div>
+
+                  {data.curse ? <div className="item-card-benefit" dangerouslySetInnerHTML={{__html: data.curse}}></div> : ""}
+
+                </div>
 
               )
 

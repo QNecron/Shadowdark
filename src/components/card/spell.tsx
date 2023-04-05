@@ -23,12 +23,9 @@ const SpellCard = ({ ...props }) => {
 
       <p className="spell-description">{props.description_1}</p>
 
-      {props.description_2 &&
-        <div className="spell-helpers">
-          {props.description_2 ? <div className="spell-helper" dangerouslySetInnerHTML={{__html: props.description_2}}></div> : ""}
-          {props.description_3 ? <div className="spell-helper" dangerouslySetInnerHTML={{__html: props.description_3}}></div> : ""}
-        </div>
-      }
+      {props.description_2 ? <p className="spell-description" dangerouslySetInnerHTML={{__html: props.description_2}}></p> : ""}
+
+      {props.description_3 ? <p className="spell-description" dangerouslySetInnerHTML={{__html: props.description_3}}></p> : ""}
 
     </article>
   )

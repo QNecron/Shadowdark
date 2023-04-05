@@ -2,6 +2,21 @@
   border: solid rem(1) rgba($white, .32);
   padding: $space-16;
   position: relative;
+
+  &.custom {
+
+    .spell-tier {
+      color: $white;
+
+      &:before {
+        background: rgba($white, .02);
+        border: solid rem(1) rgba($white, .08);
+      }
+
+    }
+
+  }
+
 }
 
 .spell-name {
@@ -48,13 +63,7 @@
   margin-top: $space-8;
 }
 
-.spell-description {
-  border-top: solid rem(1) rgba($white, .16);
-  padding-top: $space-8;
-}
-
-.spell-helpers {
-  // border-top: solid rem(1) rgba($white, .16);
-  margin-top: $space-8;
-  // padding-top: $space-8;
+.spell-range {
+  border-bottom: solid rem(1) rgba($white, .08);
+  padding-bottom: $space-8;
 }

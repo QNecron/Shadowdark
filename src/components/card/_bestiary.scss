@@ -2,6 +2,21 @@
   border: solid rem(1) rgba($white, .32);
   padding: $space-16;
   position: relative;
+
+  &.custom {
+
+    .bestiary-level {
+      color: $white;
+
+      &:before {
+        background: rgba($white, .02);
+        border: solid rem(1) rgba($white, .08);
+      }
+
+    }
+
+  }
+
 }
 
 .bestiary-name {
@@ -22,6 +37,7 @@
   display: flex;
   font-family: monospace;
   font-size: rem(12);
+  font-weight: 700;
   justify-content: center;
   height: $space-24;
   width: $space-24;
@@ -49,7 +65,7 @@
 .bestiary-attack,
 .bestiary-abilities,
 .bestiary-spells {
-  border-top: solid rem(1) rgba($white, .16);
+  border-top: solid rem(1) rgba($white, .08);
   font-size: rem(14);
   margin-top: $space-8;
   padding-top: $space-8;

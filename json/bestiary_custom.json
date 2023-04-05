@@ -2,9 +2,9 @@
   {
     "name": "Zombie, Spellgorged",
     "description": "The shambling zombie shuffles forward, opens its mouth in a silent moan, and suddenly spits out a gout of searing fire.",
-    "level": 3,
-    "hitpoints": 19,
-    "armorclass": "11 (leather)",
+    "level": 2,
+    "hitpoints": 9,
+    "armorclass": "11",
     "alignment": "C",
     "move": "near",
     "str": "+1",
@@ -14,8 +14,27 @@
     "wis": "+2",
     "cha": "-1",
     "attack": "1 slam +1 (1d6) or one spell +2",
-    "ability_3": "<strong>Undead.</strong> Immune to morale checks.",
+    "ability_1": "<strong>Undead.</strong> Immune to morale checks.",
     "spell_1": "<strong>Burning Hands.</strong> DC 12. Creatures within the area of effect take 1d6 damage. Unattended flammable objects ignite.",
+    "source": "custom"
+  },
+  {
+    "name": "Zombie, Juju",
+    "description": "This wretched human figure has tight leathery skin, sunken eyes, and an emaciated frame, yet it moves with eerie alacrity.",
+    "level": 3,
+    "hitpoints": 15,
+    "armorclass": "15 (chainmail + shield)",
+    "alignment": "C",
+    "move": "near",
+    "str": "+3",
+    "dex": "+0",
+    "con": "+2",
+    "int": "-1",
+    "wis": "+0",
+    "cha": "-1",
+    "attack": "1 longsword +3 (1d8) or 1 longbow (far) +0 (1d8)",
+    "ability_1": "<strong>Undead.</strong> Immune to morale checks.",
+    "ability_2": "<strong>Juju.</strong> Immune to damage from cold, electricity, and the spell Magic Missile.",
     "source": "custom"
   }
 ]

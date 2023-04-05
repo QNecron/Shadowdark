@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Bag of Holding",
+    "description": "A worn, leather pouch with tight drawstrings.",
+    "benefit": "<strong>Benefit.</strong> This bag has an interdimensional space inside that can hold up to 10 gear slots.",
+    "curse": "<strong>Curse.</strong> Placing this item inside another Bag of Holding or a Portable Hole destroys both items and all held inside them.",
+    "source": "core"
+  }
+]

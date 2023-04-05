@@ -27,7 +27,7 @@ import HeroMobile from "../images/heroes/1-1.webp"
 const Bestiary: React.FC<PageProps> = () => {
 
   const [alpha, alphaUpdate] = useState("*")
-  const [level, levelUpdate] = useState("*")
+  const [level, levelUpdate] = useState(1)
   const [source, sourceUpdate] = useState("*")
   const [search, searchUpdate] = useState("")
   const [submit, submitUpdate] = useState("")
@@ -35,6 +35,9 @@ const Bestiary: React.FC<PageProps> = () => {
   const form = (e, prop) => {
     e.preventDefault()
     submitUpdate(prop)
+    alphaUpdate("*")
+    levelUpdate("*")
+    sourceUpdate("*")
   }
 
   const clear = (prop) => {
