@@ -3,7 +3,7 @@ import * as React from "react"
 const SpellCard = ({ ...props }) => {
 
   return (
-    <article className={`spell-card${props.source ? " "+props.source : ""}`} key={props.key} card-search={props.name}>
+    <article className={`spell-card${props.source ? " "+props.source : ""}`} key={props.key}>
 
       <h2 className="spell-name heading-3">{props.name}</h2>
 

@@ -10,7 +10,7 @@ import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
 import Icon from "../components/icon/icon"
 import Input from "../components/forms/input"
-import SpellCard from "../components/card/spell"
+import ItemCard from "../components/card/item"
 import Tabs from "../components/tabs/tabs"
 
 import Alphabet from "../../json/alphabet.json"
@@ -63,7 +63,7 @@ const Spells: React.FC<PageProps> = () => {
         loading="auto"
         x="2"
         y="2"
-        heading="Magical Items"
+        heading="Magic Items"
       >
         {/* @TODO make a search component */}
         <form className="search" onSubmit={(e) => form(e, search)}>
@@ -77,7 +77,7 @@ const Spells: React.FC<PageProps> = () => {
             id="search"
             srt="true"
             label="Search"
-            placeholder="Spell Name"
+            placeholder="Magic Item Name"
             change={(e) => searchUpdate(e.target.value)}
           />
           <button type="reset" className="btn-icon btn-primary" onClick={(e) => clear("")}>
@@ -146,17 +146,14 @@ const Spells: React.FC<PageProps> = () => {
 
               return (
 
-                <div className="item-card" key={index} hidden>
-
-                  <div className="item-card-name">{data.name}</div>
-
-                  <div className="item-card-description">{data.description}</div>
-
-                  <div className="item-card-benefit" dangerouslySetInnerHTML={{__html: data.benefit}}></div>
-
-                  {data.curse ? <div className="item-card-benefit" dangerouslySetInnerHTML={{__html: data.curse}}></div> : ""}
-
-                </div>
+                <ItemCard
+                  key={index}
+                  source={data.source}
+                  name={data.name}
+                  description={data.description}
+                  benefit={data.benefit}
+                  curse={data.curse}
+                />
 
               )
 

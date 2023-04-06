@@ -1,12 +1,12 @@
 // @TODO clean up repeating styles from bestiary, spell, and item
-.spell-card {
+.item-card {
   border: solid rem(1) rgba($white, .32);
   padding: $space-16;
   position: relative;
 
   &.custom {
 
-    .spell-tier {
+    .item-source {
       color: $white;
 
       &:before {
@@ -20,11 +20,11 @@
 
 }
 
-.spell-name {
+.item-name {
   margin-bottom: $space-16;
 }
 
-.spell-tier {
+.item-source {
   align-items: center;
   color: $black;
   display: flex;
@@ -52,19 +52,13 @@
 
 }
 
-.spell-class,
-.spell-duration,
-.spell-range {
-  font-size: rem(14);
-}
-
-.spell-duration,
-.spell-range,
-.spell-description {
+.item-description,
+.item-benefit,
+.item-curse {
   margin-top: $space-8;
 }
 
-.spell-range {
+.item-description {
   border-bottom: solid rem(1) rgba($white, .08);
   padding-bottom: $space-8;
 }
