@@ -151,8 +151,11 @@ const Spells: React.FC<PageProps> = () => {
                   source={data.source}
                   name={data.name}
                   description={data.description}
+                  bonus={data.bonus}
                   benefit={data.benefit}
                   curse={data.curse}
+                  personality={data.personality}
+                  additional={data.additional}
                 />
 
               )

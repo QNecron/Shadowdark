@@ -5,5 +5,122 @@
     "benefit": "<strong>Benefit.</strong> This bag has an interdimensional space inside that can hold up to 10 gear slots.",
     "curse": "<strong>Curse.</strong> Placing this item inside another Bag of Holding or a Portable Hole destroys both items and all held inside them.",
     "source": "core"
+  },
+  {
+    "name": "Boots of the Cat",
+    "description": "Grey, doeskin boots as thin and soft as slippers.",
+    "benefit": "<strong>Benefit.</strong> You can jump up to a near distance from a standstill. Your checks to move silently are always easy (DC 9).",
+    "source": "core"
+  },
+  {
+    "name": "Bracers of Defense",
+    "description": "Steel bracers traced with dwarvish runes of protection.",
+    "benefit": "<strong>Benefit.</strong> You get a +1 bonus to your armor class.",
+    "source": "core"
+  },
+  {
+    "name": "Brak's Cube of Perfection",
+    "description": "A tiny cube with paintings of goblins on each face, each one depicting transcendence in a physical or mental trait.",
+    "benefit": "<strong>Benefit.</strong> Roll the cube by rolling a d6. Your corresponding stat permanently increases to 18 (+4). <strong>1.</strong> Strength. <strong>2.</strong> Dexterity. <strong>3.</strong> Constitution. <strong>4.</strong> Intelligence. <strong>5.</strong> Wisdom. <strong>6.</strong> Charisma.",
+    "additional": "After being rolled, Brak's Cube of Perfection teleports to a random location in the multiverse.",
+    "source": "core"
+  },
+  {
+    "name": "Cloak of Elvenkind",
+    "description": "A hooded, billowing cloak that shifts colors to match its surroundings.",
+    "benefit": "<strong>Benefit.</strong> Your checks to hide are always easy (DC 9). Once per day, you can become invisible for 5 rounds. The invisibility ends if you attack or cast a spell.",
+    "source": "core"
+  },
+  {
+    "name": "Gauntlets of Might",
+    "description": "Heavy, bronze gauntlets with engravings of Herculean giants.",
+    "benefit": "<strong>Benefit.</strong> Your Strength stat becomes 18 (+4) while wearing these gauntlets.",
+    "source": "core"
+  },
+  {
+    "name": "Immovable Rod",
+    "description": "A short, bejeweled iron rod with a button on one end.",
+    "benefit": "<strong>Benefit.</strong> When you click the button, the rod becomes fixed in space. Clicking the button again ends the effect.",
+    "source": "core"
+  },
+  {
+    "name": "Jewel of Barbalt",
+    "description": "A glistening, coconut-sized ruby held in golden claws.",
+    "benefit": "<strong>Benefit.</strong> You roll a critical success on an 18-20.",
+    "curse": "<strong>Curse.</strong> You roll a critical failure on a 1-3.",
+    "source": "core"
+  },
+  {
+    "name": "Kytherian Cog",
+    "description": "A coin-sized, toothed wheel.",
+    "benefit": "<strong>Benefit.</strong> You start every session with a luck token.",
+    "source": "core"
+  },
+  {
+    "name": "Ophidian Armor",
+    "description": "Glistening, smooth leather of dappled emerald scales.",
+    "bonus": "<strong>Bonus.</strong> +1 leather armor.",
+    "benefit": "<strong>Benefit.</strong> You have advantage on checks to avoid the effects of poison.",
+    "source": "core"
+  },
+  {
+    "name": "Pearl of Power",
+    "description": "A fat, opalescent pearl glowing with an inner radiance.",
+    "benefit": "<strong>Benefit.</strong> Once per day, you may regain the ability to cast a spell you have lost. This cannot restore a spell lost due to a critical spellcasting failure.",
+    "source": "core"
+  },
+  {
+    "name": "Potion of Extirpation",
+    "description": "An acrid, tarry substance in an iron flask with a lead stopper.",
+    "benefit": "<strong>Benefit.</strong> You can pour the potion on one object or creature filling up to a close area. The target is utterly removed from reality and cannot be returned by anything short of a wish spell.",
+    "personality": "<strong>Personality.</strong> Chaotic. Protests loudly while being used and never agrees that the target is the right choice for extirpation.",
+    "source": "core"
+  },
+  {
+    "name": "Potion of Healing",
+    "description": "A glass bottle with a fizzy, lemon-vanilla liquid inside.",
+    "benefit": "<strong>Benefit.</strong> The imbiber of this potion regains hit points based on its level.",
+    "additional": "<strong>LV 1-3:</strong> 1d6 hit points. <br /> <strong>LV 4-6:</strong> 2d8 hit points. <br /> <strong>LV 7-9:</strong> 3d10 hit points. <br /> <strong>LV 10+:</strong> 4d12 hit points.",
+    "source": "core"
+  },
+  {
+    "name": "Potion of Invisibility",
+    "description": "This glass vial appears to be empty, but a liquid audibly splashes around inside it.",
+    "benefit": "<strong>Benefit.</strong> When you drink this potion, you become invisible for 10 rounds or until you attack or cast a spell.",
+    "source": "core"
+  },
+  {
+    "name": "Scarab of Protection",
+    "description": "A brooch made from a horned scarab beetle dipped in gold.",
+    "benefit": "<strong>Benefit.</strong> If you die, make a DC 18 Constitution check. If you succeed, you are unconscious instead of dead.",
+    "source": "core"
+  },
+  {
+    "name": "Shortsword of the Thief",
+    "description": "A stubby, grey blade riddled with notches and scars.",
+    "bonus": "<strong>Bonus.</strong> +1 shortsword. +2 if wielded by a halfling or thief.",
+    "benefit": "<strong>Benefit.</strong> Once per day, regain a luck token you just spent.",
+    "source": "core"
+  },
+  {
+    "name": "Staff of Healing",
+    "description": "A knotted, oak stave with a heavy knurl on one end.",
+    "bonus": "<strong>Bonus.</strong> +1 staff.",
+    "benefit": "<strong>Benefit.</strong> Once per day, you can touch a creature with the staff to heal it for 1d6 hit points.",
+    "source": "core"
+  },
+  {
+    "name": "Sword of the Ancients",
+    "description": "A chipped and rusting blade with an oiled leather grip.",
+    "bonus": "<strong>Bonus.</strong> +2 longsword.",
+    "benefit": "<strong>Benefit.</strong> The sword is unbreakable and can carve through any material.",
+    "additional": "The owner can summon the sword to their hand if it's on the same plane.",
+    "source": "core"
+  },
+  {
+    "name": "True Name",
+    "description": "The secret, unique name borne by a creature and documented in The Covenant. Few creatures know their own True Names.",
+    "benefit": "<strong>Benefit.</strong> You have advantage on attack rolls and spellcasting checks targeting a creature whose True Name you utter.",
+    "source": "core"
   }
 ]

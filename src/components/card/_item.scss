@@ -3,58 +3,20 @@
   border: solid rem(1) rgba($white, .32);
   padding: $space-16;
   position: relative;
-
-  &.custom {
-
-    .item-source {
-      color: $white;
-
-      &:before {
-        background: rgba($white, .02);
-        border: solid rem(1) rgba($white, .08);
-      }
-
-    }
-
-  }
-
 }
 
 .item-name {
   margin-bottom: $space-16;
 }
 
-.item-source {
-  align-items: center;
-  color: $black;
-  display: flex;
-  font-family: monospace;
-  font-size: rem(12);
-  justify-content: center;
-  height: $space-24;
-  width: $space-24;
-  position: absolute;
-  top: rem(20);
-  right: rem(20);
-  z-index: 1;
-
-  &:before {
-    content: "";
-    background: $white;
-    height: $space-24;
-    width: $space-24;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: rotate(45deg);
-  }
-
-}
+// @TODO need to figure out how to indentify core vs custom visially
 
 .item-description,
+.item-bonus,
 .item-benefit,
-.item-curse {
+.item-curse,
+.item-personality,
+.item-additional {
   margin-top: $space-8;
 }
 
