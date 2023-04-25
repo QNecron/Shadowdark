@@ -82,6 +82,7 @@
 
 }
 
-.bestiary-ability:not(:first-of-type) {
+.bestiary-ability:not(:first-of-type),
+.bestiary-spell:not(:first-of-type) {
   padding-top: $space-8;
 }

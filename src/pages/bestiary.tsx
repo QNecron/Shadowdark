@@ -189,6 +189,7 @@ const Bestiary: React.FC<PageProps> = () => {
                   spell_3={data.spell_3}
                   spell_4={data.spell_4}
                   spell_5={data.spell_5}
+                  spell_6={data.spell_6}
                 />
 
               )

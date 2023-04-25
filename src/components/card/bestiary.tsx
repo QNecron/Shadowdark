@@ -46,6 +46,7 @@ const BestiaryCard = ({ ...props }) => {
           {props.spell_3 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_3}}></div> : ""}
           {props.spell_4 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_4}}></div> : ""}
           {props.spell_5 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_5}}></div> : ""}
+          {props.spell_6 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_6}}></div> : ""}
         </div>
       }
 
