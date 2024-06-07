@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Shield Bash",
+    "description": "Attack with shield dealing 1d4 damage.",
+    "action": "action",
+    "type": "combat",
+    "stacking": false
+  },
+  {
+    "name": "Shield Block",
+    "description": "Reduces damage equal to the shield's AC.",
+    "action": "action",
+    "type": "combat",
+    "stacking": false
+  },
+  {
+    "name": "Shield Other",
+    "description": "Grants close ally AC equal to your shield, you lose the shield's AC.",
+    "action": "action",
+    "type": "combat",
+    "stacking": false
+  },
+  {
+    "name": "Ambidextrous",
+    "description": "May attack with off-hand weapon, -3 to off-hand attack roll.",
+    "action": "action",
+    "type": "combat",
+    "stacking": false
+  },
+  {
+    "name": "Cleaving Attack",
+    "description": "Attack one additional close enemy, -3 to additional attack roll.",
+    "action": "action",
+    "type": "combat",
+    "stacking": false
+  },
+  {
+    "name": "Precise Attack",
+    "description": "-1 to damage rolls, +1 to attack rolls.",
+    "action": "action",
+    "type": "combat",
+    "stacking": true
+  },
+  {
+    "name": "Power Attack",
+    "description": "-1 to attack tolls, +1 to damage rolls.",
+    "action": "action",
+    "type": "combat",
+    "stacking": true
+  },
+  {
+    "name": "Empower Spell",
+    "description": "+1 DC to spell cast, +1 dice added to spell.",
+    "action": "action",
+    "type": "magical",
+    "stacking": false
+  },
+  {
+    "name": "Extend Spell",
+    "description": "+1 DC to spell cast, focused spells extend to one additional target.",
+    "action": "action",
+    "type": "magical",
+    "stacking": false
+  },
+  {
+    "name": "Maximize Spell",
+    "description": "+3 DC to spell cast, maximum dice rolls.",
+    "action": "action",
+    "type": "magical",
+    "stacking": false
+  },
+  {
+    "name": "Transform Spell",
+    "description": "+1 DC to spell cast, changes spell's elemental damage type to another.",
+    "action": "action",
+    "type": "magical",
+    "stacking": false
+  },
+  {
+    "name": "Heavyload",
+    "description": "+1 inventory slot.",
+    "action": "passive",
+    "type": "general",
+    "stacking": true
+  },
+  {
+    "name": "Lucky",
+    "description": "Additional luck token can be stored.",
+    "action": "passive",
+    "type": "general",
+    "stacking": false
+  },
+  {
+    "name": "Toughness",
+    "description": "Additional class die added to hit points.",
+    "action": "passive",
+    "type": "general",
+    "stacking": true
+  }
+]

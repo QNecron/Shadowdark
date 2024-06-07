@@ -1,0 +1,29 @@
+// @TODO clean up repeating styles from bestiary, spell, and item
+.feat-card {
+  border: solid rem(1) rgba($white, .32);
+  padding: $space-16;
+  position: relative;
+}
+
+.feat-name {
+  margin-bottom: $space-16;
+}
+
+.feat-description {
+  border-bottom: solid rem(1) rgba($white, .08);
+  padding-bottom: $space-8;
+}
+
+.feat-properties {
+  display: flex;
+  gap: $space-8;
+  margin-top: $space-8;
+}
+
+.feat-property {
+  border: solid rem(1) rgba($white, .08);
+  font-size: rem(12);
+  font-weight: 700;
+  padding: $space-8 $space-12;
+  text-transform: capitalize;
+}
