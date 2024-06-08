@@ -1,4 +1,9 @@
 .copyright {
   font-size: rem(12);
   text-align: center;
+
+  ~ .copyright {
+    margin-top: $space-16;
+  }
+
 }

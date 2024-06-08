@@ -35,7 +35,6 @@
 .filters-casters,
 .filters-source {
   display: flex;
-  // flex-direction: column;
   gap: $space-8;
 
   > *:nth-child(1),
@@ -45,6 +44,17 @@
 
   > *:nth-child(3) {
     min-width: $space-40;
+  }
+
+}
+
+.filters-type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-8;
+
+  > * {
+    min-width: calc(50% - $space-4);
   }
 
 }

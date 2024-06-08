@@ -20,9 +20,9 @@ import Sources from "../../json/sources.json"
 import Core from "../../json/bestiary_core.json"
 import Custom from "../../json/bestiary_custom.json"
 
-import HeroDesktop from "../images/heroes/16-4-5.webp"
+import HeroDesktop from "../images/heroes/default_16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"
-import HeroMobile from "../images/heroes/1-1.webp"
+import HeroMobile from "../images/heroes/default_1-1.webp"
 
 const Bestiary: React.FC<PageProps> = () => {
 
@@ -52,7 +52,7 @@ const Bestiary: React.FC<PageProps> = () => {
     <Page>
 
       <Hero
-        theme="shaded"
+        theme="greyscale"
         desktop={HeroDesktop}
         desktopH="540"
         desktopW="1920"

@@ -9,11 +9,13 @@ import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
 import MediaCard from "../components/card/media"
 
-import HeroDesktop from "../images/heroes/16-9.webp"
+import HeroDesktop from "../images/heroes/tar-baphon_arazni_16-9.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"
-import HeroMobile from "../images/heroes/9-16.webp"
+import HeroMobile from "../images/heroes/tar-baphon_arazni_9-16.webp"
 
-import MediaImage from "../images/heroes/1-1.webp"
+import MediaCharacter from "../images/heroes/characters_1-1.webp"
+import MediaFeats from "../images/heroes/feats_1-1.webp"
+import ShadowdarkImage from "../images/heroes/shadowdark_rulebook.webp"
 
 const IndexPage: React.FC<PageProps> = () => {
 
@@ -22,7 +24,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <Page>
 
       <Hero
-        theme="large shaded"
+        theme="greyscale"
         desktop={HeroDesktop}
         desktopH="1080"
         desktopW="1920"
@@ -47,19 +49,57 @@ const IndexPage: React.FC<PageProps> = () => {
           <Grid desktop="3" tablet="3" mobile="1">
 
             <MediaCard
-              theme="shaded overlay"
-              desktop={MediaImage}
+              theme="greyscale overlay"
+              desktop={MediaFeats}
               desktopH="480"
               desktopW="480"
-              tablet={MediaImage}
+              tablet={MediaFeats}
               tabletH="480"
               tabletW="480"
-              mobile={MediaImage}
+              mobile={MediaFeats}
               mobileH="480"
               mobileW="480"
-              alt="The Arcane Library's ShadowDark"
-              heading="ShadowDark"
-              copy="Shadowdark RPG is what old-school fantasy gaming would look like after being redesigned with 50 years of innovation. "
+              alt="Custom feats for Shadowdark."
+              heading="Learn New Feats"
+              copy="Alternative rules that add feats on your characters even levels."
+              linkClass="btn-link btn-secondary"
+              url="/feats"
+              cta="Character Feats"
+            />
+
+            <MediaCard
+              theme="greyscale overlay"
+              desktop={MediaCharacter}
+              desktopH="480"
+              desktopW="480"
+              tablet={MediaCharacter}
+              tabletH="480"
+              tabletW="480"
+              mobile={MediaCharacter}
+              mobileH="480"
+              mobileW="480"
+              alt="Custom feats for Shadowdark."
+              heading="Create Characters"
+              copy="Create, save, modify, and delete characters as needed."
+              linkClass="btn-link btn-secondary"
+              url="/creator"
+              cta="Character Creator"
+            />
+
+            <MediaCard
+              theme="greyscale overlay"
+              desktop={ShadowdarkImage}
+              desktopH="480"
+              desktopW="480"
+              tablet={ShadowdarkImage}
+              tabletH="480"
+              tabletW="480"
+              mobile={ShadowdarkImage}
+              mobileH="480"
+              mobileW="480"
+              alt="The Arcane Library's Shadowdark"
+              heading="Shadowdark"
+              copy="Support the amazing creator of Shadowdark over at The Arcane Libra"
               linkClass="btn-link btn-secondary"
               target="_blank"
               url="https://www.thearcanelibrary.com/pages/shadowdark"

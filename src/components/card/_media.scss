@@ -1,5 +1,4 @@
 .media-card {
-  // border: solid rem(1) rgba($white, .32);
   position: relative;
 }
 
@@ -18,35 +17,21 @@
   margin-top: $space-8;
 }
 
-[media-theme~="shaded"] {
-  background-color: $black;
+[media-theme~="greyscale"] {
 
   .media-card-asset {
-    filter: grayscale(50%);
-    opacity: .48;
-  }
-
-}
-
-[media-theme~="tinted"] {
-  background-color: $white;
-
-  .media-card-asset {
-    filter: grayscale(50%);
-    opacity: .48;
-  }
-
-  .media-card-heading,
-  .media-card-copy {
-    color: $black;
-    @include shadows(0, 1);
-  }
+    filter: grayscale(100%);
+    opacity: .24;
+   }
 
 }
 
 [media-theme~="overlay"] {
 
   .media-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding: $space-32;
     position: absolute;
     right: 0;

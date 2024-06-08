@@ -37,22 +37,26 @@ const MediaCard = ({ ...props }) => {
           </p>
 
           {(!props.target && props.url) &&
-            <Link
-              to={props.url}
-              className={`${props.linkClass ? props.linkClass+" " : ""}media-card-cta`}
-            >
-              {props.cta}
-            </Link>
+            <div className="media-card-cta">
+              <Link
+                to={props.url}
+                className={`${props.linkClass ? props.linkClass : ""}`}
+              >
+                {props.cta}
+              </Link>
+            </div>
           }
 
           {(props.target === "_blank" && props.url) &&
-            <a
-              href={props.url}
-              target={props.target}
-              className={`${props.linkClass ? props.linkClass+" " : ""}media-card-cta`}
-            >
-              {props.cta}
-            </a>
+            <div className="media-card-cta">
+              <a
+                href={props.url}
+                target={props.target}
+                className={`${props.linkClass ? props.linkClass : ""}`}
+              >
+                {props.cta}
+              </a>
+            </div>
           }
 
         </div>

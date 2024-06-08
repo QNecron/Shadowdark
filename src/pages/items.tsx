@@ -19,9 +19,9 @@ import Sources from "../../json/sources.json"
 import Core from "../../json/items_core.json"
 import Custom from "../../json/items_custom.json"
 
-import HeroDesktop from "../images/heroes/16-4-5.webp"
+import HeroDesktop from "../images/heroes/default_16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"
-import HeroMobile from "../images/heroes/1-1.webp"
+import HeroMobile from "../images/heroes/default_1-1.webp"
 
 const Spells: React.FC<PageProps> = () => {
 
@@ -49,7 +49,7 @@ const Spells: React.FC<PageProps> = () => {
     <Page>
 
       <Hero
-        theme="shaded"
+        theme="greyscale"
         desktop={HeroDesktop}
         desktopH="540"
         desktopW="1920"

@@ -17,21 +17,24 @@ import Alphabet from "../../json/alphabet.json"
 
 import Data from "../../json/feats.json"
 
-import HeroDesktop from "../images/heroes/16-4-5.webp"
+import HeroDesktop from "../images/heroes/default_16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"
-import HeroMobile from "../images/heroes/1-1.webp"
+import HeroMobile from "../images/heroes/default_1-1.webp"
 
 const Spells: React.FC<PageProps> = () => {
 
+  const Type = ["general", "combat", "magical", "*"]
+
   const [alpha, alphaUpdate] = useState("*")
   const [search, searchUpdate] = useState("")
+  const [type, typeUpdate] = useState("*")
   const [submit, submitUpdate] = useState("")
 
   const form = (e, prop) => {
     e.preventDefault()
     submitUpdate(prop)
     alphaUpdate("*")
-    sourceUpdate("*")
+    typeUpdate("*")
   }
 
   const clear = (prop) => {
@@ -44,7 +47,7 @@ const Spells: React.FC<PageProps> = () => {
     <Page>
 
       <Hero
-        theme="shaded"
+        theme="greyscale"
         desktop={HeroDesktop}
         desktopH="540"
         desktopW="1920"
@@ -104,6 +107,15 @@ const Spells: React.FC<PageProps> = () => {
                 <h5 className="filters-heading heading-5">Name</h5>
               </Tabs>
 
+              <Tabs
+                data={Type}
+                state={type}
+                click={typeUpdate}
+                tabClass="filters-type"
+              >
+                <h5 className="filters-heading heading-5">Type</h5>
+              </Tabs>
+
             </NavFlyout>
 
           </nav>
@@ -115,9 +127,13 @@ const Spells: React.FC<PageProps> = () => {
               let alphaFilter = data.name.charAt(0)
               let submitFilter = submit.toLowerCase()
               let nameFilter = data.name.toLowerCase()
+              let typeFilter = data.type
 
               // alphabetical filter
               if (alphaFilter !== alpha && alpha !== "*") return null
+
+              // type filter
+              if (typeFilter !== type && type !== "*") return null
 
               // search filter
               if (submit) {

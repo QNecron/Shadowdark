@@ -75,12 +75,11 @@
 
 }
 
-[hero-theme~="shaded"] {
-  background-color: $black;
+[hero-theme~="greyscale"] {
 
   .hero-asset {
-    filter: grayscale(50%);
-    opacity: .48;
-  }
+    filter: grayscale(100%);
+    opacity: .24;
+   }
 
 }
