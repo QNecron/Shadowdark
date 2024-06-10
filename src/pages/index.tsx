@@ -99,7 +99,7 @@ const IndexPage: React.FC<PageProps> = () => {
               mobileW="480"
               alt="The Arcane Library's Shadowdark"
               heading="Shadowdark"
-              copy="Support the amazing creator of Shadowdark over at The Arcane Libra"
+              copy="Support the amazing creator of Shadowdark over at The Arcane Library."
               linkClass="btn-link btn-secondary"
               target="_blank"
               url="https://www.thearcanelibrary.com/pages/shadowdark"
