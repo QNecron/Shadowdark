@@ -88,6 +88,14 @@
     "properties": "2H"
   },
   {
+    "name": "Shortsword",
+    "cost": "7 gp",
+    "type": "M",
+    "range": "C",
+    "damage": "1d6",
+    "properties": "-"
+  },
+  {
     "name": "Spear",
     "cost": "5 sp",
     "type": "M/R",

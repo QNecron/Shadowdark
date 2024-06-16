@@ -814,6 +814,8 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Priest">Priest</option>
                   <option value="Thief">Thief</option>
                   <option value="Wizard">Wizard</option>
+                  <option value="Bard">Bard</option>
+                  <option value="Ranger">Ranger</option>
                 </Select>
                 {/* @TODO class + level + alignment = title */}
                 <Input

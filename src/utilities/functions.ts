@@ -50,8 +50,8 @@ export const diceroll = (dice, count) => {
 export const hitdice = (a) => {
   let type = "d4"
 
-  if (a === "Fighter") { type = "d8" }
-  else if (a === "Priest") { type = "d6" }
+  if (a === "Fighter" || a === "Ranger") { type = "d8" }
+  else if (a === "Priest" || a === "Bard") { type = "d6" }
   else {
     type = "d4"
   }
