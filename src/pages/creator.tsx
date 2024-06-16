@@ -564,7 +564,7 @@ const Creator: React.FC<PageProps> = () => {
                   {total(
                     character.armor_class.armor,
                     character.armor_class.shield,
-                    character.armor_class.armor <= 0 ? modifier(character.attributes.dex, 0, 0) : 0,
+                    character.armor_class.armor <= 13 ? modifier(character.attributes.dex, 0, 0) : 0,
                     character.armor_class.armor <= 0 ? character.armor_class.base : 0,
                   )}
                 </div>
