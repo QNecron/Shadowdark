@@ -21,13 +21,6 @@
     "stacking": false
   },
   {
-    "name": "Ambidextrous",
-    "description": "May attack with off-hand weapon, -3 to off-hand attack roll.",
-    "action": "action",
-    "type": "combat",
-    "stacking": false
-  },
-  {
     "name": "Cleaving Attack",
     "description": "Attack one additional close enemy, -3 to additional attack roll.",
     "action": "action",
@@ -46,6 +39,13 @@
     "description": "-1 to attack tolls, +1 to damage rolls.",
     "action": "action",
     "type": "combat",
+    "stacking": true
+  },
+  {
+    "name": "Combat Casting",
+    "description": "+1 to caster level checks.",
+    "action": "passive",
+    "type": "magical",
     "stacking": true
   },
   {
@@ -92,9 +92,9 @@
   },
   {
     "name": "Toughness",
-    "description": "Additional class die added to hit points.",
+    "description": "+3 maximum hit points.",
     "action": "passive",
     "type": "general",
-    "stacking": true
+    "stacking": false
   }
 ]
