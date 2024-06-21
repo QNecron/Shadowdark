@@ -1,8 +1,82 @@
 [
   {
-    "name": "Fairy Pumps",
-    "description": "Green, leafed-shaped shoes are as comfortable as they are magical.",
-    "benefit": "<strong>Benefit.</strong> All Dexterity checks are done with advantage.",
-    "source": "custom"
+    "name": "Hirbel's Protective Skin",
+    "description": "Forged from the scales of a great wurm's impenetrable hide.",
+    "bonus": "<strong>Bonus.</strong> +1 chainmail.",
+    "benefit": "<strong>Benefit.</strong> Reduces physical damage by 1 (minimum of 1).",
+    "source": "custom",
+    "type": "chainmail"
+  },
+  {
+    "name": "Autumn Fire",
+    "description": "Made to give the wearer the appearance of a fire breathing wurm.",
+    "benefit": "<strong>Benefit.</strong> Attacks deal an additional 1d4 fire damage.",
+    "additional": "<strong>Spell.</strong> Burning Hands (1x / day)",
+    "source": "custom",
+    "type": "chainmail"
+  },
+  {
+    "name": "Sun-Touched Chainmail of Hyran Rath",
+    "description": "An armor created to combat creatures suchs as ghouls and vampires.",
+    "benefit": "<strong>Benefit.</strong> You have advantage on checks to avoid the effects of poison and disease.",
+    "additional": "<strong>Spell.</strong> Smite (1x / day)",
+    "source": "custom",
+    "type": "chainmail"
+  },
+  {
+    "name": "Wurmwull",
+    "description": "Protects the wearer from the slashing claws and fiery breath of a great wurm.",
+    "benefit": "<strong>Benefit.</strong> Reduces physical damage by 1 and reduces fire damage by 3 (minimum of 1).",
+    "source": "custom",
+    "type": "chainmail"
+  },
+  {
+    "name": "Heldrik's Coat",
+    "description": "Provides additional padding to protect the wearer from the bitter cold.",
+    "benefit": "<strong>Benefit.</strong> Reduces cold damage by 3 (minimum of 1) and you have advantage on checks to avoid the effects paralyze.",
+    "source": "custom",
+    "type": "chainmail"
+  },
+  {
+    "name": "Coat of Ill Payment",
+    "description": "Attackers will recoil in pain after successfully landing their blows.",
+    "bonus": "<strong>Bonus.</strong> +1 chainmail.",
+    "benefit": "<strong>Benefit.</strong> Attackers within close range take 1 point of damage when they strike you.",
+    "source": "custom",
+    "type": "chainmail"
+  },
+  {
+    "name": "Angio's Gambeson",
+    "description": "Aids in performing jawdropping feats that seem to defy the laws of nature and good sense alike.",
+    "bonus": "",
+    "benefit": "<strong>Benefit.</strong> Your Dexterity stat is increased by 2 (to a maximum of 20).",
+    "additional": "<strong>Spell.</strong> Misty Step (1x / day)",
+    "source": "custom",
+    "type": "leather"
+  },
+  {
+    "name": "Elryn's Jacket",
+    "description": "Where most padded armor is constructed in vertical strips, this one bears a distinctive diamond pattern.",
+    "bonus": "",
+    "benefit": "<strong>Benefit.</strong> Your Wisdom stat is increased by 2 (to a maximum of 20).",
+    "additional": "<strong>Spell.</strong> Blind/Deafen (1x / day)",
+    "source": "custom",
+    "type": "leather"
+  },
+  {
+    "name": "Blaidh Golan",
+    "description": "Blaidh Golan, or Wolf Heart, is said to have been blessed by Jezelda herself.",
+    "bonus": "<strong>Bonus.</strong> +1 leather armor.",
+    "benefit": "<strong>Benefit.</strong> You have advantage on checks to avoid the effects paralyze.",
+    "source": "custom",
+    "type": "leather"
+  },
+  {
+    "name": "Rebel's Call",
+    "description": "Revolutionaries from Galt struck fear into the hear of the Empire of Taldor.",
+    "bonus": "<strong>Bonus.</strong> +1 leather armor.",
+    "additional": "<strong>Spell.</strong> Shield of Faith (1x / day)",
+    "source": "custom",
+    "type": "leather"
   }
 ]

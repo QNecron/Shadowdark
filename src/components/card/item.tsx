@@ -7,7 +7,7 @@ const ItemCard = ({ ...props }) => {
 
       <h2 className="item-name heading-3">{props.name}</h2>
 
-      <p className="item-description">{props.description}</p>
+      {props.description ? <p className="item-description">{props.description}</p> : ""}
 
       {props.bonus ? <p className="item-bonus" dangerouslySetInnerHTML={{__html: props.bonus}}></p> : ""}
 

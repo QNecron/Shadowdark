@@ -15,8 +15,9 @@ import Tabs from "../components/tabs/tabs"
 
 import Alphabet from "../../json/alphabet.json"
 import Sources from "../../json/sources.json"
+import ItemTypes from "../../json/items_type.json"
 
-import Core from "../../json/items_core.json"
+// import Core from "../../json/items_core.json"
 import Custom from "../../json/items_custom.json"
 
 import HeroDesktop from "../images/heroes/default_16-4-5.webp"
@@ -27,6 +28,7 @@ const Spells: React.FC<PageProps> = () => {
 
   const [alpha, alphaUpdate] = useState("*")
   const [source, sourceUpdate] = useState("*")
+  const [type, typeUpdate] = useState("*")
   const [search, searchUpdate] = useState("")
   const [submit, submitUpdate] = useState("")
 
@@ -41,6 +43,8 @@ const Spells: React.FC<PageProps> = () => {
     searchUpdate(prop)
     submitUpdate(prop)
   }
+
+  const Core = []
 
   const Data = Core.concat(Custom)
 
@@ -110,6 +114,16 @@ const Spells: React.FC<PageProps> = () => {
               </Tabs>
 
               <Tabs
+                data={ItemTypes}
+                state={type}
+                click={typeUpdate}
+                tabClass="filters-source"
+              >
+                <h5 className="filters-heading heading-5">Type</h5>
+              </Tabs>
+
+              {/*
+              <Tabs
                 data={Sources}
                 state={source}
                 click={sourceUpdate}
@@ -117,6 +131,7 @@ const Spells: React.FC<PageProps> = () => {
               >
                 <h5 className="filters-heading heading-5">Source</h5>
               </Tabs>
+              */}
 
             </NavFlyout>
 
@@ -128,6 +143,7 @@ const Spells: React.FC<PageProps> = () => {
 
               let alphaFilter = data.name.charAt(0)
               let sourceFilter = data.source
+              let typeFilter = data.type
               let submitFilter = submit.toLowerCase()
               let nameFilter = data.name.toLowerCase()
 
@@ -136,6 +152,9 @@ const Spells: React.FC<PageProps> = () => {
 
               // source filter
               if (sourceFilter !== source && source !== "*") return null
+
+              // type filter
+              if (typeFilter !== type && type !== "*") return null
 
               // search filter
               if (submit) {
@@ -178,7 +197,7 @@ export default Spells
 
 export const Head: HeadFC = () => (
   <SEO
-    title="Spells | Umbral Tools"
+    title="Magic Items | Umbral Tools"
     description="Search through all openly available spells for ShadowDark TTRPG."
   />
 )
