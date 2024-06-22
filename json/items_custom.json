@@ -119,7 +119,7 @@
     "bonus": "<strong>Bonus.</strong> +1 robe.",
     "additional": "Once per day, you can cast Mirros Image with a +4 bonus.",
     "source": "custom",
-    "type": "plate"
+    "type": "robe"
   },
   {
     "name": "Rundl's Finery",
@@ -127,7 +127,7 @@
     "bonus": "<strong>Bonus.</strong> +1 robe.",
     "benefit": "<strong>Benefit.</strong> Your Intelligence stat is increased by 2 (to a maximum of 20).",
     "source": "custom",
-    "type": "plate"
+    "type": "robe"
   },
   {
     "name": "Starlit Garb",
@@ -136,7 +136,7 @@
     "benefit": "Once per day, you can cast Holy Weapon with a +4 bonus.",
     "additional": "Once per day, you can cast Cleansing Weapon with a +4 bonus.",
     "source": "custom",
-    "type": "plate"
+    "type": "robe"
   },
   {
     "name": "Gwisk Gias",
@@ -144,7 +144,7 @@
     "benefit": "<strong>Benefit.</strong> Your Constitution stat is increased by 2 (to a maximum of 20).",
     "additional": "You have advantage on checks made to stabilize.",
     "source": "custom",
-    "type": "plate"
+    "type": "robe"
   },
   {
     "name": "Band of Wurm's Might",
