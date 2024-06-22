@@ -117,7 +117,7 @@ const Spells: React.FC<PageProps> = () => {
                 data={ItemTypes}
                 state={type}
                 click={typeUpdate}
-                tabClass="filters-source"
+                tabClass="filters-type"
               >
                 <h5 className="filters-heading heading-5">Type</h5>
               </Tabs>
