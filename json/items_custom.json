@@ -509,5 +509,36 @@
     "additional": "Once per day, you can cast Cure Wounds with a +4 bonus.",
     "source": "custom",
     "type": "neck"
+  },
+  {
+    "name": "Drake's Bell",
+    "description": ".",
+    "additional": "<strong>Benefit.</strong> Deals an extra 1d4 points of fire damage.",
+    "source": "custom",
+    "type": "bastard sword"
+  },
+  {
+    "name": "The White Spire",
+    "description": ".",
+    "bonus": "<strong>Bonus.</strong> +1 bastard sword.",
+    "additional": "<strong>On Hit.</strong> Reduce target's Dexterity stat by 2, DC12 Constitution save negates. Does not stack.",
+    "source": "custom",
+    "type": "bastard sword"
+  },
+  {
+    "name": "The Grey Sleeper",
+    "description": ".",
+    "bonus": "<strong>Bonus.</strong> +1 bastard sword.",
+    "benefit": "<Strong>Benefit</strong>. You have advantage on checks to avoid the effects of curse.",
+    "source": "custom",
+    "type": "bastard sword"
+  },
+  {
+    "name": "Traitor's Merit",
+    "description": ".",
+    "bonus": "<strong>Bonus.</strong> +1 bastard sword.",
+    "benefit": "<Strong>Benefit</strong>. You have advantage on attack rolls against flanked, prone, and stunned enemies.",
+    "source": "custom",
+    "type": "bastard sword"
   }
 ]
