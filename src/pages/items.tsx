@@ -13,12 +13,12 @@ import Input from "../components/forms/input"
 import ItemCard from "../components/card/item"
 import Tabs from "../components/tabs/tabs"
 
-import Alphabet from "../../json/alphabet.json"
-import Sources from "../../json/sources.json"
-import ItemTypes from "../../json/items_type.json"
+import Alphabet from "../json/alphabet.json"
+import Sources from "../json/sources.json"
+import ItemTypes from "../json/items_type.json"
 
-// import Core from "../../json/items_core.json"
-import Custom from "../../json/items_custom.json"
+// import Core from "../json/items_core.json"
+import Custom from "../json/items_custom.json"
 
 import HeroDesktop from "../images/heroes/default_16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"

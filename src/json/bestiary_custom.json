@@ -54,5 +54,26 @@
     "ability_1": "<strong>False appearance.</strong> While the creeper remains motionless, it's indistinguishable from an ordinary flowering vine.",
     "ability_2": "<strong>Yellow Musk.</strong> The creeper’s flowers release a strong musk that charms close humanoids. A DC 12 Wisdom saving throw is needed to resist the charm, if charm the humanoid slow walks towards the creeper and nothing else. Lasts 5 rounds.",
     "source": "custom"
+  },
+  {
+    "name": "Hound of Tindalos",
+    "description": "Ancient texts refer to these relentless temporal hunters as the Hounds of Tindalos, yet they never seem to explore what Tindalos actually is...",
+    "level": 3,
+    "hitpoints": 15,
+    "armorclass": "13",
+    "alignment": "C",
+    "move": "near",
+    "str": "+2",
+    "dex": "+3",
+    "con": "+1",
+    "int": "+0",
+    "wis": "+1",
+    "cha": "+0",
+    "attack": "2 claw +2 (1d6) or 1 bite +2 (1d8)",
+    "ability_1": "<strong>Otherworldly.</strong> Immune to morale checks.",
+    "ability_2": "<strong>Ripping Gaze.</strong> The hound's eyes glow balefully, causing painful but bloodless wounds to rip open all over the creature's body dealing 2d8 damage.",
+    "ability_3": "<strong>Time Sensitive.</strong> The hound is a superb hunter of those that use time altering magic, ADV on checks made to find such individuals.",
+    "ability_4": "<strong>Angled Entry.</strong> The hound casts Dimension Door spell, but it must transport itself into a space adjacent to an angle of 90º (or more acute) in the structure or environment around it.",
+    "source": "custom"
   }
 ]

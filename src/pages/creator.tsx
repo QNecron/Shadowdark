@@ -14,8 +14,8 @@ import Input from "../components/forms/input"
 import Select from "../components/forms/select"
 import TextArea from "../components/forms/textarea"
 
-import Armors from "../../json/armors.json"
-import Weapons from "../../json/weapons.json"
+import Armors from "../json/armors.json"
+import Weapons from "../json/weapons.json"
 
 import { modifier, total, diceroll, hitdice, ancestry, armors, weapons } from "../utilities/functions"
 

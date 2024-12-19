@@ -13,9 +13,9 @@ import Input from "../components/forms/input"
 import FeatCard from "../components/card/feat"
 import Tabs from "../components/tabs/tabs"
 
-import Alphabet from "../../json/alphabet.json"
+import Alphabet from "../json/alphabet.json"
 
-import Data from "../../json/feats.json"
+import Data from "../json/feats.json"
 
 import HeroDesktop from "../images/heroes/default_16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"

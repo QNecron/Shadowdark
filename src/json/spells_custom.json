@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Shillelagh",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "5 rounds",
+    "range": "Close",
+    "description_1": "One club or staff you touch becomes hard as iron. The weapon becomes magical and damage rolls have advantage for the duration.",
+    "source": "custom"
+  },
+  {
+    "name": "Haste",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "3 rounds",
+    "range": "Close",
+    "description_1": "Target is granted 2 actions per round for the next 3 rounds.",
+    "source": "custom"
+  },
+  {
+    "name": "Slow",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "3 rounds",
+    "range": "Near",
+    "description_1": "Target is reduced to either an action or move only for the next 3 rounds.",
+    "source": "custom"
+  }
+]

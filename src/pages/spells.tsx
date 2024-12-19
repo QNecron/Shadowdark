@@ -13,13 +13,13 @@ import Input from "../components/forms/input"
 import SpellCard from "../components/card/spell"
 import Tabs from "../components/tabs/tabs"
 
-import Alphabet from "../../json/alphabet.json"
-import Numeric from "../../json/tier.json"
-import Sources from "../../json/sources.json"
-import Casters from "../../json/casters.json"
+import Alphabet from "../json/alphabet.json"
+import Numeric from "../json/tier.json"
+import Sources from "../json/sources.json"
+import Casters from "../json/casters.json"
 
-import Core from "../../json/spells_core.json"
-import Custom from "../../json/spells_custom.json"
+// import Core from "../json/spells_core.json"
+import Custom from "../json/spells_custom.json"
 
 import HeroDesktop from "../images/heroes/default_16-4-5.webp"
 // import HeroTablet from "../images/heroes/16-9.webp"
@@ -28,7 +28,7 @@ import HeroMobile from "../images/heroes/default_1-1.webp"
 const Spells: React.FC<PageProps> = () => {
 
   const [alpha, alphaUpdate] = useState("*")
-  const [level, levelUpdate] = useState(1)
+  const [level, levelUpdate] = useState("*")
   const [source, sourceUpdate] = useState("*")
   const [caster, casterUpdate] = useState("*")
   const [search, searchUpdate] = useState("")
@@ -47,6 +47,8 @@ const Spells: React.FC<PageProps> = () => {
     searchUpdate(prop)
     submitUpdate(prop)
   }
+  
+  const Core = [];
 
   const Data = Core.concat(Custom)
 
