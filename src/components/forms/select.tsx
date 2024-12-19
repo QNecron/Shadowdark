@@ -10,6 +10,7 @@ const Select = ({ ...props }) => {
         value={props.value}
         id={props.id}
         className="input"
+        aria-describedby={`${props.id}Helper`}
         autoComplete="off"
         onChange={props.change}
       >
@@ -24,7 +25,7 @@ const Select = ({ ...props }) => {
       </label>
 
       {props.helper &&
-        <span className="input-helper">{props.helper}</span>
+        <span id={`${props.id}Helper`} className="input-helper">{props.helper}</span>
       }
 
     </div>

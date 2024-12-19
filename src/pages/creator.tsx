@@ -704,30 +704,6 @@ const Creator: React.FC<PageProps> = () => {
                     name: e.target.value
                   })}
                 />
-              </div>
-
-              <div className="creator-block">
-                <Select
-                  value={character.ancestry}
-                  id="ancestry"
-                  label="Ancestry"
-                  helper="Ancestry"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    ancestry: e.target.value,
-                    ancestry_trait: ancestry(e.target.value)
-                  })}
-                >
-                  {/* @TODO move to JSON data */}
-                  <option value="None">-</option>
-                  <option value="Dwarf">Dwarf</option>
-                  <option value="Elf">Elf</option>
-                  <option value="Goblin">Goblin</option>
-                  <option value="Halfling">Halfling</option>
-                  <option value="Half-orc">Half-orc</option>
-                  <option value="Human">Human</option>
-                </Select>
                 <Select
                   value={character.background}
                   id="background"
@@ -761,7 +737,34 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Scholar">Scholar</option>
                   <option value="Noble">Noble</option>
                   <option value="Chirurgeon">Chirurgeon</option>
+                </Select>                
+              </div>
+
+              <div className="creator-block">
+                <Select
+                  value={character.ancestry}
+                  id="ancestry"
+                  label="Ancestry"
+                  helper="Ancestry"
+                  srt="true"
+                  change={(e) => characterUpdate({
+                    ...character,
+                    ancestry: e.target.value,
+                    ancestry_trait: ancestry(e.target.value)
+                  })}
+                >
+                  {/* @TODO move to JSON data */}
+                  <option value="None">-</option>
+                  <option value="Dwarf">Dwarf</option>
+                  <option value="Elf">Elf</option>
+                  <option value="Goblin">Goblin</option>
+                  <option value="Halfling">Halfling</option>
+                  <option value="Half-orc">Half-orc</option>
+                  <option value="Human">Human</option>
                 </Select>
+                <div class="creator-ancestry">
+                  {character.ancestry_trait}
+                </div>
               </div>
 
               <div className="creator-block">
@@ -816,6 +819,9 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Wizard">Wizard</option>
                   <option value="Bard">Bard</option>
                   <option value="Ranger">Ranger</option>
+                  <option value="Vanguard">Vanguard</option>
+                  <option value="Warlock">Warlock</option>
+                  <option value="Witch">Witch</option>
                 </Select>
                 {/* @TODO class + level + alignment = title */}
                 <Input
@@ -837,8 +843,9 @@ const Creator: React.FC<PageProps> = () => {
                 <div className="creator-total">
                   {total(
                     character.hit_points,
+                    modifier(character.attributes.con, 0, 0),
                     character.ancestry === "Dwarf" ? 2 : 0,
-                    0, 0
+                    0
                   )}
                 </div>
                 <Input

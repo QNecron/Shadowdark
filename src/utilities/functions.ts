@@ -51,7 +51,7 @@ export const hitdice = (a) => {
   let type = "d4"
 
   if (a === "Fighter" || a === "Ranger") { type = "d8" }
-  else if (a === "Priest" || a === "Bard") { type = "d6" }
+  else if (a === "Priest" || a === "Bard" || a === "Vanguard" || a === "Warlock") { type = "d6" }
   else {
     type = "d4"
   }

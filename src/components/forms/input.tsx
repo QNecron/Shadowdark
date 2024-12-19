@@ -13,6 +13,7 @@ const Input = ({ ...props }) => {
         className="input"
         placeholder={props.placeholder}
         autoComplete="off"
+        aria-describedby={`${props.id}Helper`}
         onChange={props.change}
       />
 
@@ -24,7 +25,7 @@ const Input = ({ ...props }) => {
       </label>
 
       {props.helper &&
-        <span className="input-helper">{props.helper}</span>
+        <span id={`${props.id}Helper`} className="input-helper">{props.helper}</span>
       }
 
     </div>

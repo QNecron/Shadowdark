@@ -12,6 +12,7 @@ const TextArea = ({ ...props }) => {
         value={props.value}
         rows={props.rows}
         cols={props.cols}
+        aria-describedby={`${props.id}Helper`}
         disabled={props.disabled}
         onChange={props.change}
       />
@@ -24,7 +25,7 @@ const TextArea = ({ ...props }) => {
       </label>
 
       {props.helper &&
-        <span className="input-helper">{props.helper}</span>
+        <span id={`${props.id}Helper`} className="input-helper">{props.helper}</span>
       }
 
     </div>

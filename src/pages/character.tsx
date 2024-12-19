@@ -163,11 +163,11 @@ const Character: React.FC<PageProps> = () => {
 
   }
 
-  const details = (string1, string2) => {
+  const details = (string1, string2, string3) => {
     let final = ""
 
-    if (string1) final = string2 + "\r\n" + "Armor properties: " + string1
-    else final = string2
+    if (string1) final = string2 + "\r\n" + string3 + "\r\n" + "Armor properties: " + string1
+    else final = string2 + "\r\n" + string3
 
     return final
   }
@@ -307,7 +307,12 @@ const Character: React.FC<PageProps> = () => {
                   <div className="character-sheet-block separator">
                     <div className="character-sheet-prop">Hit Points</div>
                     <div className="character-sheet-value">
-                      {total(character.hit_points, character.ancestry === "Dwarf" ? 2 : 0, 0, 0)}
+                      {total(
+                        character.hit_points,
+                        modifier(character.attributes.con, 0, 0), 
+                        character.ancestry === "Dwarf" ? 2 : 0, 
+                        0
+                      )}
                     </div>
                   </div>
 
@@ -384,7 +389,13 @@ const Character: React.FC<PageProps> = () => {
 
                   <div className="character-sheet-block separator">
                     <TextArea
-                      value={details(character.armor_class.properties, character.talents_spells)}
+                      value={
+                        details(
+                          character.armor_class.properties, 
+                          character.talents_spells,
+                          character.ancestry_trait
+                        )
+                      }
                       id="talents-spells"
                       label="Talents / Spells"
                       rows="12"
