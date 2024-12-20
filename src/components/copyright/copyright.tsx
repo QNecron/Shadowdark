@@ -8,7 +8,7 @@ const Copyright = ({ ...props }) => {
       <div className="copyright">
         Umbral Tools is an independenmt product published under the Shadowdark RPG
         Thrid-Partry License and is not affiliated with The Arcane Library, LLC.
-        Shadow RPG &copy; 2023 The Arcane Library.
+        Shadow RPG &copy; {(new Date().getFullYear())} The Arcane Library.
       </div>
 
       <div className="copyright">

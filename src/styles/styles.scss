@@ -25,9 +25,11 @@
 @import "../components/card/_media";
 @import "../components/card/_spell";
 @import "../components/card/_feat";
+@import "../components/accordion/_accordion";
 
 // pages
 @import "pages/_character";
+@import "pages/_codex";
 @import "pages/_creator";
 @import "pages/_filters";
 

@@ -1,0 +1,23 @@
+// media
+@include media($mq-desktop) {
+
+  [grid-desktop="codex"] {
+    
+    .page-nav { grid-column: span 2; }
+    
+    .page { grid-column: span 10; }
+    
+  }
+  
+}
+@include media($mq-tablet-range) {
+
+  [grid-tablet="codex"] {
+    
+    .page-nav { grid-column: span 2; }
+    
+    .page { grid-column: span 10; }
+    
+  }
+  
+}

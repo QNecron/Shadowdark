@@ -1,14 +1,7 @@
 [
   {
-    "name": "Shield Bash",
-    "description": "Attack with shield dealing 1d4 damage.",
-    "action": "action",
-    "type": "combat",
-    "stacking": false
-  },
-  {
     "name": "Shield Block",
-    "description": "Reduces damage equal to the shield's AC.",
+    "description": "Reduces damage equal to your shield's AC.",
     "action": "action",
     "type": "combat",
     "stacking": false
@@ -77,15 +70,8 @@
     "stacking": false
   },
   {
-    "name": "Heavyload",
-    "description": "+1 inventory slot.",
-    "action": "passive",
-    "type": "general",
-    "stacking": true
-  },
-  {
     "name": "Lucky",
-    "description": "Additional luck token can be stored.",
+    "description": "Grants a luck token at the beginning of each session.",
     "action": "passive",
     "type": "general",
     "stacking": false

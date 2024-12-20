@@ -61,7 +61,7 @@ const IndexPage: React.FC<PageProps> = () => {
               mobileW="480"
               alt="Custom feats for Shadowdark."
               heading="Learn New Feats"
-              copy="Alternative rules that add feats on your characters even levels."
+              copy="Alternative rules that add feats for your characters to learn at even levels."
               linkClass="btn-link btn-secondary"
               url="/feats"
               cta="Character Feats"
