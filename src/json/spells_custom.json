@@ -1,29 +1,77 @@
 [
   {
-    "name": "Shillelagh",
+    "name": "Divine Favor",
     "tier": 1,
-    "class": "Wizard",
-    "duration": "5 rounds",
-    "range": "Close",
-    "description_1": "One club or staff you touch becomes hard as iron. The weapon becomes magical and damage rolls have advantage for the duration.",
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "You grant the favor of your god to a target within near. On their next damage roll, roll with advantage.",
     "source": "custom"
   },
   {
-    "name": "Haste",
-    "tier": 2,
-    "class": "Wizard",
-    "duration": "3 rounds",
+    "name": "Purify Food and Drink",
+    "tier": 1,
+    "class": "Priest",
+    "duration": "Instant",
     "range": "Close",
-    "description_1": "Target is granted 2 actions per round for the next 3 rounds.",
+    "description_1": "With a touch, food and drink becomes consumable again to grant nurishment. Removes poison and rot from food and drink.",
     "source": "custom"
   },
   {
-    "name": "Slow",
+    "name": "Aid",
     "tier": 2,
+    "class": "Priest",
+    "duration": "10 rounds",
+    "range": "Near",
+    "description_1": "You bolster the resolve of a target within near. For the spell's duration the target gains 4 temporary hitpoints and advantage on morale checks.",
+    "source": "custom"
+  },
+  {
+    "name": "Prayer",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "Upon citing a prayer to your god grants blessings to you and your allies while also condemning those who stand against you.",
+    "description_2": "Allies within near gain advantage on their next attack roll or spell check.",
+    "description_3": "Enemies within near gain disadvantage on their next attack roll or spell check.",
+    "source": "custom"
+  },
+  {
+    "name": "Adhesive",
+    "tier": 1,
     "class": "Wizard",
     "duration": "3 rounds",
     "range": "Near",
-    "description_1": "Target is reduced to either an action or move only for the next 3 rounds.",
+    "description_1": "You conjure forth a thick, sticky substance on the ground. All creatures within close of the target area must make a DC12 dexterity check or be unable to move for the spell's duration.",
+    "description_2": "Upon stepping on to the substance the same check is needed in order not to become stuck.",
     "source": "custom"
-  }
+  },
+  {
+    "name": "Chilling Touch",
+    "tier": 1,
+    "class": "Wizard",
+    "duration": "3 rounds",
+    "range": "Close",
+    "description_1": "Your hand forms a layer of ice as you reach out. Touching a target deals 1d4 cold damage. Additionally the target must make a DC12 constitution check or become weakened.",
+    "source": "custom"
+  },
+  {
+    "name": "Air Walk",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Close",
+    "description_1": "You begin to walk on air as if it's solid as the ground. You walk at half speed and are unable to run while the spell is maintained.",
+    "source": "custom"
+  },
+  {
+    "name": "False Life",
+    "tier": 2,
+    "class": "Wizard",
+    "duration": "10 rounds",
+    "range": "Self",
+    "description_1": "Incantations bolster your physical form. Roll a number of d4s equal to half your level (rounded down) and apply that as temporary hit points for the spell's duration.",
+    "source": "custom"
+  }  
 ]

@@ -32,8 +32,8 @@
     "wis": "+2",
     "cha": "+2",
     "attack": "2 claw +4 (1d8) or 1 disrupting screech",
-    "ability_1": "<strong>Otherworldly.</strong> Immune to morale checks.",
-    "ability_2": "<strong>Disrupting Screech.</strong> The woe strider's open mouth creates an area of antimagic, disrupting spells and items a like as they become useless. Effects all within far range for 2 rounds.",
+    "ability_1": "<strong>Otherworldly.</strong> Immune to charm and morale checks.",
+    "ability_2": "<strong>Disrupting Screech.</strong> The woe strider's open mouth creates an area of antimagic, disrupting spells and magical items a like as they become useless. Effects all within far range for 3 rounds.",
     "source": "custom"
   },
   {
@@ -70,7 +70,7 @@
     "wis": "+1",
     "cha": "+0",
     "attack": "2 claw +2 (1d6) or 1 bite +2 (1d8)",
-    "ability_1": "<strong>Otherworldly.</strong> Immune to morale checks.",
+    "ability_1": "<strong>Otherworldly.</strong> Immune to charm and morale checks.",
     "ability_2": "<strong>Ripping Gaze.</strong> The hound's eyes glow balefully, causing painful but bloodless wounds to rip open all over the creature's body dealing 2d8 damage.",
     "ability_3": "<strong>Time Sensitive.</strong> The hound is a superb hunter of those that use time altering magic, ADV on checks made to find such individuals.",
     "ability_4": "<strong>Angled Entry.</strong> The hound casts Dimension Door spell, but it must transport itself into a space adjacent to an angle of 90º (or more acute) in the structure or environment around it.",
