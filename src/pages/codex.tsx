@@ -118,6 +118,17 @@ const Codex: React.FC<PageProps> = () => {
                   <li>Swapping weapons is a free action.</li>
                 </ul>
                 
+                <p>What attribute is an action tied to, examples:</p>
+
+                <ul>
+                  <li><strong>[STR]</strong> Climb, Jump, Pull, Push</li>
+                  <li><strong>[DEX]</strong> Acrobatics, Balance, Jump</li>
+                  <li><strong>[CON]</strong> Hold Breath, Tolerate Pain</li>
+                  <li><strong>[WIS]</strong> Heal, Intuition, Perception</li>
+                  <li><strong>[INT]</strong> Knowledge (All), Recollection</li>
+                  <li><strong>[CHR]</strong> Intimidate, Persuade</li>
+                </ul>
+                
               </Accordion>
               
               <Accordion 

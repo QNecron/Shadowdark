@@ -48,6 +48,10 @@
     margin-bottom: $space-8;
   }
   
+  ul ~ p {
+    margin-top: $space-24;
+  }
+  
   li {
     list-style: square;
     margin: $space-4 $space-32;
