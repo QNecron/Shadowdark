@@ -48,3 +48,24 @@ input, select, textarea {
 ol, ul {
   list-style-type: none;
 }
+
+details, details * {
+  
+  &::selection {
+    background: transparent;
+  }
+  
+}
+
+summary {
+  cursor: pointer;
+
+  &::marker {
+    content: none;
+  }
+
+  &::selection {
+    background: transparent;
+  }
+  
+}

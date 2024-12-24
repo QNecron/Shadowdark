@@ -35,7 +35,7 @@ const Header = ({ ...props }) => {
               navClass="nav-primary"
             >
               <Link className="btn btn-primary" to="/">Home</Link>
-              {/*<Link className="btn btn-primary" to="/codex">Codex</Link>*/}
+              <Link className="btn btn-primary" to="/codex">Codex</Link>
               <Link className="btn btn-primary" to="/creator">Creator</Link>
               <Link className="btn btn-primary" to="/feats">Feats</Link>
               <Link className="btn btn-primary" to="/spells">Spells</Link>

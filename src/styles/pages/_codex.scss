@@ -3,9 +3,9 @@
 
   [grid-desktop="codex"] {
     
-    .page-nav { grid-column: span 2; }
+    .page-nav { grid-column: span 3; }
     
-    .page { grid-column: span 10; }
+    .page { grid-column: span 9; }
     
   }
   
@@ -14,10 +14,43 @@
 
   [grid-tablet="codex"] {
     
-    .page-nav { grid-column: span 2; }
+    .page-nav { grid-column: span 3; }
     
-    .page { grid-column: span 10; }
+    .page { grid-column: span 9; }
     
+  }
+  
+}
+
+.accordion-codex {
+  margin-bottom: $space-8;
+}
+
+.accordion-title-codex {
+  text-align: left;
+}
+
+.accordion-content-codex {
+  background: rgba($white, .04);
+  padding: $space-32;
+}
+
+// content (JSON in the end maybe?)
+[class*="-codex"] {
+  
+  strong {
+    @extend %black-letter;
+    font-size: rem(12);
+    opacity: .64;
+  }
+  
+  p {
+    margin-bottom: $space-8;
+  }
+  
+  li {
+    list-style: square;
+    margin: $space-4 $space-32;
   }
   
 }

@@ -1,0 +1,28 @@
+[class*="accordion-"][open] {
+  
+  [class*="accordion-title-"] {
+    
+    &::before {
+      background: rgba($white, 1);
+    }
+    
+  }
+  
+}
+
+[class*="accordion-title-"] {
+  position: relative;
+  
+  &::before {
+    content: "";
+    background: rgba($white, .08);
+    height: $space-8;
+    width: $space-8;
+    position: absolute;
+    top: 50%;
+    right: $space-16;
+    transform: translate(0, -50%) rotate(45deg);
+    transition: all .24s ease-in-out 0s;
+  }
+  
+}

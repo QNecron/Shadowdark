@@ -1,5 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import { Link } from "gatsby"
 
 import SEO from "../components/seo/seo"
 import Page from "../components/page/page"
@@ -46,18 +47,118 @@ const Codex: React.FC<PageProps> = () => {
           
             <div className="page-nav">
               
-              <a href="#leveling" className="btn btn-primary">Leveling</a>
+              <nav aria-label="Codex Highlights" role="navigation">
+                
+                <ul>
+                  <li><a href="#classes" className="link">Classes</a></li>
+                  <li><a href="#leveling" className="link">Leveling</a></li>
+                  <li><a href="#actions" className="link">Actions</a></li>
+                  <li><a href="#items" className="link">Inventory Slots</a></li>
+                  <li><a href="#damage" className="link">Damage Types</a></li>
+                </ul>
+                
+              </nav>
               
             </div>
             
             <div className="page">
-              
+
+              <Accordion 
+                id="classes"
+                classes="codex"
+                trigger="btn btn-primary"
+                title="Classes"
+                open="true"
+              >
+                
+                <p>The following classes are available to choose from for ShadowDark campaigns:</p>
+                
+                <ul>
+                  <li>Fighter</li>
+                  <li>Priest</li>
+                  <li>Thief</li>
+                  <li>Wizard</li>
+                  <li>Bard</li>
+                  <li>Ranger</li>
+                  <li>Vanguard <strong>[Knight of St. Ydris]</strong></li>
+                  <li>Warlock</li>
+                  <li>Witch</li>
+                </ul>
+                
+              </Accordion>
+
               <Accordion 
                 id="leveling"
                 classes="codex"
+                trigger="btn btn-primary"
                 title="Leveling"
-                content="Information about leveling."
-              />
+              >
+                
+                <p>Leveling will follow the ShadowDark ruleset except for the following:</p>
+                
+                <ul>
+                  <li>At first level players will recieve the maximum hit points possible.</li>
+                  <li>On even levels players gain a <Link className="link" to="/feats">Feat</Link>.</li>
+                </ul>
+                
+              </Accordion>
+              
+              <Accordion 
+                id="actions"
+                classes="codex"
+                trigger="btn btn-primary"
+                title="Actions"
+              >
+                
+                <p>Clarification on actions a player could choose to do on their turn:</p>
+                
+                <ul>
+                  <li>Knowledge checks are a free action within reason.</li>
+                  <li>Perception; seeing, hearing, and smelling, checks are a free action within reason.</li>
+                  <li>Swapping weapons is a free action.</li>
+                </ul>
+                
+              </Accordion>
+              
+              <Accordion 
+                id="items"
+                classes="codex"
+                trigger="btn btn-primary"
+                title="Inventory Slots"
+              >
+                
+                <p>In addition to the 10 starting inventory slots players will also have:</p>
+                
+                <ul>
+                  <li><strong>[Head]</strong> Circlets, Headbands, Helmets, Hoods, and Masks</li>
+                  <li><strong>[Back]</strong> Capes, Cloaks, and Mantles</li>
+                  <li><strong>[Neck]</strong> Amulets, Broaches, and Necklaces</li>
+                  <li><strong>[Body]</strong> Armor and Robes</li>
+                  <li><strong>[Arms]</strong> Gauntlets, Gloves, and Vambraces</li>
+                  <li><strong>[Heands]</strong> Weapons and Shields</li>
+                  <li><strong>[Accessories]</strong> Bracelets, Rings, and Torcs</li>
+                  <li><strong>[Waist]</strong> Belts and Sashes</li>
+                  <li><strong>[Feet]</strong> Boots, Sandles, and Sabatons</li>
+                </ul>
+                
+              </Accordion>
+              
+              <Accordion 
+                id="damage"
+                classes="codex"
+                trigger="btn btn-primary"
+                title="Damage Types"
+              >
+              
+                <p>Damage types defined:</p>
+                
+                <ul>
+                  <li><strong>[Physical]</strong> Bludgeoning, Piercing, and Slashing</li>
+                  <li><strong>[Elemental]</strong> Acid, Cold, Electrical, and Fire</li>
+                  <li><strong>[Foundational]</strong> Force, Light, and Shadow</li>
+                </ul>
+                
+              </Accordion>
               
             </div>
           
