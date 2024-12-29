@@ -69,7 +69,8 @@
 .creator-armor,
 .creator-weapon,
 .creator-name,
-.creator-ancestry {
+.creator-ancestry,
+.creator-damage {
   background: rgba($white, .02);
   border: solid rem(1) rgba($white, .08);
   text-align: center;
@@ -120,4 +121,11 @@
 
 .creator-no-characters {
   margin-top: $space-16;
+}
+
+.creator-damage {
+	font-size: rem(14);
+	padding: calc($space-12 - 1px) $space-16;
+	line-height: $space-16;
+  text-align: left;
 }

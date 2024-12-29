@@ -27,6 +27,11 @@
   &::placeholder {
     font-style: italic;
   }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .32;    
+  }
 
 }
 

@@ -12,6 +12,7 @@ const Select = ({ ...props }) => {
         className="input"
         aria-describedby={`${props.id}Helper`}
         autoComplete="off"
+        disabled={props.disabled}
         onChange={props.change}
       >
         {props.children}

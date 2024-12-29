@@ -14,6 +14,8 @@ const Input = ({ ...props }) => {
         placeholder={props.placeholder}
         autoComplete="off"
         aria-describedby={`${props.id}Helper`}
+        min={props.min}
+        max={props.max}
         onChange={props.change}
       />
 

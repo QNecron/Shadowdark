@@ -5,6 +5,8 @@
     "type": "M",
     "range": "C",
     "damage": "1d8/1d10",
+    "damage_1": "1d8",
+    "damage_2": "1d10",
     "properties": "V, 2 slots"
   },
   {
@@ -37,6 +39,8 @@
     "type": "M",
     "range": "C",
     "damage": "1d8/1d10",
+    "damage_1": "1d8",
+    "damage_2": "1d10",    
     "properties": "V, 2 slots"
   },
   {

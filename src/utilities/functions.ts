@@ -80,7 +80,9 @@ export const ancestry = (a) => {
 export const weapons = (json, weapon, output) => {
   let type = "-"
   let range = "-"
-  let damage = "-"
+  let damage = "0"
+  let damage_1 = "0"
+  let damage_2 = "0"
   let properties = "-"
 
   json.map((data) => {
@@ -89,6 +91,8 @@ export const weapons = (json, weapon, output) => {
       type = data.type
       range = data.range
       damage = data.damage
+      damage_1 = data.damage_1 ? data.damage_1 : data.damage
+      damage_2 = data.damage_2 ? data.damage_2 : data.damage
       properties = data.properties
     }
 
@@ -98,6 +102,8 @@ export const weapons = (json, weapon, output) => {
   else if (output === 2) return range
   else if (output === 3) return damage
   else if (output === 4) return properties
+  else if (output === 5) return damage_1
+  else if (output === 6) return damage_2
   else {
     console.log("Weapon not found.")
   }

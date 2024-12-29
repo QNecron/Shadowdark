@@ -572,24 +572,9 @@ const Creator: React.FC<PageProps> = () => {
                 {/*<div className="creator-total">{character.armor_class.armor_slot}</div>*/}
               </div>
 
-              <h2 className="creator-heading heading-3">Attacks</h2>
+              <h2 className="creator-heading heading-3">Attack</h2>
 
               <div className="creator-block attacks">
-                {/*<Input
-                  type="number"
-                  value={character.attacks.weapon_bonus_1}
-                  id="weapon-bonus1"
-                  label="Weapon (A) Bonus"
-                  helper="Bonus"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    attacks: {
-                      ...character.attacks,
-                      weapon_bonus_1: e.target.value
-                    }
-                  })}
-                />*/}
                 <Select
                   value={character.attacks.weapon_1}
                   id="weapon1"
@@ -737,7 +722,7 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Scholar">Scholar</option>
                   <option value="Noble">Noble</option>
                   <option value="Chirurgeon">Chirurgeon</option>
-                </Select>                
+                </Select>
               </div>
 
               <div className="creator-block">
