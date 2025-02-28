@@ -38,6 +38,24 @@
     "source": "custom"
   },
   {
+    "name": "Smite",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "You call down punishing flames on a creature you can see within range. It takes 2d6 damage.",
+    "source": "custom"
+  },
+  {
+    "name": "Flamestrike",
+    "tier": 2,
+    "class": "Priest",
+    "duration": "Instant",
+    "range": "Far",
+    "description_1": "You call down a holy pillar of fire, immolating one creature you can see within range. The target takes 3d6 damage.",
+    "source": "custom"    
+  },
+  {
     "name": "Adhesive",
     "tier": 1,
     "class": "Wizard",

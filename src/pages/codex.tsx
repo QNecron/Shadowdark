@@ -47,16 +47,13 @@ const Codex: React.FC<PageProps> = () => {
           
             <div className="page-nav">
               
-              <nav aria-label="Codex Highlights" role="navigation">
-                
-                <ul>
-                  <li><a href="#classes" className="link">Classes</a></li>
-                  <li><a href="#leveling" className="link">Leveling</a></li>
-                  <li><a href="#actions" className="link">Actions</a></li>
-                  <li><a href="#items" className="link">Inventory Slots</a></li>
-                  <li><a href="#damage" className="link">Damage Types</a></li>
-                </ul>
-                
+              <nav className="nav-quick" aria-label="Codex Highlights" role="navigation">
+                <a href="#classes" className="btn btn-primary">Classes</a>
+                <a href="#changes" className="btn btn-primary">Changes</a>                
+                <a href="#leveling" className="btn btn-primary">Leveling</a>
+                <a href="#actions" className="btn btn-primary">Actions</a>
+                <a href="#items" className="btn btn-primary">Inventory Slots</a>
+                <a href="#damage" className="btn btn-primary">Damage Types</a>                
               </nav>
               
             </div>
@@ -83,6 +80,41 @@ const Codex: React.FC<PageProps> = () => {
                   <li>Vanguard <strong>[Knight of St. Ydris]</strong></li>
                   <li>Warlock</li>
                   <li>Witch</li>
+                </ul>
+                
+              </Accordion>
+              
+              <Accordion 
+                id="changes"
+                classes="codex"
+                trigger="btn btn-primary"
+                title="Changes"
+                open="true"
+              >
+                
+                <p>Changes to core classes:</p>
+                
+                <ul>
+                  <li>Priest: Use the Wizard's <strong>Spells Known</strong> table for spell progression.</li>
+                  <li>Priest: Start with 3 spells instead of 2 at level 1.</li>
+                  <li>Priest: <strong>Turn Undead</strong> is no longer given at level 1.</li>
+                  <li>Priest: Add crossbows to weapons you're proficient in.</li>
+                  <li>Thief: <strong>Backstab</strong> works on flanked enemies.</li>
+                  <li>Wizard: Add crossbows to weapons you're proficient in.</li>
+                </ul>
+                
+                <p>Changes to core items:</p>
+                
+                <ul>
+                  <li>Arrows/Bolts: Now are considered interchangable.</li>
+                  <li>Shortsword: Now has the <strong>Finese</strong> property.</li>
+                </ul>
+                
+                <p>Changes to core spells:</p>
+                
+                <ul>
+                  <li>Smite: Now deals 2d6 damage, up from 1d6.</li>
+                  <li>Flamestrike: Now deals 3d6 damage, up from 2d6.</li>
                 </ul>
                 
               </Accordion>
