@@ -48,17 +48,54 @@ const Codex: React.FC<PageProps> = () => {
             <div className="page-nav">
               
               <nav className="nav-quick" aria-label="Codex Highlights" role="navigation">
+                <a href="#changes" className="btn btn-primary">Changes</a>
                 <a href="#classes" className="btn btn-primary">Classes</a>
-                <a href="#changes" className="btn btn-primary">Changes</a>                
                 <a href="#leveling" className="btn btn-primary">Leveling</a>
+                <a href="#items" className="btn btn-primary">Inventory Slots</a>                
                 <a href="#actions" className="btn btn-primary">Actions</a>
-                <a href="#items" className="btn btn-primary">Inventory Slots</a>
                 <a href="#damage" className="btn btn-primary">Damage Types</a>                
               </nav>
               
             </div>
             
             <div className="page">
+
+              <Accordion 
+                id="changes"
+                classes="codex"
+                trigger="btn btn-primary"
+                title="Changes"
+                open="true"
+              >
+                
+                <p>Changes to core classes:</p>
+                
+                <ul>
+                  <li>Priest: Use the Wizard's <strong>Spells Known</strong> table for spell progression.</li>
+                  <li>Priest: Start with 3 spells instead of 2 at level 1.</li>
+                  <li>Priest: <strong>Turn Undead</strong> is no longer given at level 1.</li>
+                  <li>Priest: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
+                  <li>Thief: <strong>Backstab</strong> works on flanked enemies.</li>
+                  <li>Thief: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
+                  <li>Wizard: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
+                </ul>
+                
+                <p>Changes to core items:</p>
+                
+                <ul>
+                  <li>Arrows: Are now interchangable with Bolts.</li>
+                  <li>Bolts: Are now interchangable with Arrows.</li>
+                  <li>Shortsword: Now has the <strong>Finese</strong> property.</li>
+                </ul>
+                
+                <p>Changes to core spells:</p>
+                
+                <ul>
+                  <li>Smite: Now deals 2d6 damage, up from 1d6.</li>
+                  <li>Flamestrike: Now deals 3d6 damage, up from 2d6.</li>
+                </ul>
+                
+              </Accordion>
 
               <Accordion 
                 id="classes"
@@ -83,42 +120,6 @@ const Codex: React.FC<PageProps> = () => {
                 </ul>
                 
               </Accordion>
-              
-              <Accordion 
-                id="changes"
-                classes="codex"
-                trigger="btn btn-primary"
-                title="Changes"
-                open="true"
-              >
-                
-                <p>Changes to core classes:</p>
-                
-                <ul>
-                  <li>Priest: Use the Wizard's <strong>Spells Known</strong> table for spell progression.</li>
-                  <li>Priest: Start with 3 spells instead of 2 at level 1.</li>
-                  <li>Priest: <strong>Turn Undead</strong> is no longer given at level 1.</li>
-                  <li>Priest: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
-                  <li>Thief: <strong>Backstab</strong> works on flanked enemies.</li>
-                  <li>Thief: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
-                  <li>Wizard: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
-                </ul>
-                
-                <p>Changes to core items:</p>
-                
-                <ul>
-                  <li>Arrows/Bolts: Now are considered interchangable.</li>
-                  <li>Shortsword: Now has the <strong>Finese</strong> property.</li>
-                </ul>
-                
-                <p>Changes to core spells:</p>
-                
-                <ul>
-                  <li>Smite: Now deals 2d6 damage, up from 1d6.</li>
-                  <li>Flamestrike: Now deals 3d6 damage, up from 2d6.</li>
-                </ul>
-                
-              </Accordion>
 
               <Accordion 
                 id="leveling"
@@ -135,7 +136,30 @@ const Codex: React.FC<PageProps> = () => {
                 </ul>
                 
               </Accordion>
-              
+
+              <Accordion 
+                id="items"
+                classes="codex"
+                trigger="btn btn-primary"
+                title="Inventory Slots"
+              >
+                
+                <p>In addition to the 10 starting inventory slots players will also have:</p>
+                
+                <ul>
+                  <li><strong>[Head]</strong> Circlets, Headbands, Helmets, Hoods, and Masks</li>
+                  <li><strong>[Back]</strong> Capes, Cloaks, and Mantles</li>
+                  <li><strong>[Neck]</strong> Amulets, Broaches, and Necklaces</li>
+                  <li><strong>[Body]</strong> Armor and Robes</li>
+                  <li><strong>[Arms]</strong> Gauntlets, Gloves, and Vambraces</li>
+                  <li><strong>[Hands]</strong> Weapons and Shields</li>
+                  <li><strong>[Accessories]</strong> Bracelets, Rings, and Torcs</li>
+                  <li><strong>[Waist]</strong> Belts and Sashes</li>
+                  <li><strong>[Feet]</strong> Boots, Sandles, and Sabatons</li>
+                </ul>
+
+              </Accordion>
+
               <Accordion 
                 id="actions"
                 classes="codex"
@@ -160,29 +184,6 @@ const Codex: React.FC<PageProps> = () => {
                   <li><strong>[WIS]</strong> Heal, Intuition, Perception</li>
                   <li><strong>[INT]</strong> Knowledge (All), Recollection</li>
                   <li><strong>[CHR]</strong> Intimidate, Persuade</li>
-                </ul>
-                
-              </Accordion>
-              
-              <Accordion 
-                id="items"
-                classes="codex"
-                trigger="btn btn-primary"
-                title="Inventory Slots"
-              >
-                
-                <p>In addition to the 10 starting inventory slots players will also have:</p>
-                
-                <ul>
-                  <li><strong>[Head]</strong> Circlets, Headbands, Helmets, Hoods, and Masks</li>
-                  <li><strong>[Back]</strong> Capes, Cloaks, and Mantles</li>
-                  <li><strong>[Neck]</strong> Amulets, Broaches, and Necklaces</li>
-                  <li><strong>[Body]</strong> Armor and Robes</li>
-                  <li><strong>[Arms]</strong> Gauntlets, Gloves, and Vambraces</li>
-                  <li><strong>[Heands]</strong> Weapons and Shields</li>
-                  <li><strong>[Accessories]</strong> Bracelets, Rings, and Torcs</li>
-                  <li><strong>[Waist]</strong> Belts and Sashes</li>
-                  <li><strong>[Feet]</strong> Boots, Sandles, and Sabatons</li>
                 </ul>
                 
               </Accordion>

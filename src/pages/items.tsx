@@ -32,16 +32,16 @@ const Spells: React.FC<PageProps> = () => {
   const [search, searchUpdate] = useState("")
   const [submit, submitUpdate] = useState("")
 
-  const form = (e, prop) => {
-    e.preventDefault()
-    submitUpdate(prop)
-    alphaUpdate("*")
-    sourceUpdate("*")
+  const form = (e: React.FormEvent<HTMLFormElement>, prop: string): void => {
+    e.preventDefault();
+    submitUpdate(prop);
+    alphaUpdate("*");
+    sourceUpdate("*");
   }
 
-  const clear = (prop) => {
-    searchUpdate(prop)
-    submitUpdate(prop)
+  const clear = (prop: string): void => {
+    searchUpdate(prop);
+    submitUpdate(prop);
   }
 
   const Core = []

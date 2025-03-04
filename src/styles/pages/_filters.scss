@@ -52,6 +52,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: $space-8;
+  margin-bottom: $space-8;
 
   > * {
     min-width: calc(50% - $space-4);
