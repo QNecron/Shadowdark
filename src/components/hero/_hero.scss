@@ -55,16 +55,24 @@
   @include media($mq-mobile) { grid-area: b; }
 }
 
+.hero-logo {
+  margin-top: $space-16;
+  padding-right: $space-64;
+  padding-left: $space-64;
+}
+
 .hero-content {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-.hero-logo {
+.hero-copy {
+  margin-top: $space-8;
+}
+
+.hero-cta {
   margin-top: $space-16;
-  padding-right: $space-64;
-  padding-left: $space-64;
 }
 
 [hero-theme~="large"] {

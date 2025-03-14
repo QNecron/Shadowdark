@@ -48,9 +48,14 @@ const Hero = ({ ...props }) => {
               : ""}
 
               {props.cta ?
-                <Link className="hero-cta" to={props.link}>
-                  {props.cta}
-                </Link>
+                <div className="hero-cta">
+                  <Link 
+                    className={`${props.linkClass ? props.linkClass : ""}`} 
+                    to={props.link}
+                  >
+                    {props.cta}
+                  </Link>
+                </div>
               : ""}
 
               {props.logo &&

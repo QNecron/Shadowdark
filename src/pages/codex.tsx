@@ -8,11 +8,10 @@ import Hero from "../components/hero/hero"
 import Section from "../components/section/section"
 import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
-import MediaCard from "../components/card/media"
+// import MediaCard from "../components/card/media"
 import Accordion from "../components/accordion/accordion"
 
 import HeroDesktop from "../images/heroes/default_16-4-5.webp"
-// import HeroTablet from "../images/heroes/16-9.webp"
 import HeroMobile from "../images/heroes/default_1-1.webp"
 
 const Codex: React.FC<PageProps> = () => {
@@ -93,6 +92,7 @@ const Codex: React.FC<PageProps> = () => {
                 <ul>
                   <li>Smite: Now deals 2d6 damage, up from 1d6.</li>
                   <li>Flamestrike: Now deals 3d6 damage, up from 2d6.</li>
+                  <li>New: Additional arcane and divine <Link className="link" to="/spells">Spells</Link>.</li>
                 </ul>
                 
               </Accordion>
@@ -114,7 +114,7 @@ const Codex: React.FC<PageProps> = () => {
                   <li>Wizard</li>
                   <li>Bard</li>
                   <li>Ranger</li>
-                  <li>Vanguard <strong>[Knight of St. Ydris]</strong></li>
+                  <li>Avenger <strong>[Knight of St. Ydris]</strong></li>
                   <li>Warlock</li>
                   <li>Witch</li>
                 </ul>
