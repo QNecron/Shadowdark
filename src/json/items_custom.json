@@ -7,16 +7,36 @@
     "additional": "You can cast Burning Hands three times per day (+4 bonus).",
     "source": "custom",
     "type": "hands",
-    "subtype": "longsword"
+    "subtype": "Longsword"
   },
   {
     "name": "Frost Brand",
     "description": "This dark iron blade is cool to the touch. It freezes the surrounding air when drawn.",
-    "bonus": "<strong>Bonus.</strong> +1 longsword.",
-    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 cold damage.",
+    "bonus": "<strong>Bonus.</strong> +1 adamantine greatsword.",
+    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 water damage.",
     "additional": "You can cast Chilling Touch three times per day (+4 bonus).",
     "source": "custom",
     "type": "hands",
-    "subtype": "longsword"
+    "subtype": "Greatsword"
+  },
+  {
+    "name": "Avalanche",
+    "description": "A dark iron axe that weighs twice that of other hammers. Loose pebbles begind to levitate when drawn.",
+    "bonus": "<strong>Bonus.</strong> +1 adamantine warhammer.",
+    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 earth damage.",
+    "additional": "You can cast Adhesive three times per day (+4 bonus).",
+    "source": "custom",
+    "type": "hands",
+    "subtype": "Warhammer"
+  },
+  {
+    "name": "Stormcaller",
+    "description": "This pearl white wooden bow radiates energy. The air crackles with electricity when drawn.",
+    "bonus": "<strong>Bonus.</strong> +1 shortbow.",
+    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 air damage.",
+    "additional": "You can cast Shocking Grasp three times per day (+4 bonus).",
+    "source": "custom",
+    "type": "hands",
+    "subtype": "Shortbow"
   }  
 ]

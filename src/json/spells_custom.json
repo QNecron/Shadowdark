@@ -71,7 +71,7 @@
     "class": "Wizard",
     "duration": "3 rounds",
     "range": "Close",
-    "description_1": "Your hand forms a layer of ice as you reach out. Touching a target deals 1d4 cold damage. Additionally the target must make a DC12 constitution check or become weakened.",
+    "description_1": "Your hand forms a layer of ice as you reach out. Touching a target deals 1d4 damage. Additionally the target must make a DC12 constitution check or become weakened.",
     "source": "custom"
   },
   {
