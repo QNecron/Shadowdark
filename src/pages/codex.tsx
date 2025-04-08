@@ -70,12 +70,9 @@ const Codex: React.FC<PageProps> = () => {
                 <p>Changes to core classes:</p>
                 
                 <ul>
-                  <li>Priest: Use the Wizard's <strong>Spells Known</strong> table for spell progression.</li>
-                  <li>Priest: Start with 3 spells instead of 2 at level 1.</li>
-                  <li>Priest: <strong>Turn Undead</strong> is no longer given at level 1.</li>
+                  <li>Priest: Choose between <strong>Turn Undead</strong> or <strong>Command Undead</strong> at level 1.</li>
                   <li>Priest: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
                   <li>Thief: <strong>Backstab</strong> works on flanked enemies.</li>
-                  <li>Thief: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
                   <li>Wizard: Add <strong>crossbows</strong> to weapons you're proficient in.</li>
                 </ul>
                 

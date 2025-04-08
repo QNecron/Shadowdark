@@ -14,7 +14,7 @@ import ItemCard from "../components/card/item"
 import Tabs from "../components/tabs/tabs"
 
 import Alphabet from "../json/alphabet.json"
-import Sources from "../json/sources.json"
+// import Sources from "../json/sources.json"
 import ItemTypes from "../json/items_type.json"
 
 // import Core from "../json/items_core.json"
@@ -44,10 +44,8 @@ const Spells: React.FC<PageProps> = () => {
     submitUpdate(prop);
   }
 
-  const Core = []
-
-  const Data = Core.concat(Custom)
-
+  const Data = Custom
+  
   return (
 
     <Page>
@@ -82,7 +80,7 @@ const Spells: React.FC<PageProps> = () => {
             srt="true"
             label="Search"
             placeholder="Magic Item Name"
-            change={(e) => searchUpdate(e.target.value)}
+            change={(e: { target: { value: React.SetStateAction<string> } }) => searchUpdate(e.target.value)}
           />
           <button type="reset" className="btn-icon btn-primary" onClick={(e) => clear("")}>
             <span className="srt">Clear</span>
@@ -172,8 +170,6 @@ const Spells: React.FC<PageProps> = () => {
                   description={data.description}
                   bonus={data.bonus}
                   benefit={data.benefit}
-                  curse={data.curse}
-                  personality={data.personality}
                   additional={data.additional}
                 />
 
