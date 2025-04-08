@@ -265,5 +265,25 @@
     "range": "Close",
     "description_1": "Your hand glows an eerie green hue as you reach out. Touched creatures spell checks and damage have disadvantage for the duration of the spell.",
     "source": "custom"
+  },
+  {
+    "name": "Haste",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "3 rounds",
+    "range": "Near",
+    "description_1": "You change the flow of time, speeding up a creature within near range. Target gains one additional action for the spell's duration.",
+    "description_2": "While hasted you may attack twice, cast two spells, or move twice.",
+    "source": "custom"
+  },
+  {
+    "name": "Slow",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "3 rounds",
+    "range": "Near",
+    "description_1": "You change the flow of time, slowing down a creature within near range. Target loses one action for the spell's duration.",
+    "description_2": "While slowed you may only perform one action; be it attack, cast a spell, or move.",
+    "source": "custom"
   }
 ]
