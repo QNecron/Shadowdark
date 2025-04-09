@@ -28,13 +28,13 @@ import HeroMobile from "../images/heroes/default_1-1.webp"
 const Spells: React.FC<PageProps> = () => {
 
   const [alpha, alphaUpdate] = useState("*")
-  const [level, levelUpdate] = useState("*")
+  const [level, levelUpdate] = useState(1)
   const [source, sourceUpdate] = useState("*")
   const [caster, casterUpdate] = useState("*")
   const [search, searchUpdate] = useState("")
   const [submit, submitUpdate] = useState("")
 
-  const form = (e, prop) => {
+  const form = (e: React.FormEvent<HTMLFormElement>, prop: React.SetStateAction<string>) => {
     e.preventDefault()
     submitUpdate(prop)
     alphaUpdate("*")
@@ -43,12 +43,12 @@ const Spells: React.FC<PageProps> = () => {
     casterUpdate("*")
   }
 
-  const clear = (prop) => {
+  const clear = (prop: React.SetStateAction<string>) => {
     searchUpdate(prop)
     submitUpdate(prop)
   }
   
-  const Core = [];
+  const Core: any[] = [];
 
   const Data = Core.concat(Custom)
 

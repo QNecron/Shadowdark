@@ -101,7 +101,7 @@
     "class": "Priest",
     "duration": "Focus",
     "range": "Near",
-    "description_1": "All living enemies within near range of you take 2d6 points of damage.",
+    "description_1": "All living enemies within near range of you take 2d6 damage.",
     "source": "custom"
   },
   {
@@ -129,7 +129,7 @@
     "class": "Wizard",
     "duration": "3 rounds",
     "range": "Close",
-    "description_1": "Your hand forms a layer of ice as you reach out. Touching a target deals 1d4 damage and they must make a DC11 constitution check or become weakened.",
+    "description_1": "Your hand forms a layer of ice as you reach out. The target takes 1d4 damage and they must make a DC11 constitution check or become weakened.",
     "source": "custom"
   },
   {
@@ -179,7 +179,7 @@
     "class": "Wizard",
     "duration": "Instant",
     "range": "Close",
-    "description_1": "Electrical discharge forms around your hand as you reach out. Touching a target deals 1d4 damage, the damage is increased to 2d4 if the target is heavily armored.",
+    "description_1": "Electrical discharge forms around your hand as you reach out. The target takes 1d4 damage, the damage is increased to 2d4 if the target is heavily armored.",
     "source": "custom"
   },
   {
@@ -201,12 +201,12 @@
     "source": "custom"
   },
   {
-    "name": "Blur",
+    "name": "Barkskin",
     "tier": 2,
     "class": "Wizard",
-    "duration": "5 rounds",
+    "duration": "10 rounds",
     "range": "Near",
-    "description_1": "You bend light around a target creature in broken bands, distorting their physical form. All weapon attacks (melee and ranged) have disadvantage for the spell's duration.",
+    "description_1": "The target creature's skin hardens and appears to be made of wood, non-magical weapon damage have disadvantage against the target.",
     "source": "custom"
   },
   {
@@ -244,7 +244,7 @@
     "duration": "3 rounds",
     "range": "Near",
     "description_1": "You conjure forth a snap freeze that deals 1d6 damage and creates a thick sheet of ice covering half a near sized surface.",
-    "description_2": "All creatures inside the target area must make a DC13 dexterity check or fall prone.",
+    "description_2": "All creatures inside the target area must make a DC12 dexterity check or fall prone.",
     "source": "custom"
   },
   {
@@ -263,7 +263,7 @@
     "class": "Wizard",
     "duration": "3 rounds",
     "range": "Close",
-    "description_1": "Your hand glows an eerie green hue as you reach out. Touched creatures spell checks and damage have disadvantage for the duration of the spell.",
+    "description_1": "Your hand glows an eerie green hue as you reach out. The target creature's spell checks and spell damage have disadvantage for the duration of the spell.",
     "source": "custom"
   },
   {
@@ -284,6 +284,55 @@
     "range": "Near",
     "description_1": "You change the flow of time, slowing down a creature within near range. Target loses one action for the spell's duration.",
     "description_2": "While slowed you may only perform one action; be it attack, cast a spell, or move.",
+    "source": "custom"
+  },
+  {
+    "name": "Deep Slumber",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Near",
+    "description_1": "You weave a powerful lulling spell that fills a near-sized cube extending from you. Living creatures in the area of effect fall into a deep sleep if they are LV 4 or less.",
+    "description_2": "Vigorous shaking or being injured wakes them.",
+    "source": "custom"
+  },
+  {
+    "name": "Thorny Entanglement",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "3 rounds",
+    "range": "Near",
+    "description_1": "Touching the ground you conjure fourth grasping vines covered in thorns that covers a near sized surface.",
+    "description_2": "Creatures caught in the vines have their movement halfed and take 1d6 damage.",
+    "source": "custom"
+  },
+  {
+    "name": "Thunderclap",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Close",
+    "description_1": "You slam the ground with your hands, unleashing a thunderous wave that errupts out to a double close area from where you stand.",
+    "description_2": "Creatures within the area of effect take 2d6 damage, and are thrown close range landing prone.",
+    "source": "custom"
+  },
+  {
+    "name": "Vampiric Touch",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Close",
+    "description_1": "Your hand glows a sinister red hue as you reach out. The target takes 2d6 damage, and you heal an amount equal to the damage dealt.",
+    "source": "custom"
+  },
+  {
+    "name": "Witness",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "Focus",
+    "range": "Far",
+    "description_1": "You psychically meld with another creatures mind, through this connection you can see and hear as they do for the duration of the spell.",
+    "description_2": "When the spell ends the creature makes a DC13 WIS check to know they've been targeted.",
     "source": "custom"
   }
 ]
