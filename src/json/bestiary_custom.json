@@ -1,79 +1,147 @@
 [
   {
-    "name": "Drake, River",
-    "description": "Although the glistening scales and sleek, fin-like wings on these drakes give them an appearance reminiscent of river fish, they are actually distant relatives of the dragons that rule the oceans.",
-    "level": 2,
-    "hitpoints": 11,
-    "armorclass": "11",
+    "name": "Coyote",
+    "description": "A medium canine with a slender build and prominent erect pointed ears.",
+    "level": 1,
+    "hitpoints": 5,
+    "armorclass": "13",
     "alignment": "N",
-    "move": "near",
+    "move": "double near",
     "str": "+1",
-    "dex": "+2",
+    "dex": "+3",
     "con": "+1",
-    "int": "-1",
+    "int": "-2",
     "wis": "+1",
     "cha": "-1",
-    "attack": "1 bite +1 (1d4) or 1 caustic mucus (near) +2 (1d4 acid)",
-    "ability_1": "<strong>Speed Surge.</strong> The river drake is able to move twice in one turn once a day.",
+    "attack": "1 bite +1 (1d4)",
+    "abilities": [
+      {
+        "name": "Pack Hunter",
+        "description": "Deals +1 damage when ally is near." 
+      }
+    ],
     "source": "custom"
   },
   {
-    "name": "Woe Strider",
-    "description": "Cosmic blasphemers transform into hunched, long-limbed horrors. These sadistic things seek ways to reweave themselves into the tapestry of destiny.",
-    "level": 5,
-    "hitpoints": 27,
-    "armorclass": "17",
+    "name": "Snapping Turtle, Giant",
+    "description": "An overly aggressive, large, turle with powerful beak-like jaws.",
+    "level": 3,
+    "hitpoints": 18,
+    "armorclass": "9",
+    "alignment": "N",
+    "move": "half near",
+    "str": "+3",
+    "dex": "-1",
+    "con": "+2",
+    "int": "-2",
+    "wis": "+1",
+    "cha": "-2",
+    "attack": "1 bite +3 (2d6 + clamp)",
+    "abilities": [
+      {
+        "name": "Clamp",
+        "description": "Target is immobilized until the creature's next attack." 
+      },
+      {
+        "name": "Hardened Shell",
+        "description": "Physical attacks deal half damage."
+      }
+    ],
+    "source": "custom"
+  },
+  {
+    "name": "Skeleton Acrolyte",
+    "description": "A skeleton with tattered robes and a rusted blade.",
+    "level": 2,
+    "hitpoints": 10,
+    "armorclass": "11",
     "alignment": "C",
     "move": "near",
-    "str": "+4",
-    "dex": "+2",
-    "con": "+3",
-    "int": "-1",
-    "wis": "+2",
-    "cha": "+2",
-    "attack": "2 claw +4 (1d8) or 1 disrupting screech",
-    "ability_1": "<strong>Otherworldly.</strong> Immune to charm and morale checks.",
-    "ability_2": "<strong>Disrupting Screech.</strong> The woe strider's open mouth creates an area of antimagic, disrupting spells and magical items a like as they become useless. Effects all within far range for 3 rounds.",
-    "source": "custom"
-  },
-  {
-    "name": "Yellow Musk Creeper",
-    "description": "A yellow musk creeper is an unholy vine whose flowers resemble an orchid's. Bright yellow with splashes of purple, these flowers expel a musk that attracts prey.",
-    "level": 4,
-    "hitpoints": 19,
-    "armorclass": "10",
-    "alignment": "N",
-    "move": "close",
     "str": "+1",
-    "dex": "-4",
-    "con": "+1",
-    "int": "-5",
-    "wis": "+1",
-    "cha": "-4",
-    "attack": "2 tendril (near) +1 (1d8)",
-    "ability_1": "<strong>False appearance.</strong> While the creeper remains motionless, it's indistinguishable from an ordinary flowering vine.",
-    "ability_2": "<strong>Yellow Musk.</strong> The creeper’s flowers release a strong musk that charms close humanoids. A DC 12 Wisdom saving throw is needed to resist the charm, if charm the humanoid slow walks towards the creeper and nothing else. Lasts 5 rounds.",
+    "dex": "+1",
+    "con": "+2",
+    "int": "-2",
+    "wis": "+0",
+    "cha": "-1",
+    "attack": "1 shortsword +1 (1d6)",
+    "abilities": [
+      {
+        "name": "Undead",
+        "description": "Immune to morale checks." 
+      },
+      {
+        "name": "Death Throes",
+        "description": "Upon death, living within near take 1 point of damage while undead heal 1 point."
+      }
+    ],
     "source": "custom"
   },
   {
-    "name": "Hound of Tindalos",
-    "description": "Ancient texts refer to these relentless temporal hunters as the Hounds of Tindalos, yet they never seem to explore what Tindalos actually is...",
-    "level": 3,
-    "hitpoints": 17,
-    "armorclass": "15",
+    "name": "Skeleton Champion",
+    "description": "A heavily armored skeleon with a horrific glare.",
+    "level": 2,
+    "hitpoints": 14,
+    "armorclass": "15 (chainmail + shield)",
     "alignment": "C",
     "move": "near",
     "str": "+2",
-    "dex": "+3",
-    "con": "+1",
+    "dex": "+0",
+    "con": "+2",
+    "int": "-2",
+    "wis": "+0",
+    "cha": "-1",
+    "attack": "1 longsword +2 (1d8) or shield slam +2 (1)",
+    "abilities": [
+      {
+        "name": "Undead",
+        "description": "Immune to morale checks." 
+      },
+      {
+        "name": "Shield Slam",
+        "description": "15 STR or be knocked prone."
+      }
+    ],
+    "source": "custom"
+  },
+  {
+    "name": "Skeleton Priest",
+    "description": "A skeleton with an unholy symbol draped around its neck and dagger in hand.",
+    "level": 3,
+    "hitpoints": 16,
+    "armorclass": "12",
+    "alignment": "C",
+    "move": "near",
+    "str": "+0",
+    "dex": "+2",
+    "con": "+2",
     "int": "+0",
-    "wis": "+1",
-    "cha": "+0",
-    "attack": "2 claw +2 (1d6) or 1 bite +2 (1d8)",
-    "ability_1": "<strong>Otherworldly.</strong> Immune to charm and morale checks.",
-    "ability_2": "<strong>Ripping Gaze.</strong> The hound's eyes glow balefully, causing painful but bloodless wounds to rip open all over the creature's body dealing 2d8 damage.",
-    "ability_3": "<strong>Time Sensitive.</strong> The hound is a superb hunter of those that use time altering magic, ADV on checks made to find such individuals.",
-    "ability_4": "<strong>Angled Entry.</strong> The hound casts Dimension Door spell, but it must transport itself into a space adjacent to an angle of 90º (or more acute) in the structure or environment around it.",
+    "wis": "+3",
+    "cha": "-1",
+    "attack": "1 dagger +0 (1d4) or 1 spell",
+    "abilities": [
+      {
+        "name": "Undead",
+        "description": "Immune to morale checks." 
+      },
+      {
+        "name": "Spellcasting",
+        "description": "Casts spells as a Priest."
+      }
+    ],
+    "spells": [
+      {
+        "name": "Inflict Wounds",
+        "description": "Touch a living creature and deal 2d6 damage."
+      },
+      {
+        "name": "Holy Weapon",
+        "description": "Targeted weapon has a +1 to attack and damage rolls."
+      },
+      {
+        "name": "Shield of Faith",
+        "description": "Gains a +2 to armor class."
+      }
+    ],
     "source": "custom"
   }
 ]

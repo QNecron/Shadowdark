@@ -28,25 +28,28 @@ const BestiaryCard = ({ ...props }) => {
       </div>
 
       <div className="bestiary-attack">{props.attack}</div>
-
-      {props.ability_1 &&
+      
+      {props.abilities &&
         <div className="bestiary-abilities">
-          {props.ability_1 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: props.ability_1}}></div> : ""}
-          {props.ability_2 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: props.ability_2}}></div> : ""}
-          {props.ability_3 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: props.ability_3}}></div> : ""}
-          {props.ability_4 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: props.ability_4}}></div> : ""}
-          {props.ability_5 ? <div className="bestiary-ability" dangerouslySetInnerHTML={{__html: props.ability_5}}></div> : ""}
+          {props.abilities.map((ability: {name: string, description: string}, index: number) => {
+            return [
+              <div className="bestiary-ability" key="index">
+                <strong>{ability.name}.</strong> {ability.description}
+              </div>
+            ]
+          })}
         </div>
       }
 
-      {props.spell_1 &&
+      {props.spells &&
         <div className="bestiary-spells">
-          {props.spell_1 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_1}}></div> : ""}
-          {props.spell_2 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_2}}></div> : ""}
-          {props.spell_3 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_3}}></div> : ""}
-          {props.spell_4 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_4}}></div> : ""}
-          {props.spell_5 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_5}}></div> : ""}
-          {props.spell_6 ? <div className="bestiary-spell" dangerouslySetInnerHTML={{__html: props.spell_6}}></div> : ""}
+          {props.spells.map((spell: {name: string, description: string}, index: number) => {
+            return [
+              <div className="bestiary-spell" key="index">
+                <strong>{spell.name}.</strong> {spell.description}
+              </div>
+            ]
+          })}
         </div>
       }
 

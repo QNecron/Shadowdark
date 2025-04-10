@@ -24,12 +24,8 @@
   margin-bottom: $space-16;
 }
 
-.bestiary-source {
-  height: $space-32;
-  width: $space-32;
-  position: absolute;
-  top: $space-16;
-  right: $space-16;
+.bestiary-description {
+  font-style: italic;
 }
 
 .bestiary-level {
@@ -61,7 +57,6 @@
 
 }
 
-.bestiary-details,
 .bestiary-stats,
 .bestiary-attack,
 .bestiary-abilities,
@@ -73,16 +68,19 @@
 }
 
 .bestiary-details,
-.bestiary-stats {
+.bestiary-stats,
+.bestiary-abilities,
+.bestiary-spells {
   display: flex;
-
-  > * {
-    margin-right: $space-8;
-  }
-
+  gap: $space-8;
 }
 
-.bestiary-ability:not(:first-of-type),
-.bestiary-spell:not(:first-of-type) {
-  padding-top: $space-8;
+.bestiary-details {
+  font-size: rem(14);
+  padding-top: $space-16;
+}
+
+.bestiary-abilities,
+.bestiary-spells {
+  flex-direction: column;
 }
