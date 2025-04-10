@@ -92,16 +92,35 @@
     "class": "Priest",
     "duration": "Focus",
     "range": "Near",
-    "description_1": "Uttering words of damnation, you target a enemy and curse them. As long as the spell is maintained they have disadvantage on all attack and spellcasting checks.",
+    "description_1": "Uttering words of damnation, you target a enemy creature and curse them. As long as the spell is maintained they have disadvantage on all attack and spellcasting checks.",
+    "source": "custom"
+  },
+  {
+    "name": "Mantle of Hope",
+    "tier": 3,
+    "class": "Priest",
+    "duration": "3 rounds",
+    "range": "Self",
+    "description_1": "Holy light baths you as you're filled with hope. Each successful attack or spell cast by you or an ally heals 1 hit point within near.",
     "source": "custom"
   },
   {
     "name": "Mass Inflict",
     "tier": 3,
     "class": "Priest",
-    "duration": "Focus",
+    "duration": "Instant",
     "range": "Near",
     "description_1": "All living enemies within near range of you take 2d6 damage.",
+    "source": "custom"
+  },
+  {
+    "name": "Righteous Fevor",
+    "tier": 3,
+    "class": "Priest",
+    "duration": "Focus",
+    "range": "Near",
+    "description_1": "You instill an overwhelming righteousness into a target. For the spells duraction, each successful attack on an enemy increases your attack roll by 1 against that target.",
+    "description_2": "Should you miss the bonus is reset to 0.",
     "source": "custom"
   },
   {
@@ -284,6 +303,16 @@
     "range": "Near",
     "description_1": "You change the flow of time, slowing down a creature within near range. Target loses one action for the spell's duration.",
     "description_2": "While slowed you may only perform one action; be it attack, cast a spell, or move.",
+    "source": "custom"
+  },
+  {
+    "name": "Burst of Nettles",
+    "tier": 3,
+    "class": "Wizard",
+    "duration": "Instant",
+    "range": "Close",
+    "description_1": "You release a burst of barbed nettles in near circle around you. Creatures within the area take 2d6 damage.",
+    "description_2": "For the next 3 rounds creatures hit take an additional 1d4 damage on their turn.",
     "source": "custom"
   },
   {
