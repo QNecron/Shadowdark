@@ -175,12 +175,20 @@
         "description": "DC 11. Touch a living creature and deal 3d6 damage."
       },
       {
+        "name": "Shield of Faith (WIS)",
+        "description": "DC 11. Gains a +2 to armor class."
+      },
+      {
+        "name": "Chilling Touch (CHR)",
+        "description": "DC 11. Deal 1d4 damage, target becomes weakened on a failed DC11 CON save."        
+      },
+      {
         "name": "Magic Missile (CHR)",
         "description": "DC 11. Deal 1d4 damage."
       },
       {
         "name": "Death Knell (CHR)",
-        "description": "DC 12. Each creatures that dies within near grants a +1 caster level and heals 1d6."
+        "description": "DC 12. Each creatures that dies within near grants a +1 caster level checks, attack rolls, and heals 1d6."
       }
     ],
     "source": "custom"
