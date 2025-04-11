@@ -2,6 +2,7 @@
 .bestiary-card {
   border: solid rem(1) rgba($white, .32);
   padding: $space-16;
+  overflow: hidden;
   position: relative;
 
   &.custom {
@@ -83,4 +84,16 @@
 .bestiary-abilities,
 .bestiary-spells {
   flex-direction: column;
+}
+
+.bestiary-abilities {
+  
+  ~ .btn-link {
+    margin-top: $space-16;
+  }
+  
+}
+
+.bestiary-spells {
+  overflow: auto;
 }

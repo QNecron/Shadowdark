@@ -11,9 +11,9 @@
     "dex": "+3",
     "con": "+1",
     "int": "-2",
-    "wis": "+1",
+    "wis": "+0",
     "cha": "-1",
-    "attack": "1 bite +1 (1d4)",
+    "attack": "1 bite +3 (1d4)",
     "abilities": [
       {
         "name": "Pack Hunter",
@@ -24,7 +24,7 @@
   },
   {
     "name": "Snapping Turtle, Giant",
-    "description": "An overly aggressive, large, turle with powerful beak-like jaws.",
+    "description": "An overly aggressive, large, turle with a powerful beak-like jaw.",
     "level": 3,
     "hitpoints": 18,
     "armorclass": "9",
@@ -78,19 +78,19 @@
   },
   {
     "name": "Skeleton Champion",
-    "description": "A heavily armored skeleon with a horrific glare.",
+    "description": "A heavily armored skeleon with a rusted blade and shield in hand.",
     "level": 2,
     "hitpoints": 14,
     "armorclass": "15 (chainmail + shield)",
     "alignment": "C",
     "move": "near",
-    "str": "+2",
+    "str": "+3",
     "dex": "+0",
     "con": "+2",
     "int": "-2",
     "wis": "+0",
     "cha": "-1",
-    "attack": "1 longsword +2 (1d8) or shield slam +2 (1)",
+    "attack": "1 longsword +3 (1d8) or shield slam +3 (1d4)",
     "abilities": [
       {
         "name": "Undead",
@@ -98,7 +98,7 @@
       },
       {
         "name": "Shield Slam",
-        "description": "15 STR or be knocked prone."
+        "description": "12 STR or be knocked prone."
       }
     ],
     "source": "custom"
@@ -130,16 +130,84 @@
     ],
     "spells": [
       {
-        "name": "Inflict Wounds",
-        "description": "Touch a living creature and deal 2d6 damage."
+        "name": "Inflict Wounds (WIS)",
+        "description": "DC 11. Touch a living creature and deal 2d6 damage."
       },
       {
-        "name": "Holy Weapon",
-        "description": "Targeted weapon has a +1 to attack and damage rolls."
+        "name": "Holy Weapon (WIS)",
+        "description": "DC 11. Targeted weapon has a +1 to attack and damage rolls."
       },
       {
-        "name": "Shield of Faith",
-        "description": "Gains a +2 to armor class."
+        "name": "Shield of Faith (WIS)",
+        "description": "DC 11. Gains a +2 to armor class."
+      }
+    ],
+    "source": "custom"
+  },
+  {
+    "name": "Deathlock",
+    "description": "After failing to fulfill their pact, something new has arisen full of hatred and malice for the living.",
+    "level": 4,
+    "hitpoints": 22,
+    "armorclass": "14",
+    "alignment": "C",
+    "move": "near",
+    "str": "+1",
+    "dex": "+2",
+    "con": "+2",
+    "int": "+0",
+    "wis": "+2",
+    "cha": "+3",
+    "attack": "1 claw +4 (1d6) or 1 spell",
+    "abilities": [
+      {
+        "name": "Greater Undead",
+        "description": "Immune to morale checks. Only damaged by silver or magical sources." 
+      },
+      {
+        "name": "Dual Spellcasting",
+        "description": "Able to cast both Priest and Wizard spells with CHR."
+      }
+    ],
+    "spells": [
+      {
+        "name": "Inflict Wounds (CHR)",
+        "description": "DC 11. Touch a living creature and deal 3d6 damage."
+      },
+      {
+        "name": "Magic Missile (CHR)",
+        "description": "DC 11. Deal 1d4 damage."
+      },
+      {
+        "name": "Death Knell (CHR)",
+        "description": "DC 12. Each creatures that dies within near grants a +1 caster level and heals 1d6."
+      }
+    ],
+    "source": "custom"
+  },
+  {
+    "name": "Wood Woad",
+    "description": "",
+    "level": 3,
+    "hitpoints": 18,
+    "armorclass": "15",
+    "alignment": "N",
+    "move": "near",
+    "str": "+3",
+    "dex": "+1",
+    "con": "+3",
+    "int": "+0",
+    "wis": "+1",
+    "cha": "-1",
+    "attack": "2 club +3 (1d4)",
+    "abilities": [
+      {
+        "name": "Regenerate",
+        "description": "Regains 1d4 hit points on its turn." 
+      },
+      {
+        "name": "Tree Stride",
+        "description": "Step inside a tree, then move from tree to tree within far distance."
       }
     ],
     "source": "custom"

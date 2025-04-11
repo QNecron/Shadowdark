@@ -1,7 +1,11 @@
 import * as React from "react"
 
+import NavFlyout from "../nav/nav-flyout"
+
 const BestiaryCard = ({ ...props }) => {
 
+  const spellBook = props.name.toLowerCase().replaceAll(' ', '')
+  
   return (
     <article className={`bestiary-card${props.source ? " "+props.source : ""}`} key={props.key}>
 
@@ -42,15 +46,24 @@ const BestiaryCard = ({ ...props }) => {
       }
 
       {props.spells &&
-        <div className="bestiary-spells">
-          {props.spells.map((spell: {name: string, description: string}, index: number) => {
-            return [
-              <div className="bestiary-spell" key="index">
-                <strong>{spell.name}.</strong> {spell.description}
-              </div>
-            ]
-          })}
-        </div>
+        <NavFlyout
+          btnClass="btn-primary btn-link"
+          btnCopy="Spell Book"
+          navType="expose"
+          navId={spellBook}
+          navClass="bestiary-spellbook"
+        >
+          <h3 className="bestiary-name heading-4">Spell Book</h3>
+          <div className="bestiary-spells">
+            {props.spells.map((spell: {name: string, description: string}, index: number) => {
+              return [
+                <div className="bestiary-spell" key="index">
+                  <strong>{spell.name}.</strong> {spell.description}
+                </div>
+              ]
+            })}
+          </div>
+        </NavFlyout>
       }
 
     </article>

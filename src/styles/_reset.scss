@@ -38,6 +38,9 @@ button {
 
 a, button, select {
   cursor: pointer;
+}
+
+a, button, input, select, textarea {
   transition: all .24s ease-in-out 0s;
 }
 

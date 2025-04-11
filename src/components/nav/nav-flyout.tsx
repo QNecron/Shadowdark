@@ -22,11 +22,16 @@ const NavFlyout = ({ ...props }) => {
       {props.btnCopy}
     </button>
 
-    <div id={props.navId} className={`${props.navClass ? props.navClass+" " : ""}nav-flyout`} nav-open={nav.toString()}>
+    <div 
+      id={props.navId} 
+      className={`${props.navClass ? props.navClass+" " : ""}dialog`} 
+      dialog-type={props.navType || "nav-flyout"}
+      dialog-open={nav.toString()}
+    >
 
-      <div className="nav-flyout-content">
+      <div className="dialog-content">
 
-        <button className="btn-icon btn-secondary nav-flyout-close" onClick={navToggle}>
+        <button className="btn-icon btn-secondary dialog-close" onClick={navToggle}>
           <span className="srt">Close</span>
           <Icon icon="close" />
         </button>

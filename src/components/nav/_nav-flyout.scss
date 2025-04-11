@@ -1,17 +1,45 @@
-.nav-flyout {
+[dialog-type] {
   backdrop-filter: blur($space-8);
   background: rgba($black, .8);
+  transition: .48s cubic-bezier(.5,.25,0,1) 0s;
+  z-index: 9;
+
+  &[dialog-open="true"] {
+    transform: translate(0, 0);
+  
+    .dialog-content {
+      display: block;
+    }
+  
+  }
+  
+}
+
+[dialog-type="nav-flyout"] {
   padding: $space-32;
   height: 100vh;
   width: rem(320);
   position: fixed;
   top: $space-72;
-  z-index: 9;
-  transition: .48s cubic-bezier(.5,.25,0,1) 0s;
   @include shadows(1, 0);
 }
 
-.nav-flyout-content {
+[dialog-type="expose"] {
+  padding: $space-32 $space-16 $space-16;
+  position: absolute;
+  inset: 0;
+  transform: translate(0, 108%);
+  
+  .dialog-close {
+    position: absolute;
+    top: $space-16;
+    right: $space-16;
+    z-index: 9;
+  }
+  
+}
+
+.dialog-content {
 
   // media
   @include media($mq-mobile) {
@@ -21,17 +49,22 @@
 
 }
 
-.nav-flyout-close {
+.dialog-close {
   position: absolute;
   top: $space-32;
   z-index: 9;
 }
 
+.dialog-content {
+  display: none;
+}
+
+// dialog : nav
 .nav-primary {
   transform: translate(-108%, 0);
   left: 0;
 
-  .nav-flyout-close {
+  .dialog-close {
     right: rem(-20);
   }
 
@@ -41,21 +74,8 @@
   transform: translate(108%, 0);
   right: 0;
 
-  .nav-flyout-close {
+  .dialog-close {
     left: rem(-20);
-  }
-
-}
-
-.nav-flyout-content {
-  display: none;
-}
-
-[nav-open="true"] {
-  transform: translate(0, 0);
-
-  .nav-flyout-content {
-    display: block;
   }
 
 }
