@@ -1,0 +1,99 @@
+[dialog-type] {
+  backdrop-filter: blur($space-8);
+  background: rgba($black, .8);
+  border: 0;
+  color: inherit;
+  opacity: 0;
+  transition: display .48s allow-discrete, .48s cubic-bezier(.5,.25,0,1) 0s;
+  z-index: 9;
+    
+  &[open] {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+}
+
+[dialog-type="nav-primary"],
+[dialog-type="nav-secondary"] {
+  padding: $space-32;
+  height: 100vh;
+  width: rem(320);
+  position: fixed;
+  top: $space-72;
+  @include shadows(1, 0);
+}
+
+[dialog-type="nav-primary"] {
+  left: 0;
+  transform: translate(-108%, 0);
+
+
+  .dialog-close {
+    right: rem(-20);
+  }
+
+}
+
+[dialog-type="nav-secondary"] {
+  right: 0;
+  left: auto;
+  transform: translate(108%, 0);
+
+  .dialog-close {
+    left: rem(-20);
+  }
+
+}
+
+[dialog-type="expose"] {
+  padding: $space-32 $space-16 $space-16;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  transform: translate(0, 108%);
+  
+  .dialog-close {
+    position: absolute;
+    top: $space-16;
+    right: $space-16;
+    z-index: 9;
+  }
+  
+}
+
+@starting-style {
+  
+  [dialog][open] {
+    opacity: 0;
+  }
+  
+  [dialog-type="expose"][open] {
+    transform: translate(0, 108%);
+  }
+  
+  [dialog-type="nav-primary"][open] {
+    transform: translate(-108%, 0);
+  }
+  
+  [dialog-type="nav-secondary"][open] {
+    transform: translate(108%, 0);
+  }
+  
+}
+
+.dialog-content {
+
+  // media
+  @include media($mq-mobile) {
+    max-height: calc(100vh - rem(136));
+    overflow-y: auto;
+  }
+
+}
+
+.dialog-close {
+  position: absolute;
+  top: $space-32;
+  z-index: 9;
+}

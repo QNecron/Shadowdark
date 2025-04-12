@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import SEO from "../components/seo/seo"
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
-import NavFlyout from "../components/nav/nav-flyout"
+import Dialog from "../components/dialog/dialog"
 import Section from "../components/section/section"
 import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
@@ -246,11 +246,11 @@ const Creator: React.FC<PageProps> = () => {
               <Icon icon="upload" />
             </button>
 
-            <NavFlyout
+            <Dialog
               btnClass="btn btn-primary"
               btnCopy="Characters"
-              navId="character"
-              navClass="nav-secondary"
+              dialogType="nav-secondary"
+              dialogId="character"
             >
 
               <Link
@@ -298,7 +298,7 @@ const Creator: React.FC<PageProps> = () => {
                   </p>
                 </div>
               )}
-            </NavFlyout>
+            </Dialog>
 
           </nav>
 
@@ -747,7 +747,7 @@ const Creator: React.FC<PageProps> = () => {
                   <option value="Half-orc">Half-orc</option>
                   <option value="Human">Human</option>
                 </Select>
-                <div class="creator-ancestry">
+                <div className="creator-ancestry">
                   {character.ancestry_trait}
                 </div>
               </div>

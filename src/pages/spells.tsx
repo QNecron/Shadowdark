@@ -4,7 +4,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import SEO from "../components/seo/seo"
 import Page from "../components/page/page"
 import Hero from "../components/hero/hero"
-import NavFlyout from "../components/nav/nav-flyout"
+import Dialog from "../components/dialog/dialog"
 import Section from "../components/section/section"
 import Wrapper from "../components/wrapper/wrapper"
 import Grid from "../components/grid/grid"
@@ -101,11 +101,11 @@ const Spells: React.FC<PageProps> = () => {
 
           <nav className="filters" aria-label="Bestiary Filters" role="navigation">
 
-            <NavFlyout
+            <Dialog
               btnClass="btn btn-primary"
               btnCopy="Filters"
-              navId="filters"
-              navClass="nav-secondary"
+              dialogType="nav-secondary"
+              dialogId="filters"
             >
 
               <Tabs
@@ -144,7 +144,7 @@ const Spells: React.FC<PageProps> = () => {
                 <h5 className="filters-heading heading-5">Source</h5>
               </Tabs>
 
-            </NavFlyout>
+            </Dialog>
 
           </nav>
 

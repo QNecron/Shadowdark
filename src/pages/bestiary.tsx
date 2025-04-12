@@ -4,7 +4,7 @@ import type { HeadFC, PageProps } from "gatsby";
 import SEO from "../components/seo/seo";
 import Page from "../components/page/page";
 import Hero from "../components/hero/hero";
-import NavFlyout from "../components/nav/nav-flyout";
+import Dialog from "../components/dialog/dialog";
 import Section from "../components/section/section";
 import Wrapper from "../components/wrapper/wrapper";
 import Grid from "../components/grid/grid";
@@ -104,11 +104,11 @@ const Bestiary: React.FC<PageProps> = () => {
             aria-label="Bestiary Filters"
             role="navigation"
           >
-            <NavFlyout
+            <Dialog
               btnClass="btn btn-primary"
               btnCopy="Filters"
-              navId="filters"
-              navClass="nav-secondary"
+              dialogType="nav-secondary"
+              dialogId="filters"
             >
               <Tabs
                 data={Alphabet}
@@ -139,7 +139,7 @@ const Bestiary: React.FC<PageProps> = () => {
               </Tabs>
               */}
 
-            </NavFlyout>
+            </Dialog>
           </nav>
 
           <Grid desktop="3" tablet="3" mobile="1">

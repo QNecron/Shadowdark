@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Image from "../image/image"
 import Wrapper from "../wrapper/wrapper"
-import NavFlyout from "../nav/nav-flyout"
+import Dialog from "../dialog/dialog"
 
 import Logo from "../../images/d20.png"
 
@@ -28,11 +28,11 @@ const Header = ({ ...props }) => {
               />
             </Link>
 
-            <NavFlyout
+            <Dialog
               btnClass="btn btn-primary"
               btnCopy="Menu"
-              navId="nav"
-              navClass="nav-primary"
+              dialogType="nav-primary"
+              dialogId="nav"
             >
               <Link className="btn btn-primary" to="/">Home</Link>
               <Link className="btn btn-primary" to="/codex">Codex</Link>
@@ -42,7 +42,7 @@ const Header = ({ ...props }) => {
               <Link className="btn btn-primary" to="/spells">Spells</Link>
               <Link className="btn btn-primary" to="/items">Magic Items</Link>
               <Link className="btn btn-primary" to="/bestiary">Bestiary</Link>
-            </NavFlyout>
+            </Dialog>
 
           </nav>
 

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import NavFlyout from "../nav/nav-flyout"
+import Dialog from "../dialog/dialog"
 
 const BestiaryCard = ({ ...props }) => {
 
@@ -46,12 +46,12 @@ const BestiaryCard = ({ ...props }) => {
       }
 
       {props.spells &&
-        <NavFlyout
+        <Dialog
           btnClass="btn-primary btn-link"
           btnCopy="Spell Book"
-          navType="expose"
-          navId={spellBook}
-          navClass="bestiary-spellbook"
+          dialogType="expose"
+          dialogId={spellBook}
+          dialogClass="bestiary-spellbook"
         >
           <h3 className="bestiary-name heading-4">Spell Book</h3>
           <div className="bestiary-spells">
@@ -63,7 +63,7 @@ const BestiaryCard = ({ ...props }) => {
               ]
             })}
           </div>
-        </NavFlyout>
+        </Dialog>
       }
 
     </article>
