@@ -514,7 +514,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="armor"
                   label="Armor"
                   helper="Armor"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     armor_class: {
@@ -543,7 +542,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="shield"
                   label="Shield"
                   helper="Shield"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     armor_class: {
@@ -580,7 +578,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="weapon1"
                   label="Weapon (A)"
                   helper="Weapon (A)"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     attacks: {
@@ -636,7 +633,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="weapon2"
                   label="Weapon (B)"
                   helper="Weapon (B)"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     attacks: {
@@ -683,7 +679,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="name"
                   label="Name"
                   helper="Name"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     name: e.target.value
@@ -694,7 +689,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="background"
                   label="Background"
                   helper="Background"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     background: e.target.value
@@ -731,7 +725,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="ancestry"
                   label="Ancestry"
                   helper="Ancestry"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     ancestry: e.target.value,
@@ -758,7 +751,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="alignment"
                   label="Alignment"
                   helper="Alignment"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     alignment: e.target.value
@@ -774,7 +766,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="deity"
                   label="Deity"
                   helper="Deity"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     deity: e.target.value
@@ -790,7 +781,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="class"
                   label="Class"
                   helper="Class"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     class: e.target.value,
@@ -814,7 +804,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="title"
                   label="Title"
                   helper="Title"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     title: e.target.value
@@ -839,7 +828,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="hp"
                   label="Hit Points"
                   helper="HP"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     hit_points: e.target.value
@@ -851,7 +839,6 @@ const Creator: React.FC<PageProps> = () => {
                   id="level"
                   label="Level"
                   helper="Level"
-                  srt="true"
                   change={(e) => characterUpdate({
                     ...character,
                     level: e.target.value

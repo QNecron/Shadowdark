@@ -1,0 +1,4 @@
+@mixin appearance($display: none) {
+  --webkit-appearance: $display;
+  appearance: $display;
+}

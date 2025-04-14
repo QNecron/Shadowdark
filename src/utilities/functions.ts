@@ -1,4 +1,4 @@
-export const modifier = (a, b, c) => {
+export const modifier = (a: string, b: string, c: string) => {
   const add = parseInt(a) + parseInt(b) + parseInt(c)
   const total = Math.floor((add - 10) / 2)
   let modifier
@@ -9,7 +9,7 @@ export const modifier = (a, b, c) => {
   return modifier
 }
 
-export const total = (a, b, c, d) => {
+export const total = (a: string, b: string, c: string, d: string) => {
   let one = parseInt(a) ? parseInt(a) : 0
   let two = parseInt(b) ? parseInt(b) : 0
   let three = parseInt(c) ? parseInt(c) : 0
@@ -19,7 +19,7 @@ export const total = (a, b, c, d) => {
   return add
 }
 
-export const diceroll = (dice, count) => {
+export const diceroll = (dice: string, count: number) => {
   let die = 0
   let roll = 0
 
@@ -47,7 +47,7 @@ export const diceroll = (dice, count) => {
 
 }
 
-export const hitdice = (a) => {
+export const hitdice = (a: string) => {
   let type = "d4"
 
   if (a === "Fighter" || a === "Ranger") { type = "d8" }
@@ -60,7 +60,7 @@ export const hitdice = (a) => {
 
 }
 
-export const ancestry = (a) => {
+export const ancestry = (a: string) => {
   let trait = "None"
 
   if (a === "Dwarf") { trait = "Stout" }
@@ -77,7 +77,7 @@ export const ancestry = (a) => {
 
 }
 
-export const weapons = (json, weapon, output) => {
+export const weapons = (json: Record<string, any>, weapon: string, output: number) => {
   let type = "-"
   let range = "-"
   let damage = "0"
@@ -85,7 +85,7 @@ export const weapons = (json, weapon, output) => {
   let damage_2 = "0"
   let properties = "-"
 
-  json.map((data) => {
+  json.map((data: Record<string, any>) => {
 
     if (weapon === data.name) {
       type = data.type
@@ -110,13 +110,13 @@ export const weapons = (json, weapon, output) => {
 
 }
 
-export const armors = (json, armor, output) => {
+export const armors = (json: Record<string, any>, armor: string, output: number) => {
   let slots = 0
   let ac = 0
   let dex = false
   let properties = "-"
 
-  json.map((data) => {
+  json.map((data: Record<string, any>) => {
 
     if (parseInt(armor) === parseInt(data.ac)) {
       slots = data.gear_slots

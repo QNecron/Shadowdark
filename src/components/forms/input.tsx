@@ -26,9 +26,11 @@ const Input = ({ ...props }) => {
         {props.label}
       </label>
 
+      {/*
       {props.helper &&
         <span id={`${props.id}Helper`} className="input-helper">{props.helper}</span>
       }
+      */}
 
     </div>
 

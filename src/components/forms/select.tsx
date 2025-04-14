@@ -24,10 +24,14 @@ const Select = ({ ...props }) => {
       >
         {props.label}
       </label>
+      
+      <div className="input-icon" aria-hidden="true">&rsaquo;</div>
 
+      {/*
       {props.helper &&
         <span id={`${props.id}Helper`} className="input-helper">{props.helper}</span>
       }
+      */}
 
     </div>
 
