@@ -174,6 +174,6 @@ export default Spells
 export const Head: HeadFC = () => (
   <SEO
     title="Feats | Umbral Tools"
-    description="Search through all openly available feats for ShadowDark TTRPG."
+    description="Custom feats for ShadowDark campaigns."
   />
 )

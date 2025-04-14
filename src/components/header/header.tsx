@@ -40,7 +40,7 @@ const Header = ({ ...props }) => {
               <Link className="btn btn-primary" to="/combat">Combat</Link>
               <Link className="btn btn-primary" to="/feats">Feats</Link>
               <Link className="btn btn-primary" to="/spells">Spells</Link>
-              <Link className="btn btn-primary" to="/items">Magic Items</Link>
+              <Link className="btn btn-primary" to="/items">Items</Link>
               <Link className="btn btn-primary" to="/bestiary">Bestiary</Link>
             </Dialog>
 

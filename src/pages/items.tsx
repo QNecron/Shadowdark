@@ -65,7 +65,7 @@ const Spells: React.FC<PageProps> = () => {
         loading="auto"
         x="2"
         y="2"
-        heading="Magic Items"
+        heading="Items"
       >
         {/* @TODO make a search component */}
         <form className="search" onSubmit={(e) => form(e, search)}>
@@ -193,7 +193,7 @@ export default Spells
 
 export const Head: HeadFC = () => (
   <SEO
-    title="Magic Items | Umbral Tools"
-    description="Search through all openly available spells for ShadowDark TTRPG."
+    title="Items | Umbral Tools"
+    description="Custom magical items and equipment for ShadowDark campaigns."
   />
 )

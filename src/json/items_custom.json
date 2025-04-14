@@ -24,7 +24,7 @@
     "description": "A dark iron axe that weighs twice that of other hammers. Loose pebbles begind to levitate when drawn.",
     "bonus": "<strong>Bonus.</strong> +1 adamantine warhammer.",
     "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 earth damage.",
-    "additional": "You can cast Adhesive three times per day (+4 bonus).",
+    "additional": "You can cast Grease three times per day (+4 bonus).",
     "source": "custom",
     "type": "hands",
     "subtype": "Warhammer"

@@ -147,6 +147,6 @@ export default IndexPage
 export const Head: HeadFC = () => (
   <SEO
     title="Umbral Tools"
-    description="Tool set for the ShadowDark TTRP created by The Arcane Light."
+    description="Toolset for the ShadowDark TTRPG created by The Arcane Light."
   />
 )

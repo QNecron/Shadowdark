@@ -363,6 +363,6 @@ export default Combat
 export const Head: HeadFC = () => (
   <SEO
   title="Combat | Umbral Tools"
-  description="Calculator for combat."
+  description="Custom Roll20 combat widget creator for ShadowDark campaigns."
   />
 )

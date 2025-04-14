@@ -37,7 +37,7 @@ const BestiaryCard = ({ ...props }) => {
         <div className="bestiary-abilities">
           {props.abilities.map((ability: {name: string, description: string}, index: number) => {
             return [
-              <div className="bestiary-ability" key="index">
+              <div className="bestiary-ability" key={index}>
                 <strong>{ability.name}.</strong> {ability.description}
               </div>
             ]
@@ -57,7 +57,7 @@ const BestiaryCard = ({ ...props }) => {
           <div className="bestiary-spells">
             {props.spells.map((spell: {name: string, description: string}, index: number) => {
               return [
-                <div className="bestiary-spell" key="index">
+                <div className="bestiary-spell" key={index}>
                   <strong>{spell.name}.</strong> {spell.description}
                 </div>
               ]

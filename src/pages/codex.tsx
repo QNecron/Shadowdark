@@ -219,8 +219,8 @@ const Codex: React.FC<PageProps> = () => {
 export default Codex
 
 export const Head: HeadFC = () => (
-<SEO
-  title="Codex | Umbral Tools"
-  description="Alternative rules and information for ongoing campaigns."
-/>
+  <SEO
+    title="Codex | Umbral Tools"
+    description="Alternative rules for ShadowDark campaigns."
+  />
 )      
