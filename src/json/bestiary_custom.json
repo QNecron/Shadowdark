@@ -195,9 +195,9 @@
   },
   {
     "name": "Wood Woad",
-    "description": "",
+    "description": "Powerful, tree-like guardians that are sworn to defend the forest.",
     "level": 3,
-    "hitpoints": 18,
+    "hitpoints": 19,
     "armorclass": "15",
     "alignment": "N",
     "move": "near",
@@ -216,6 +216,37 @@
       {
         "name": "Tree Stride",
         "description": "Step inside a tree, then move from tree to tree within far distance."
+      }
+    ],
+    "source": "custom"
+  },
+  {
+    "name": "Ghoul Harpy",
+    "description": "A foul, hideous harpy that has met it's end but refuses to stop sowing chaos.",
+    "level": 3,
+    "hitpoints": 14,
+    "armorclass": "13",
+    "alignment": "C",
+    "move": "near (fly)",
+    "str": "+2",
+    "dex": "+3",
+    "con": "+2",
+    "int": "-3",
+    "wis": "-1",
+    "cha": "+1",
+    "attack": "2 claw +3 (1d6 + paralyze) or 1 song",
+    "abilities": [
+      {
+        "name": "Undead",
+        "description": "Immune to morale checks." 
+      },
+      {
+        "name": "Paralyze",
+        "description": "DC 13 CON or paralyzed 1d4 rounds."
+      },
+      {
+        "name": "Song",
+        "description": "Living within double near DC 13 CHA or sickened for 1d4 rounds. Immune for 1 day if passed check."
       }
     ],
     "source": "custom"
