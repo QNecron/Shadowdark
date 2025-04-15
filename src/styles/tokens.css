@@ -1,0 +1,41 @@
+:root {
+
+  /* sizes : primitive */
+  --size-2: 0.125rem;
+  --size-4: .25rem;
+  --size-8: .5rem;
+  --size-12: .75rem;
+  --size-16: 1rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-48: 3rem;
+  --size-56: 3.5rem;
+  --size-64: 4rem;
+  --size-72: 4.5rem;
+  --size-80: 5rem;
+  
+  /* sizes : semantic */
+  --size-xsmall: var(--size-4);
+  --size-small: var(--size-8);
+  --size-medium: var(--size-16);
+  --size-large: var(--size-32);
+  --size-xlarge: var(--size-64);
+  
+  /* breakpoints : @media + var() != work, env() not fully supported :( */
+  --breakpoint-small: 767px;
+  --breakpoint-medium-min: 768px;
+  --breakpoint-medium-max: 1024px;
+  --breakpoint-large: 1025px;
+  
+  /* timings */
+  --timing-basic: all .24 ease-in-out 0s;
+  --timing-display: display .48s allow-discrete, .48s cubic-bezier(.5,.25,0,1) 0s;
+  
+  /* colors */
+  --color-black: #111;
+  --color-black-rgb: 17,17,17;
+  --color-white: #eee;
+  --color-white-rgb: 238,238,238;
+  
+}

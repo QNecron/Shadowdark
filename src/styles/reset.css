@@ -1,0 +1,79 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+picture,
+video {
+  display: block;
+  line-height: 0;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+button {
+  line-height: 1;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+button, select {
+  /* safari */
+  --webkit-appearance: none;
+  appearance: none;
+}
+
+a, button, select {
+  cursor: pointer;
+}
+
+a, button, input, select, textarea {
+  transition: var(--timing-basic);
+}
+
+input, select, textarea {
+  font-size: 16px;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+details, details * {
+  
+  &::selection {
+    background: transparent;
+  }
+  
+}
+
+summary {
+  cursor: pointer;
+
+  &::marker {
+    content: none;
+  }
+
+  &::selection {
+    background: transparent;
+  }
+  
+}

@@ -1,0 +1,111 @@
+.dialog {
+  --dialog-backdrop-filter: blur(var(--size-8));
+  --dialog-background-color: var(--color-black-rgb);
+  --dialog-box-shadow: 0 1px var(--size-2) rgba(var(--color-black-rgb), .16), 0 3px var(--size-4) rgba(var(--color-black-rgb), .32);
+  --dialog-font-color: inherit;
+  --dialog-padding: var(--size-large);
+  --dialog-height: 100vh;
+  --dialog-width: 20rem; /* 320px */
+  --dialog-position: fixed;
+  --dialog-top: var(--size-72);
+  --dialog-right: auto;
+  --dialog-bottom: auto;
+  --dialog-left: auto;
+  --dialog-transform: none;
+  
+  --dialog-close-top: var(--dialog-padding);
+  --dialog-close-right: -1.25rem; /* -20px */
+  --dialog-close-left: auto;
+  
+  backdrop-filter: var(--dialog-backdrop-filter);
+  background: rgba(var(--dialog-background-color), .8);
+  border: 0;
+  box-shadow: var(--dialog-box-shadow);
+  color: var(--dialog-font-color);
+  opacity: 0;
+  padding: var(--dialog-padding);
+  height: var(--dialog-height);
+  width: var(--dialog-width);
+  position: var(--dialog-position);
+  top: var(--dialog-top);
+  right: var(--dialog-right);
+  bottom: var(--dialog-bottom);
+  left: var(--dialog-left);
+  transform: var(--dialog-transform);
+  transition: var(--timing-display);
+  z-index: 9;
+  
+  &[open] {
+    opacity: 1;
+    --dialog-transform: translate(0, 0);
+  }
+  
+}
+
+@starting-style {
+  
+  [dialog][open] {
+    opacity: 0;
+  }
+  
+  [dialog-type="expose"][open] {
+    --dialog-transform: translate(0, 108%);
+  }
+  
+  [dialog-type="nav-primary"][open] {
+    --dialog-transform: translate(-108%, 0);
+  }
+  
+  [dialog-type="nav-secondary"][open] {
+    --dialog-transform: translate(108%, 0);
+  }
+  
+}
+
+.dialog-close {
+  position: absolute;
+  top: var(--dialog-close-top);
+  right: var(--dialog-close-right);
+  left: var(--dialog-close-left);
+  z-index: 9;
+}
+
+.dialog-content {
+  
+  /* media */
+  @media screen and (max-width: 767px) {
+    max-height: calc(100vh - 8.5rem);
+    overflow-y: auto;
+  }
+
+}
+
+[dialog-type="nav-primary"] {
+  --dialog-right: auto;
+  --dialog-left: 0;
+  --dialog-transform: translate(-108%, 0);
+}
+
+[dialog-type="nav-secondary"] {
+  --dialog-right: 0;
+  --dialog-left: auto;
+  --dialog-transform: translate(108%, 0);
+  
+  --dialog-close-right: auto;
+  --dialog-close-left: -1.25rem; /* -20px */
+}
+
+[dialog-type="expose"] {
+  --dialog-padding: var(--size-large) var(--size-medium) var(--size-medium);
+  --dialog-height: 100%;
+  --dialog-width: 100%;
+  --dialog-position: absolute;
+  --dialog-top: 0;
+  --dialog-right: 0;
+  --dialog-bottom: 0;
+  --dialog-left: 0;
+  --dialog-transform: translate(0, 108%);
+  
+  --dialog-close-top: var(--size-medium);
+  --dialog-close-right: var(--size-medium);
+}
