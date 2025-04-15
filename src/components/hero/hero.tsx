@@ -4,8 +4,8 @@ import { Link } from "gatsby"
 import Image from "../image/image"
 import Wrapper from "../wrapper/wrapper"
 
-import LogoWhite from "../../images/logo-sd-white.png"
-import LogoBlack from "../../images/logo-sd-black.png"
+import LogoWhite from "../../images/logo-sd-white.webp"
+import LogoBlack from "../../images/logo-sd-black.webp"
 
 const Hero = ({ ...props }) => {
 
@@ -25,7 +25,7 @@ const Hero = ({ ...props }) => {
         mobileW={props.mobileW}
         alt={props.alt}
         loading={props.loading || "lazy"}
-        priority="high"
+        priority={props.priority || "auto"}
       />
 
       <Wrapper classes="hero-wrapper" type={props.wrapper || "structure"}>
