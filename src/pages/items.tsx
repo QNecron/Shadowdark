@@ -14,7 +14,7 @@ import ItemCard from "../components/card/item"
 import Tabs from "../components/tabs/tabs"
 
 import Alphabet from "../json/alphabet.json"
-// import Sources from "../json/sources.json"
+import Sources from "../json/sources.json"
 import ItemTypes from "../json/items_type.json"
 
 // import Core from "../json/items_core.json"
@@ -121,7 +121,6 @@ const Spells: React.FC<PageProps> = () => {
                 <h5 className="filters-heading heading-5">Type</h5>
               </Tabs>
 
-              {/*
               <Tabs
                 data={Sources}
                 state={source}
@@ -130,7 +129,6 @@ const Spells: React.FC<PageProps> = () => {
               >
                 <h5 className="filters-heading heading-5">Source</h5>
               </Tabs>
-              */}
 
             </Dialog>
 

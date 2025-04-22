@@ -151,7 +151,7 @@ const Codex: React.FC<PageProps> = () => {
                   <li><strong>[Body]</strong> Armor and Robes</li>
                   <li><strong>[Arms]</strong> Gauntlets, Gloves, and Vambraces</li>
                   <li><strong>[Hands]</strong> Weapons and Shields</li>
-                  <li><strong>[Accessories]</strong> Bracelets, Rings, and Torcs</li>
+                  <li><strong>[Accessories]</strong> Bangles, Bracelets, and Rings</li>
                   <li><strong>[Waist]</strong> Belts and Sashes</li>
                   <li><strong>[Feet]</strong> Boots, Sandles, and Sabatons</li>
                 </ul>

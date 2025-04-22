@@ -1,33 +1,81 @@
 [
   {
+    "name": "Amulet of Vitality",
+    "description": "A gold amulet with a red ruby teardrop at its center.",
+    "benefit": "<strong>Benefit.</strong> Your Constitution stat becomes 18 (+4) while wearing this amulet.",
+    "source": "core",
+    "type": "neck",
+    "subtype": "Amulet"
+  },
+  {
+    "name": "Circlet of Wisdom",
+    "description": "A thin, silver circlet set with a shimmering, blue pearl.",
+    "benefit": "<strong>Benefit.</strong> Your Wisdom stat becomes 18 (+4) while wearing this amulet.",
+    "source": "core",
+    "type": "head",
+    "subtype": "Circlet"
+  },
+  {
+    "name": "Gloves of Agility",
+    "description": "Thin, leather gloves that seem to meld with the wearer's hands.",
+    "benefit": "<strong>Benefit.</strong> Your Dexterity stat becomes 18 (+4) while wearing this amulet.",
+    "source": "core",
+    "type": "arms",
+    "subtype": "Gloves"
+  },
+  {
+    "name": "Gauntlets of Might",
+    "description": "Heavy, bronze gauntlets with engravings of Herculean giants.",
+    "benefit": "<strong>Benefit.</strong> Your Strength stat becomes 18 (+4) while wearing this amulet.",
+    "source": "core",
+    "type": "arms",
+    "subtype": "Gloves"
+  },
+  {
+    "name": "Hat of Intellect",
+    "description": "A floppy, pointed hat with a wide brim.",
+    "benefit": "<strong>Benefit.</strong> Your Intelligence stat becomes 18 (+4) while wearing this amulet.",
+    "source": "core",
+    "type": "head",
+    "subtype": "Hat"
+  },
+  {
+    "name": "Necklace of Charm",
+    "description": "A gold, fishbone chain that shimmers with subtle beauty.",
+    "benefit": "<strong>Benefit.</strong> Your Charisma stat becomes 18 (+4) while wearing this amulet.",
+    "source": "core",
+    "type": "neck",
+    "subtype": "Necklace"
+  },
+  {
     "name": "Flame Tongue",
     "description": "A silvery blade that radiates a dull, comforting heat. It errupts into flames when drawn.",
     "bonus": "<strong>Bonus.</strong> +1 silver longsword.",
     "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 fire damage.",
     "additional": "You can cast Burning Hands three times per day (+4 bonus).",
     "source": "custom",
-    "type": "hands",
+    "type": "weapons",
     "subtype": "Longsword"
   },
   {
     "name": "Frost Brand",
     "description": "This dark iron blade is cool to the touch. It freezes the surrounding air when drawn.",
-    "bonus": "<strong>Bonus.</strong> +1 adamantine greatsword.",
+    "bonus": "<strong>Bonus.</strong> +1 adamantine bastard sword.",
     "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 water damage.",
     "additional": "You can cast Chilling Touch three times per day (+4 bonus).",
     "source": "custom",
-    "type": "hands",
-    "subtype": "Greatsword"
+    "type": "weapons",
+    "subtype": "Bastard Sword"
   },
   {
     "name": "Avalanche",
-    "description": "A dark iron axe that weighs twice that of other hammers. Loose pebbles begind to levitate when drawn.",
-    "bonus": "<strong>Bonus.</strong> +1 adamantine warhammer.",
+    "description": "A dark iron axe that weighs twice that of other axes. Loose pebbles begind to levitate when drawn.",
+    "bonus": "<strong>Bonus.</strong> +1 adamantine greataxe.",
     "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 earth damage.",
     "additional": "You can cast Grease three times per day (+4 bonus).",
     "source": "custom",
-    "type": "hands",
-    "subtype": "Warhammer"
+    "type": "weapons",
+    "subtype": "Greataxe"
   },
   {
     "name": "Stormcaller",
@@ -36,7 +84,39 @@
     "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 air damage.",
     "additional": "You can cast Shocking Grasp three times per day (+4 bonus).",
     "source": "custom",
-    "type": "hands",
+    "type": "weapons",
     "subtype": "Shortbow"
-  }  
+  },
+  {
+    "name": "Sigil of the Arcane",
+    "description": "A small emerald decorates this beautiful copper ring.",
+    "benefit": "<strong>Benefit.</strong> You fire an additional bolt with the Magic Missile spell.",
+    "source": "custom",
+    "type": "accessory",
+    "subtype": "Ring"
+  },
+  {
+    "name": "Killer's Work",
+    "description": "This rusted iron bangle is covered in dried blood.",
+    "benefit": "<strong>Benefit.</strong> You deal a critical hit if you roll a 19 or better on an attack roll with daggers.",
+    "source": "custom",
+    "type": "accessory",
+    "subtype": "Bangle"
+  },
+  {
+    "name": "Seal of Faith",
+    "description": "This thick iron band is dented, scratched, and studded with small pearls.",
+    "benefit": "<strong>Benefit.</strong> Add your level to healing done by the Cure Wounds spell.",
+    "source": "custom",
+    "type": "accessory",
+    "subtype": "Bracelet"
+  },
+  {
+    "name": "Ring of Toughness",
+    "description": "A large amethyst decorates this dark iron band.",
+    "benefit": "<strong>Benefit.</strong> Your maximum hit points are increased by 4 and you take 1 less damage from physical attacks.",
+    "source": "custom",
+    "type": "accessory",
+    "subtype": "Ring"
+  }
 ]
