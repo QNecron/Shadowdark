@@ -10,7 +10,7 @@
   {
     "name": "Circlet of Wisdom",
     "description": "A thin, silver circlet set with a shimmering, blue pearl.",
-    "benefit": "<strong>Benefit.</strong> Your Wisdom stat becomes 18 (+4) while wearing this amulet.",
+    "benefit": "<strong>Benefit.</strong> Your Wisdom stat becomes 18 (+4) while wearing this circlet.",
     "source": "core",
     "type": "head",
     "subtype": "Circlet"
@@ -18,7 +18,7 @@
   {
     "name": "Gloves of Agility",
     "description": "Thin, leather gloves that seem to meld with the wearer's hands.",
-    "benefit": "<strong>Benefit.</strong> Your Dexterity stat becomes 18 (+4) while wearing this amulet.",
+    "benefit": "<strong>Benefit.</strong> Your Dexterity stat becomes 18 (+4) while wearing these gloves.",
     "source": "core",
     "type": "arms",
     "subtype": "Gloves"
@@ -26,7 +26,7 @@
   {
     "name": "Gauntlets of Might",
     "description": "Heavy, bronze gauntlets with engravings of Herculean giants.",
-    "benefit": "<strong>Benefit.</strong> Your Strength stat becomes 18 (+4) while wearing this amulet.",
+    "benefit": "<strong>Benefit.</strong> Your Strength stat becomes 18 (+4) while wearing these guantlets.",
     "source": "core",
     "type": "arms",
     "subtype": "Gloves"
@@ -34,7 +34,7 @@
   {
     "name": "Hat of Intellect",
     "description": "A floppy, pointed hat with a wide brim.",
-    "benefit": "<strong>Benefit.</strong> Your Intelligence stat becomes 18 (+4) while wearing this amulet.",
+    "benefit": "<strong>Benefit.</strong> Your Intelligence stat becomes 18 (+4) while wearing this hat.",
     "source": "core",
     "type": "head",
     "subtype": "Hat"
@@ -42,50 +42,10 @@
   {
     "name": "Necklace of Charm",
     "description": "A gold, fishbone chain that shimmers with subtle beauty.",
-    "benefit": "<strong>Benefit.</strong> Your Charisma stat becomes 18 (+4) while wearing this amulet.",
+    "benefit": "<strong>Benefit.</strong> Your Charisma stat becomes 18 (+4) while wearing this necklace.",
     "source": "core",
     "type": "neck",
     "subtype": "Necklace"
-  },
-  {
-    "name": "Flame Tongue",
-    "description": "A silvery blade that radiates a dull, comforting heat. It errupts into flames when drawn.",
-    "bonus": "<strong>Bonus.</strong> +1 silver longsword.",
-    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 fire damage.",
-    "additional": "You can cast Burning Hands three times per day (+4 bonus).",
-    "source": "custom",
-    "type": "weapons",
-    "subtype": "Longsword"
-  },
-  {
-    "name": "Frost Brand",
-    "description": "This dark iron blade is cool to the touch. It freezes the surrounding air when drawn.",
-    "bonus": "<strong>Bonus.</strong> +1 adamantine bastard sword.",
-    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 water damage.",
-    "additional": "You can cast Chilling Touch three times per day (+4 bonus).",
-    "source": "custom",
-    "type": "weapons",
-    "subtype": "Bastard Sword"
-  },
-  {
-    "name": "Avalanche",
-    "description": "A dark iron axe that weighs twice that of other axes. Loose pebbles begind to levitate when drawn.",
-    "bonus": "<strong>Bonus.</strong> +1 adamantine greataxe.",
-    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 earth damage.",
-    "additional": "You can cast Grease three times per day (+4 bonus).",
-    "source": "custom",
-    "type": "weapons",
-    "subtype": "Greataxe"
-  },
-  {
-    "name": "Stormcaller",
-    "description": "This pearl white wooden bow radiates energy. The air crackles with electricity when drawn.",
-    "bonus": "<strong>Bonus.</strong> +1 shortbow.",
-    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 air damage.",
-    "additional": "You can cast Shocking Grasp three times per day (+4 bonus).",
-    "source": "custom",
-    "type": "weapons",
-    "subtype": "Shortbow"
   },
   {
     "name": "Sigil of the Arcane",
@@ -118,5 +78,179 @@
     "source": "custom",
     "type": "accessory",
     "subtype": "Ring"
+  },
+  {
+    "name": "Bilestompers",
+    "description": "The edges of these leather boots show signs of corrosion.",
+    "benefit": "<strong>Benefit.</strong> Acid damage is reduced by 3 points.",
+    "additional": "Additionally you can walk on acidic surfaces without taking damage.",
+    "source": "custom",
+    "type": "boots",
+    "subtype": "Boots"
+  },
+  {
+    "name": "Dead Man Stands",
+    "description": "These thick leather boots show no sign of wear and tear.",
+    "benefit": "<strong>Benefit.</strong> Dying rolls reduced to 15 in order to stablize.",
+    "source": "custom",
+    "type": "boots",
+    "subtype": "Boots"
+  },
+  {
+    "name": "Trollhide Belt",
+    "description": "This belt has been crafted from the mossy hide of a forest troll with intertwined vines and leaves.",
+    "benefit": "<strong>Benefit.</strong> Regenerate 1 hit point each round of combat.",
+    "additional": "Taking acid or fire damage stops the regeneration effect for 10 rounds.",
+    "source": "custom",
+    "type": "belt",
+    "subtype": "Belt"
+  },
+  {
+    "name": "Berserker's Belt",
+    "description": "Multiple strong leather straps with crossed axes as buckles abdorn this belt.",
+    "benefit": "<strong>Benefit.</strong> Damage rolls with melee weapons increase by 1.",
+    "additional": "If hit in combat roll 1d4, on a 4 you enter a frenzy where the damage increases to 2 and your AC is reduced by 2. Frenzy lasts until the end of combat.",
+    "source": "custom",
+    "type": "belt",
+    "subtype": "Belt"
+  },
+  {
+    "name": "Mantle of Wreathing Flame",
+    "description": "This crimson red cloak with golden trim radiates warmth when worn.",
+    "benefit": "<strong>Benefit.</strong> Fire damage is reduced by 3 points.",
+    "additional": "Physical attacks deal an extra 1d4 fire damage.",
+    "source": "custom",
+    "type": "back",
+    "subtype": "Cloak"
+  },
+  {
+    "name": "Cloak of Minor Missiles",
+    "description": "While this cloak appears mudane, though a slight shimmer of blue and violet hint to something more.",
+    "benefit": "<strong>Benefit.</strong> Bows, crossbows, and the Magic Missile spell deal an additional 1 point of damage.",
+    "source": "custom",
+    "type": "back",
+    "subtype": "Cloak"
+  },
+  {
+    "name": "Ioun Stone, Garnet",
+    "description": "A strange gemstone the size of a pebble that resembles garnet.",
+    "benefit": "<strong>Benefit.</strong> Attack rolls increase by 1.",
+    "source": "custom",
+    "type": "misc",
+    "subtype": "Ioun stone"
+  },
+  {
+    "name": "Ioun Stone, Peridot",
+    "description": "A strange gemstone the size of a pebble that resembles peridot.",
+    "benefit": "<strong>Benefit.</strong> Armor increases by 1.",
+    "source": "custom",
+    "type": "misc",
+    "subtype": "Ioun stone"
+  },
+  {
+    "name": "Ioun Stone, Iolite",
+    "description": "A strange gemstone the size of a pebble that resembles iolite.",
+    "benefit": "<strong>Benefit.</strong> Spellcasting checks increase by 1.",
+    "source": "custom",
+    "type": "misc",
+    "subtype": "Ioun stone"
+  },
+  {
+    "name": "Flame Tongue",
+    "description": "A silvery blade that radiates a dull, comforting heat. It errupts into flames when drawn.",
+    "bonus": "<strong>Bonus.</strong> +1 silver longsword.",
+    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 fire damage.",
+    "additional": "You can cast Burning Hands once per day (+4 bonus).",
+    "source": "custom",
+    "type": "weapons",
+    "subtype": "Longsword"
+  },
+  {
+    "name": "Frost Brand",
+    "description": "This dark iron blade is cool to the touch. It freezes the surrounding air when drawn.",
+    "bonus": "<strong>Bonus.</strong> +1 adamantine bastard sword.",
+    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 cold damage.",
+    "additional": "You can cast Chilling Touch once per day (+4 bonus).",
+    "source": "custom",
+    "type": "weapons",
+    "subtype": "Bastard Sword"
+  },
+  {
+    "name": "Avalanche",
+    "description": "A dark iron axe that weighs twice that of other axes. Loose pebbles begind to levitate when drawn.",
+    "bonus": "<strong>Bonus.</strong> +1 adamantine greataxe.",
+    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 acid damage.",
+    "additional": "You can cast Grease once per day (+4 bonus).",
+    "source": "custom",
+    "type": "weapons",
+    "subtype": "Greataxe"
+  },
+  {
+    "name": "Stormcaller",
+    "description": "This pearl white wooden bow radiates energy. The air crackles with electricity when drawn.",
+    "bonus": "<strong>Bonus.</strong> +1 shortbow.",
+    "benefit": "<strong>Benefit.</strong> Deals an additional 1d4 electrical damage.",
+    "additional": "You can cast Shocking Grasp once per day (+4 bonus).",
+    "source": "custom",
+    "type": "weapons",
+    "subtype": "Shortbow"
+  },
+  {
+    "name": "Sarenrae's Blessing",
+    "description": "The surface of the mysterious shield is warm to the touch and grows hotter when tensions rise.",
+    "bonus": "<strong>Bonus.</strong> +1 shield.",
+    "benefit": "<strong>Benefit.</strong> Fire damage is reduced by 3 points.",
+    "additional": "Enemies within close take 1 point of fire damage per round.",
+    "source": "custom",
+    "type": "shields",
+    "subtype": "Shield"
+  },
+  {
+    "name": "Irori's Devotion",
+    "description": "A large blue crystal surrounded by hardened steel forms a remarkable shield.",
+    "bonus": "<strong>Bonus.</strong> +0 shield.",
+    "benefit": "<strong>Benefit.</strong> Physical damage is reduced by 1 point.",
+    "additional": "When struck by a critical, you and your allies within near regain 1d4 hit points.",
+    "source": "custom",
+    "type": "shields",
+    "subtype": "Shield"
+  },
+  {
+    "name": "Raiment of the Seventh Veil",
+    "description": "This fine robe has a large symbol made of six dull-colored veils tied end-to-end on the chest.",
+    "bonus": "<strong>Bonus.</strong> +1 robe.",
+    "benefit": "<strong>Benefit.</strong> You're able to see through the effects of the Mirror Image spell.",
+    "additional": "You can cast Mirror Image once per day (+4 bonus).",
+    "source": "custom",
+    "type": "body",
+    "subtype": "Robe"
+  },
+  {
+    "name": "Rebel's Call",
+    "description": "With a golden bell emblem on the chest, this reinforced leather armor has heavy wear and tear.",
+    "bonus": "<strong>Bonus.</strong> +1 leather armor.",
+    "benefit": "<strong>Benefit.</strong> For every ally within half near deal an additional 1 point of damage.",
+    "additional": "You can cast Shield of Faith once per day (+4 bonus).",
+    "source": "custom",
+    "type": "body",
+    "subtype": "Leather Armor"
+  },
+  {
+    "name": "Iridescent Chainmail",
+    "description": "This chainmail shifts hues of green, blue, white, and red in the light.",
+    "bonus": "<strong>Bonus.</strong> +0 chainmail armor.",
+    "benefit": "<strong>Benefit.</strong> Elemental damage is reduced by 3 points.",
+    "source": "custom",
+    "type": "body",
+    "subtype": "Chainmail"
+  },
+  {
+    "name": "Plate of Ill Payment",
+    "description": "This plate mail helps lash out to those who would harm the wearer.",
+    "bonus": "<strong>Bonus.</strong> +0 plate mail armor.",
+    "benefit": "<strong>Benefit.</strong> If hit within close you may counter attack once per round.",
+    "source": "custom",
+    "type": "body",
+    "subtype": "Plate mail"
   }
 ]

@@ -197,7 +197,7 @@ const Codex: React.FC<PageProps> = () => {
                 
                 <ul>
                   <li><strong>[Physical]</strong> Bludgeoning, Piercing, and Slashing</li>
-                  <li><strong>[Elemental]</strong> Air, Earth, Fire, and Water</li>
+                  <li><strong>[Elemental]</strong> Acid, Cold, Electricity, and Fire</li>
                   <li><strong>[Foundational]</strong> Force, Light, and Shadow</li>
                 </ul>
                 
