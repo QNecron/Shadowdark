@@ -170,6 +170,8 @@ const Spells: React.FC<PageProps> = () => {
                   bonus={data.bonus}
                   benefit={data.benefit}
                   additional={data.additional}
+                  curse={data.curse}
+                  spells={data.spells}
                 />
 
               )

@@ -34,6 +34,12 @@ button {
   border: 0;
   border-radius: 0;
   @include appearance(none);
+  
+  &[disabled] {
+    pointer-events: none;
+    > * { opacity: .08; }
+  }
+  
 }
 
 a, button, select {

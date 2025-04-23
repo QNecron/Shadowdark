@@ -17,6 +17,8 @@ import TextArea from "../components/forms/textarea"
 import Armors from "../json/armors.json"
 import Weapons from "../json/weapons.json"
 
+import Items from "../json/items_custom.json"
+
 import { modifier, total, diceroll, hitdice, ancestry, armors, weapons } from "../utilities/functions"
 
 import HeroDesktop from "../images/heroes/default_16-4-5.webp"
@@ -209,6 +211,8 @@ const Creator: React.FC<PageProps> = () => {
     characterSavedUpdate(characters)
 
   }, [])
+  
+  const Data = Items
 
   return (
 
@@ -268,8 +272,6 @@ const Creator: React.FC<PageProps> = () => {
 
                     <li className="creator-character" key={item}>
 
-                      <div className="creator-name">{item}</div>
-
                       <button
                         className="btn-icon btn-primary"
                         onClick={(e) => load(item)}
@@ -277,6 +279,8 @@ const Creator: React.FC<PageProps> = () => {
                         <span className="srt">Load {item}</span>
                         <Icon icon="download" />
                       </button>
+
+                      <div className="creator-name">{item}</div>
 
                       <button
                         className="btn-icon btn-primary"
@@ -614,21 +618,6 @@ const Creator: React.FC<PageProps> = () => {
               </div>
 
               <div className="creator-block attacks">
-                {/*<Input
-                  type="number"
-                  value={character.attacks.weapon_bonus_2}
-                  id="weapon-bonus2"
-                  label="Weapon (A) Bonus"
-                  helper="Bonus"
-                  srt="true"
-                  change={(e) => characterUpdate({
-                    ...character,
-                    attacks: {
-                      ...character.attacks,
-                      weapon_bonus_2: e.target.value
-                    }
-                  })}
-                />*/}
                 <Select
                   value={character.attacks.weapon_2}
                   id="weapon2"
@@ -878,73 +867,129 @@ const Creator: React.FC<PageProps> = () => {
             </div>
 
           </Grid>
+                    
+          <div className="creator-equipment">
+          
+            <h2 className="creator-heading creator-heading-spacer heading-3">Equipment</h2>
+  
+            <Grid desktop="4" tablet="4" mobile="2" gap="8">
+            
+              <div className="creator-block">
+                {/* only show items that match the base item equipped */}
+                <Select
+                  id="equipWeapon1"
+                  label="Weapon (A)"
+                >
+                  <option value="None">-</option>
+                  {Data.sort((a, b) => a.name < b.name ? -1 : 1).map((data, index) => {
+                    if (data.subtype === character.attacks.weapon_1) {
+                      return (
+                        <option key={index}>{data.name}</option>
+                      )
+                    }
+                  })}
+                </Select>
+                {/* if there is a item chosen, enable button */}
+                <button
+                  className="btn-icon btn-primary"
+                  onClick={(e) => null}
+                  disabled={true}
+                >
+                  <span className="srt">Item information</span>
+                  <Icon icon="reader" />
+                </button>
+                {/* button opens dialog with item's information */}        
+              </div>
+              
+              <Select
+                id="equipShield"
+                label="Shield"
+              >
+                <option value="None">-</option>
+                {Data.sort((a, b) => a.name < b.name ? -1 : 1).map((data, index) => {
+                  let hasShield = character.armor_class.shield > 0 ? "Shield" : ""
+                  if (data.subtype === hasShield) {
+                    return (
+                      <option key={index}>{data.name}</option>
+                    )
+                  }
+                })}
+              </Select>
+            
+            </Grid>
 
-          <h2 className="creator-heading creator-heading-spacer heading-3">Inventory / Rewards</h2>
-
-          <div className="creator-block rewards">
-            <div className="creator-subheading heading-5">XP</div>
-            <Input
-              type="number"
-              value={character.xp}
-              id="xp"
-              label="Experience"
-              srt="true"
-              change={(e) => characterUpdate({
-                ...character,
-                xp: e.target.value
-              })}
-            />
-            <div className="creator-subheading heading-5">GP</div>
-            <Input
-              type="number"
-              value={character.gp}
-              id="gp"
-              label="Gold Pieces"
-              srt="true"
-              change={(e) => characterUpdate({
-                ...character,
-                gp: e.target.value
-              })}
-            />
-            <div className="creator-subheading heading-5">SP</div>
-            <Input
-              type="number"
-              value={character.sp}
-              id="sp"
-              label="Silver Pieces"
-              srt="true"
-              change={(e) => characterUpdate({
-                ...character,
-                sp: e.target.value
-              })}
-            />
-            <div className="creator-subheading heading-5">CP</div>
-            <Input
-              type="number"
-              value={character.cp}
-              id="cp"
-              label="Copper Pieces"
-              srt="true"
-              change={(e) => characterUpdate({
-                ...character,
-                cp: e.target.value
-              })}
-            />
           </div>
+          
+          <div className="creator-inventory">
+            
+            <h2 className="creator-heading creator-heading-spacer heading-3">Inventory / Rewards</h2>
 
-          <div className="creator-block rewards">
-            <TextArea
-              value={character.inventory}
-              id="inventory"
-              label="Inventory"
-              helper="Inventory"
-              srt="true"
-              rows="12"
-              change={(e) => characterUpdate({
-                ...character,
-                inventory: e.target.value
-              })}
-            />
+            <div className="creator-block rewards">
+              <div className="creator-subheading heading-5">XP</div>
+              <Input
+                type="number"
+                value={character.xp}
+                id="xp"
+                label="Experience"
+                srt="true"
+                change={(e) => characterUpdate({
+                  ...character,
+                  xp: e.target.value
+                })}
+              />
+              <div className="creator-subheading heading-5">GP</div>
+              <Input
+                type="number"
+                value={character.gp}
+                id="gp"
+                label="Gold Pieces"
+                srt="true"
+                change={(e) => characterUpdate({
+                  ...character,
+                  gp: e.target.value
+                })}
+              />
+              <div className="creator-subheading heading-5">SP</div>
+              <Input
+                type="number"
+                value={character.sp}
+                id="sp"
+                label="Silver Pieces"
+                srt="true"
+                change={(e) => characterUpdate({
+                  ...character,
+                  sp: e.target.value
+                })}
+              />
+              <div className="creator-subheading heading-5">CP</div>
+              <Input
+                type="number"
+                value={character.cp}
+                id="cp"
+                label="Copper Pieces"
+                srt="true"
+                change={(e) => characterUpdate({
+                  ...character,
+                  cp: e.target.value
+                })}
+              />
+            </div>
+
+            <div className="creator-block rewards">
+              <TextArea
+                value={character.inventory}
+                id="inventory"
+                label="Inventory"
+                helper="Inventory"
+                srt="true"
+                rows="12"
+                change={(e) => characterUpdate({
+                  ...character,
+                  inventory: e.target.value
+                })}
+              />
+            </div>
+          
           </div>
 
         </Wrapper>

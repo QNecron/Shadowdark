@@ -185,7 +185,7 @@ const Character: React.FC<PageProps> = () => {
     characterSavedUpdate(characters)
 
   }, [])
-
+  
   return (
 
     <Page>
@@ -217,8 +217,6 @@ const Character: React.FC<PageProps> = () => {
 
                     <li className="creator-character" key={item}>
 
-                      <div className="creator-name">{item}</div>
-
                       <button
                         className="btn-icon btn-primary"
                         onClick={(e) => load(item)}
@@ -226,6 +224,8 @@ const Character: React.FC<PageProps> = () => {
                         <span className="srt">Load {item}</span>
                         <Icon icon="download" />
                       </button>
+                      
+                      <div className="creator-name">{item}</div>
 
                       <button
                         className="btn-icon btn-primary"

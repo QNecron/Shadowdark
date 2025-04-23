@@ -156,6 +156,30 @@
     "subtype": "Ioun stone"
   },
   {
+    "name": "Apprentice's Tome",
+    "description": "This tome has minimal wear and tear.. only a few dried up splotches of blood on the cover.",
+    "benefit": "<strong>Benefit.</strong> The DC to learn spells from this spell book are reduce by 1.",
+    "additional": "You can learn or cast any of the spells contained as if they were scrolls.",
+    "curse": "Only useable by Wizards.",
+    "spells": [
+      {
+        "name": "Tier 1",
+        "description": "Detect Magic, Floating Disk, Light"
+      },
+      {
+        "name": "Tier 2",
+        "description": "Knock, Silence"
+      },
+      {
+        "name": "Tier 3",
+        "description": "Fabricate"
+      }
+    ],
+    "source": "custom",
+    "type": "misc",
+    "subtype": "Spell book"
+  },
+  {
     "name": "Flame Tongue",
     "description": "A silvery blade that radiates a dull, comforting heat. It errupts into flames when drawn.",
     "bonus": "<strong>Bonus.</strong> +1 silver longsword.",

@@ -3,6 +3,7 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
+[grid-gap="8"] { grid-gap: $space-8; }
 [grid-gap="16"] { grid-gap: $space-16; }
 [grid-gap="32"] { grid-gap: $space-32; }
 

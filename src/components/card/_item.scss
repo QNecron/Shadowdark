@@ -2,6 +2,7 @@
 .item-card {
   border: solid rem(1) rgba($white, .32);
   padding: $space-16;
+  overflow: hidden;
   position: relative;
 }
 
@@ -18,6 +19,11 @@
 .item-personality,
 .item-additional {
   margin-top: $space-8;
+  
+  ~ .btn-link {
+    margin-top: $space-16;
+  }
+    
 }
 
 .item-description {

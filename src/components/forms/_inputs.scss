@@ -1,6 +1,6 @@
 .input-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   position: relative;
 }
 
@@ -11,8 +11,8 @@
   display: block;
   padding: rem(7) $space-8;
   line-height: $space-24;
-  min-height: $space-40; // select ???
-  width: calc(100%); // WUT why is this needed...
+  min-height: $space-40;
+  width: 100%;
   @include appearance();
   @include outlined($white);
 

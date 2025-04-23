@@ -9,6 +9,7 @@ import Upload from "../../images/icons/cloud-upload.svg"
 import Flame from "../../images/icons/flame.svg"
 import Delete from "../../images/icons/skull.svg"
 import Search from "../../images/icons/search.svg"
+import Reader from "../../images/icons/reader.svg"
 
 const Icon = ({ ...props }) => {
 
@@ -25,6 +26,7 @@ const Icon = ({ ...props }) => {
     if (i === "delete") url = Delete
     if (i === "search") url = Search
     if (i === "flame") url = Flame
+    if (i === "reader") url = Reader
 
     return url
 

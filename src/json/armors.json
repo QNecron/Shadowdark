@@ -21,7 +21,7 @@
     "gear_slots": 2,
     "ac": 13,
     "dex": true,
-    "properties": "Disadv on stealth, swim"
+    "properties": "DISADV on stealth, swim"
   },
   {
     "name": "Plate mail",
@@ -29,6 +29,6 @@
     "gear_slots": 3,
     "ac": 15,
     "dex": false,
-    "properties": "No swim, disadv on stealth"
+    "properties": "DISADV on stealth, cannot swim"
   }
 ]
